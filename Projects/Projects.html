@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Projects</title>
+<link
+	rel="stylesheet"
+	href="./Projects.css"
+>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="nav-area">
+			<div class="menu-bg">
+				<div>
+					<a href="../Index/index.html">Home</a>
+				</div>
+				<div>
+					<a href="../Resume/Resume.html">Résumé</a>
+				</div>
+				<div>
+					<a href="#">Projects</a>
+				</div>
+				<div>
+					<a href="../Contact/Contact.html">Contact Me</a>
+				</div>
+			</div>
+		</div>
+
+		<header class="page-title">
+			<h2>Projects</h2>
+		</header>
+
+		<article>
+			<!-- Collapsibles by Language -->
+			<button class="collapsible">Java</button>
+			<div class="coll_content">
+				<img
+					class="collTitleImg"
+					src="../Images/Projects/Java/JavaLogo.png"
+				> <br>
+
+				<!-- TODO: Images -->
+				<h2>Linear Algebra Library</h2>
+				<p class="tabbedP">I originally started working on this project
+					in highschool to practice array manipulation in preparation for the
+					AP Computer Science A exam. My main goal at that point was to be
+					able to find the reduced-row echelon form of a given array of
+					doubles, allowing me to solve linear systems of equations.</p>
+				<p class="tabbedP">As my knowledge grew regarding
+					object-oriented programming and the applications of matrices to
+					structures like networks, so did this project. I added a "Vector"
+					class where one could determine vector information (e.g.,
+					cross-product and dot-product) or use these Vectors to populate a
+					Matrix. One major change I made was making the "Matrix" class
+					generically-typed, with "BinaryMatrix" and "NumericMatrix"
+					extending the Matrix class and adding additional data type-specific
+					functionality. For example, a specific application of the
+					BinaryMatrix class is the ability to represent and determine
+					qualities (e.g., reflexive, transitive, trichotomous) of binary
+					relations; the DoubleMatrix class can solve linear systems of
+					equations like originally intended.</p>
+				<p class="tabbedP">I also learned the importance of unit testing
+					and code coverage. Currently, all fully-implemented classes have
+					100% method coverage, at least 90% line coverage, and all tests
+					passing. I will continue to add more unit tests and maintain high
+					coverage as I implement greater functionality.</p>
+				<p class="tabbedP">
+					Below is a recent coverage report. All concrete classes, except
+					those in the graph package and NumericMatrix, have more than 95%
+					line coverage. Classes in the graph package are not yet ready for a
+					round of testing, and NumericMatrix may soon be deleted, depending
+					on whether this library will support matrices of non-numerical
+					values. <img
+						class="collTitleImg"
+						src="../Images/Projects/Java/LinAlg_Coverage.png"
+					>
+				</p>
+				<p class="tabbedP">In the future, I want to continue adding
+					functionality for important objects in mathematics and computer
+					science that are commonly represented as matrices. This includes
+					items like Markov Chains and graphs. I am especially excited about
+					developing weighted and directed graphs (digraphs) for applications
+					like pathfinding and optimization.</p>
+				<p class="tabbedP">
+					Code and JavaDoc for the Linear Algebra library is available <a
+						href="https://github.com/wmboyles/LinearAlgebra"
+					>here</a>.
+				</p>
+
+				<hr>
+
+				<!-- TODO: Pictures -->
+				<h2>Rubik's Cube Solver</h2>
+				<p class="tabbedP">One of my favorite hobbies is solving Rubik's
+					Cubes and other twisty puzzles (a.k.a. cubing). I started by
+					learning how to solve the 3x3x3 (Classic), which I can now solve in
+					less than one minute. My collection of twisty puzzles has since
+					grown to also include a 2x2x2 (Mini), 4x4x4 (Rubik's Revenge), a
+					5x5x5 (Professor's Cube), a tetrahedral puzzle (Pyraminx), and a
+					dodecahedral puzzle (Megaminx), shown below.</p>
+				<div class="imgCollage">
+					<div class="collageRow">
+						<img
+							class="collageCol2"
+							src="../Images/Projects/Java/2345.jfif"
+						> <img
+							class="collageCol2"
+							src="../Images/Projects/Java/pyraminx.jpg"
+						> <img
+							class="collageCol2"
+							src="../Images/Projects/Java/megaminx.jpg"
+						>
+					</div>
+				</div>
+				<p class="tabbedP">I decided to combine my hobbies of cubing and
+					Java programming into a program that would represent, manipulate,
+					and solve virtual twisty puzzles. Currently, the project can only
+					represent and manipulate 3x3x3 and 2x2x2 puzzles, but due to the
+					object-oriented structure of the project, support for larger cubes
+					could readily be added. I am focusing on writing a solving
+					algorithm for the 3x3x3. Although the 2x2x2 may seem like a better
+					place to start working because it is smaller and easier to solve
+					than the 3x3x3, the solving method used by humans to solve the
+					3x3x3 applies more generally to larger cubes.</p>
+				<p class="tabbedP">Right now, my 3x3x3 algorithm can complete
+					any solvable 3x3x3 cube where the first two layers are already
+					finished. These final two steps are known to cubers (Rubik's Cube
+					solvers) as OLL (orient last layer) and PLL (permute last layer). I
+					am having trouble adding previous steps due to the sheer number of
+					different possibilities in completing these steps. For example, the
+					first step in most Rubik's Cube solving strategies is to properly
+					align the four edge pieces on the bottom face, which creates a
+					cross shape. Although this is a relatively simple task, it's
+					difficult to properly account for every case in an efficient way
+					because aligning one edge could undo previous work. I may need to
+					re-evaluate my solving strategy to make it more
+					programming-friendly.</p>
+				<p class="tabbedP">After I successfully complete the 3x3x3
+					solving method, I plan to work on other sizes. Larger-sized cubes
+					can have an additional step after OLL and PLL called "parity" that
+					can happen due to edges being more than one cube-unit (cubie).
+					Having worked on solving algorithms for at least the Mini, Classic,
+					and Revenge puzzles, I want to create a visual user-interface,
+					where users can solve various-sized cubes for themselves. Given how
+					visual the process of solving a Rubik's Cube is, for beginners and
+					experts alike, this is an important step in making a mature,
+					enjoyable piece of software.</p>
+				<p class="tabbedP">
+					Code and JavaDoc for the Rubik's Cube solver is available <a
+						href="https://github.com/wmboyles/Rubik-s"
+					>here</a>.
+				</p>
+			</div>
+
+			<button class="collapsible">HTML/CSS/JavaScript</button>
+			<div class="coll_content">
+				<img
+					class="collTitleImg"
+					src="../Images/Projects/HTML-CSS-JS/HTML-CSS-JS.webp"
+				>
+
+				<!-- TODO: Pictures -->
+				<h2>Personal Website</h2>
+				<p class="tabbedP">
+					I created <a
+						class="myDomain"
+						href="../Index/Index.html"
+					>INSERT DOMAIN HERE</a> because I felt that my front-end development
+					skills were lacking. Front-end development is taught (if at all) in
+					most computer science curriculums as an afterthought. However, I
+					believe that just as students are taught to make clean, legible,
+					and well-documented code through comments and programming paradigms
+					(like object-oriented), they should also be taught how to make
+					clean, navigable, and intuitive front ends. After all, this is the
+					portion of a product with which most end-users will interact.
+				</p>
+				<p class="tabbedP">
+					<a
+						class="myDomain"
+						href="..Index/Index.html"
+					>INSERT DOMAIN HERE</a> is meant to meet these design criteria and to
+					be a place to talk about myself and my experience more in-depth
+					than in a resume. Although I wrote every line of HTML, CSS, and
+					JavaScript myself, I took parts from online resources like <a
+						href="https://www.youtube.com/channel/UCki4IDK86E6_pDtptmsslow"
+					>YouTube tutorials</a> and <a href="https://www.w3schools.com/">Web
+						Developer sites</a>.
+				</p>
+				<p class="tabbedP">
+					Although you are already viewing the website, all the code is
+					available <a
+						href="https://github.com/wmboyles/LearningJS/tree/master/LearnJS/WebContent/InteractiveWebsite"
+					>here</a>.
+				</p>
+			</div>
+
+			<button class="collapsible">Python</button>
+			<div class="coll_content">
+				<img
+					class="collTitleImg"
+					src="../Images/Projects/Python/PythonLogo.png"
+				>
+
+				<h2>Computer-Generated Images</h2>
+				<p class="tabbedP">
+					Visuals have always been an effective and fun way for me to learn,
+					especially when the topic is abstract. The <a
+						href="https://docs.python.org/2/library/tkinter.html"
+					>tkinker</a>, <a
+						href="https://docs.python.org/3.3/library/turtle.html?highlight=turtle"
+					>turtle</a>, and <a href="https://python-pillow.org/">Pillow</a>
+					Python GUI libraries allow for simple image manipulation, down to
+					the pixel level.
+				</p>
+
+				<p class="tabbedP">For example, the left image below visualizes
+					how numbers change after a given number of iterations in the
+					unsolved Collatz conjecture; it has been my phone background for
+					several years. For a more artistic visualization, see the right
+					image below, which applies a smeared watercolor effect.</p>
+				<div class="imgCollage">
+					<div class="collageRow">
+						<img
+							class="collageCol"
+							src="../Images/Projects/Python/Collatz1080.bmp"
+						> <img
+							class="collageCol"
+							src="../Images/Projects/Python/CollatzWC2.bmp"
+						>
+					</div>
+				</div>
+
+				<p class="tabbedP">One can also visualize more useful and common
+					mathematical ideas. The left image below shows how horizontal and
+					vertical lines in the complex plane are transformed under e^(1/z).
+					One can clearly see concentric cardioids. The right image below
+					shows the graph of several common functions, like sine and the
+					natural logarithm.</p>
+				<div class="imgCollage">
+					<div class="collageRow">
+						<img
+							class="collageCol"
+							src="../Images/Projects/Python/e^(z^-1).bmp"
+						> <img
+							class="collageCol"
+							src="../Images/Projects/Python/pillowfunctions.bmp"
+						>
+					</div>
+				</div>
+
+				<p class="tabbedP">The Turtle library allows one to trace out
+					colored paths in an image, like the rainbow spiral no the left
+					below. Getting a little more advanced, one can create recursive
+					shapes, like the Koch Snowflake, Serpinski Triangle, and dragon
+					curve, shown below.</p>
+				<div class="imgCollage">
+					<div class="collageRow">
+						<img
+							class="collageCol"
+							src="../Images/Projects/Python/Capture10.png"
+						> <img
+							class="collageCol"
+							src="../Images/Projects/Python/snowflake.png"
+						>
+					</div>
+					<div class="collageRow">
+						<img
+							class="collageCol"
+							src="../Images/Projects/Python/serpinski-2.png"
+						> <img
+							class="collageCol"
+							src="../Images/Projects/Python/dragonCurve-1.png"
+						>
+					</div>
+				</div>
+
+				<p class="tabbedP">One can also make other startlingly complex
+					images from a simple set of recursive rules. The below images,
+					known colleteively as "strange attractors," show a tree, Barnsley
+					Fern, pine branch and piece of tall grass. The procedural
+					generation techniques used to create these images, known as
+					L-systems, are used in many of today's popular video games to make
+					random, realistic terrain and plants.</p>
+				<div class="imgCollage">
+					<div class="collageRow">
+						<img
+							class="collageCol"
+							src="../Images/Projects/Python/30degTree.png"
+						> <img
+							class="collageCol"
+							src="../Images/Projects/Python/barnsleyFern.png"
+						>
+					</div>
+					<div class="collageRow">
+						<img
+							class="collageCol"
+							src="../Images/Projects/Python/PineBranch-1.png"
+							style="margin: -90px 0px;"
+						> <img
+							class="collageCol"
+							src="../Images/Projects/Python/TallGrass1-1.png"
+						>
+					</div>
+				</div>
+
+				<p class="tabbedP">
+					The images above and many others that I made in Python, as well as
+					the code used to create them, are available on GitHub <a href="">here</a>.
+					Code and results for this and other Python projects are available
+					on GitHub <a href="https://github.com/wmboyles/Python-Projects">here</a>.
+				</p>
+
+				<hr>
+
+				<!-- TODO: Pictures -->
+				<h2>Computer Vision Security Program</h2>
+				<p class="tabbedP">This application started when my high-school
+					engineering class had just moved into a larger building. It was
+					common for expensive tools to get lost or stolen, so we needed a
+					way to find these items and identify any culprits.</p>
+				<p class="tabbedP">Although the new building already had some
+					installed security cameras, there were still many blind spots, and
+					footage could only be saved up to one week, meaning that if a tool
+					were discovered missing after one week had passed, the traditional
+					security cameras would not be useful in recovering it. My solution
+					was to use Raspberry Pi's, which are small, cheap, and single-board
+					computers, as "smart"" security cameras. These devices would be
+					cheaper and easier to install than traditional cameras, and they
+					could be more easily moved to another location if needed.</p>
+				<p class="tabbedP">My first goal was to cut down on the storage
+					space needed for footage without sacrificing picture quality or
+					other valuable information. My solution was for the smart cameras
+					to record video only when they detect motion. This way, disk space
+					wouldn't be wasted on recording hours of the exact scene, but would
+					still catch thieves as they walked into view.</p>
+				<p class="tabbedP">
+					This method worked extremely well. In many cases, hours of video
+					was cut down to mere minutes. However, changing lighting conditions
+					throughout the day could add noise to the image that would be
+					mistaken for motion. I decided to fix this problem by having a
+					threshold for motion that could be calibrated and changed
+					automatically throughout the day. However, I wanted to make sure
+					thieves would still be recorded, regardless of the lighting
+					conditions. This is where computer vision came to my aid. Using
+					Python's <a href="https://opencv.org">OpenCV</a> library, I
+					searched the video feed for faces. If any faces were detected, a
+					green rectangle would be drawn around the face in the video feed,
+					an image of the frame containing the face would be saved, and the
+					camera would wait to recalibrate until no faces were detected.
+				</p>
+				<p class="tabbedP">
+					Taken from the camera's results is an image below of me walking
+					through the frame, the camera has seen my face and is recording
+					video. <img
+						src="../Images/Projects/Python/15-06-51.jpg"
+						style="display: block; margin-left: auto; margin-right: auto;"
+					>
+				</p>
+				<p class="tabbedP">
+					Code and results for this and other Python projects are available
+					on GitHub <a href="https://github.com/wmboyles/Python-Projects">here</a>.
+				</p>
+
+				<hr>
+
+				<!-- TODO: Pictures -->
+				<h2>Automated Google Drive & Gmail</h2>
+				<p class="tabbedP">This project is a continuation of the smart
+					security camera. I wanted to use the Raspberry Pi's wireless
+					internet capabilities to upload daily images and video to a Google
+					Drive folder. I also wanted the cameras to provide daily email
+					summaries of what they had seen and to alert the owner of any
+					suspicious activity with attached evidence, like detecting a face
+					after hours.</p>
+				<p class="tabbedP">
+					Using the <a href="https://pypi.org/project/PyDrive/">PyDrive</a>
+					library, I was able to upload video and images to a specified
+					GoogleDrive folder, like the one shown below. The movement of
+					potential evidence of theft to cloud storage meant that the
+					security camera didn't need more than a single day's storage
+					capacity, as long as they had internet access. Further, evidence
+					could less easily be tampered with or destroyed in a Google Drive
+					folder as opposed to being stored locally on the camera. <img
+						src="../Images/Projects/Python/driveUpload.png"
+						style="display: block; margin-left: auto; margin-right: auto;"
+					>
+				</p>
+				<p class="tabbedP">
+					Using Python's <a
+						href="https://docs.python.org/3/library/smtplib.html"
+					>smptlib</a> and <a
+						href="https://docs.python.org/3/library/email.html"
+					>email</a> libraries, I was able to send basic summary emails with
+					attached documents to any number of email addresses, as shown
+					below. The security camera code could be modified to set times to
+					send an email alert. The email portion of this project has
+					application outside the smart security camera. It could be used
+					similarly to other automated email services and could be triggered
+					by almost any event. <img
+						src="../Images/Projects/Python/mailSent.png"
+						style="display: block; margin-left: auto; margin-right: auto;"
+					>
+				</p>
+				<p class="tabbedP">
+					Code and results for this and other Python projects are available
+					on GitHub <a href="https://github.com/wmboyles/Python-Projects">here</a>.
+				</p>
+
+			</div>
+
+			<button class="collapsible">Non-Programming</button>
+			<div class="coll_content">
+				<h2>Multivariable Calculus Summary "Textbook"</h2>
+				<p class="tabbedP">While taking a summer physics class dealing
+					with Maxwell's Equations, which are written in the language of
+					multivariable calculus, I realized how much of the subject I had
+					forgotten, despite taking a multivariable calculus class (Calc III)
+					only nine months earlier. I also knew that several of my friends
+					who would be taking Calc III in the coming semester had already
+					requested my advice about the class or to look at my handwritten
+					notes, but I like to have my notes as a reference.</p>
+				<p class="tabbedP">
+					I decided to digitize my notes using <a
+						href="https://www.latex-project.org/"
+					>LaTeX</a> in a textbook structure: chapters with sections and
+					sub-sections. I would also add better visual aids than my
+					hurriedly-made sketches using images from textbooks and other
+					online resources. This way, I could more easily share clear,
+					legible notes, keep the original, and refresh my understanding in
+					the process. By the time I was finished, I had condensed the
+					several-thousand page textbook into an <a
+						href="../Documents/Projects/MA242_Summary.pdf"
+						target="_blank"
+					>81-page guide</a> that still contained scores of visual aids and
+					many full-length proofs. I feel much more confident in my
+					abilities, and I think my friends will be able to learn from me
+					much more easily.
+				</p>
+			</div>
+
+			<!-- JavaScript for controlling collapsible menu behavior. -->
+			<script
+				type="text/javascript"
+				src="./Projects.js"
+			></script>
+		</article>
+	</div>
+</body>
+</html>

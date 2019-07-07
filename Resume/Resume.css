@@ -1,0 +1,152 @@
+@charset "ISO-8859-1";
+
+.wrapper {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+body {
+	font-family: "Times New Roman" Times, serif;
+}
+
+/* Navigation bar stuff */
+.nav-area {
+	margin: -40px 0px;
+	width: 952px;
+}
+
+.menu-bg {
+	background: #c20a34;
+	margin: 50px 0px;
+	position: relative;
+	height: 51px;
+	z-index: 400;
+	display: flex;
+}
+
+.menu-bg div {
+	position: static;
+	width: 238px;
+	padding: 0px;
+	list-style: none;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: #c20a34;
+	color: #fff;
+	list-style: none;
+}
+
+.menu-bg div a {
+	list-style: none;
+	display: block;
+	background: #c20a34;
+	text-decoration: none;
+	text-align: center;
+	padding: 16px 0px;
+	color: #fff;
+}
+
+.menu-bg div a:hover {
+	background: #333;
+}
+
+/* Page Title */
+.page-title {
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+	padding: 0px 30px;
+	margin: 30px 0px;
+	width: 892px;
+	text-align: center;
+	font-size: 2em;
+}
+
+
+.sidebar {
+	position: fixed;
+	top: 10px;
+	right: 0vw;
+	width: 200px;
+}
+
+/* Scrolling downloads sidebar won't show up when printing */
+@media print {
+	.sidebar, .sidebar * {
+		display: none !important;
+	}
+}
+
+
+/* Downloads sidebar with buttons that scrolls with you */
+nav {
+	position: sticky;
+	left: -200px;
+	background: #c20a34;
+}
+
+nav div {
+	list-style: none;
+	display: block;
+	background: #c20a34;
+	color: #fff;
+}
+
+nav div a {
+	position: relative;
+	left: 0px;
+	list-style: none;
+	display: block;
+	background: #c20a34;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 10px 10px;
+}
+
+nav div a:hover {
+	background: #333;
+}
+
+footer {
+	background-color: rgba(255, 255, 255, 0);
+	position: relative;
+	width: 95wpx;
+	padding: 5px 0px;
+	text-align: center;
+}
+
+footer p {
+	font-size: 14px;
+	color: #000;
+}
+
+.resumeTitle {
+	width: 890px;
+}
+
+.edu {
+	width: 890px;
+}
+
+.workExp {
+	width: 890px;
+}
+
+.skills {
+	width: 890px;
+}
+
+.honors {
+	width: 890px;
+}
+
+.mail {
+	color: #000;
+	text-decoration: none;
+}
+
+.mail:hover {
+	color: #00F;
+	text-decoration: underline;
+}

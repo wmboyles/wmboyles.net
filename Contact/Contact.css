@@ -1,0 +1,117 @@
+@charset "ISO-8859-1";
+
+.wrapper {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+/* Navigation bar stuff */
+.nav-area {
+	margin: -40px 0px;
+	width: 952px;
+}
+
+.menu-bg {
+	background: #c20a34;
+	margin: 50px 0px;
+	position: relative;
+	height: 51px;
+	z-index: 400;
+	display: flex;
+}
+
+.menu-bg div {
+	position: static;
+	width: 238px;
+	padding: 0px;
+	list-style: none;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: #c20a34;
+	color: #fff;
+}
+
+.menu-bg div a {
+	list-style: none;
+	display: block;
+	background: #c20a34;
+	text-decoration: none;
+	text-align: center;
+	padding: 16px 0px;
+	color: #fff;
+}
+
+.menu-bg div a:hover {
+	background: #333;
+}
+
+/* Page Title */
+.page-title {
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+	padding: 0px 30px;
+	margin: 30px 0px;
+	width: 892px;
+	text-align: center;
+	font-size: 2em;
+}
+
+body {
+	background-image: url(../Images/Contact/MyPicture.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 97vh;
+	font-family: "Times New Roman" Times, serif;
+}
+
+.home-area {
+	margin: -50px 0px;
+}
+
+.home-text {
+	margin: 7.5% 0px;
+	background: rgba(0, 0, 0, .5);
+	width: 50%;
+	padding: 5%;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.home-text p{
+	font-size: 12px; 
+	text-indent: 80px;
+	margin: 10px 0px -10px 0px;
+}
+
+.home-text h3 {
+	font-size: 24px;
+	margin: 10px 0;
+}
+
+.home-text h4 {
+	text-indent: 0px;
+	font-size: 16px;
+	margin: -10px 40px;
+	padding: 0px;
+}
+
+.hideLink {
+	color: #fff;
+	text-decoration: none;
+}
+
+.hideLink:hover {
+	color: #00F;
+	text-decoration: underline;
+}
+
+.homeAddress{
+	margin: -18.5px 100px;
+	font-size: 16px;
+}
+.schoolAddress{
+	margin: -18.5px 120px;
+	font-size: 16px;
+}
