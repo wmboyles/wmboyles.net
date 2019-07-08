@@ -1,34 +1,30 @@
 @charset "ISO-8859-1";
 
 .wrapper {
-	width: 1000px;
+	width: 62.5em;
 	margin: 0 auto;
-}
-
-.wrapper {
-	width: 1000px;
-	margin: 0px auto;
 }
 
 /* Navigation bar stuff */
 .nav-area {
-	margin: -40px 0px;
-	width: 952px;
+	margin: -2.5em 0;
+	width: 59.5em;
 }
 
 .menu-bg {
 	background: #c20a34;
-	margin: 50px 0px;
+	margin: 3.125em 0;
 	position: relative;
-	height: 51px;
+	height: 3.188em;
+	width: 58em;
 	z-index: 400;
 	display: flex;
 }
 
 .menu-bg div {
 	position: static;
-	width: 238px;
-	padding: 0px;
+	width: 14.875em;
+	padding: 0;
 	list-style: none;
 	display: inline-block;
 	text-decoration: none;
@@ -43,7 +39,7 @@
 	background: #c20a34;
 	text-decoration: none;
 	text-align: center;
-	padding: 16px 0px;
+	padding: 1em 0;
 	color: #fff;
 }
 
@@ -55,9 +51,9 @@
 .page-title {
 	background-color: rgba(0, 0, 0, .5);
 	color: #fff;
-	padding: 0px 30px;
-	margin: 30px 0px;
-	width: 892px;
+	padding: 0 .9375em;
+	margin: .9375em 0;
+	width: 27.125em;
 	text-align: center;
 	font-size: 2em;
 }
@@ -67,8 +63,8 @@
 	background-color: #777;
 	color: #fff;
 	cursor: pointer;
-	padding: 10px 40px;
-	width: 952px;
+	padding: .4375em 1.75em;
+	width: 38.625em;
 	border: none;
 	text-align: left;
 	outline: none;
@@ -86,7 +82,7 @@
 	color: white;
 	float: left;
 	font-size: 18pt;
-	margin: 0 -35px; /* shift so 5px margin between left and text */
+	margin: 0 -1.5em; /* shift so 5px margin between left and text */
 }
 
 .active:after { /* After user has clicked to expand */
@@ -99,7 +95,7 @@
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: #f1f1f1;
-	width: 890px;
+	width: 54em;
 	border: 5px solid #fff; /* Visually collapsible panels */
 }
 
@@ -107,12 +103,12 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 300px;
-	max-height: 300px;
+	max-width: 17em;
+	max-height: 17em;
 }
 
 .tabbedP{
-	text-indent: 40px;
+	text-indent: 2em;
 }
 
 .tabbedP a {
@@ -124,27 +120,20 @@
 	text-decoration: underline;
 }
 
-.artImg{
-	display: block;
-	max-width: 952px;
-	max-height: 500px;
-	margin: auto;
-}
-
 .imgCollage{
-	max-width: 920px;
+	max-width: 52em;
 }
 
 .imgCollage .collageCol{
 	float: left;
-	max-width: 430px;
+	max-width: 25em;
 	padding: 5px;
 }
 
 .imgCollage .collageCol2{
 	float: left;
-	width: 286px;
-	height: 286px;
+	width: 16.666em;
+	height: 16.666em;
 	padding: 5px;
 }
 

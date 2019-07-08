@@ -10,29 +10,30 @@ body {
 }
 
 .wrapper {
-	width: 1000px;
-	margin: 0px auto;
+	width: 62.5em;
+	margin: 0 auto;
 }
 
 /* Navigation bar stuff */
 .nav-area {
-	margin: -40px 0px;
-	width: 952px;
+	margin: -2.5em 0;
+	width: 59.5em;
 }
 
 .menu-bg {
 	background: #c20a34;
-	margin: 50px 0px;
+	margin: 3.125em 0;
 	position: relative;
-	height: 51px;
+	height: 3.188em;
+	width: 58em;
 	z-index: 400;
 	display: flex;
 }
 
 .menu-bg div {
 	position: static;
-	width: 238px;
-	padding: 0px;
+	width: 14.875em;
+	padding: 0;
 	list-style: none;
 	display: inline-block;
 	text-decoration: none;
@@ -47,7 +48,7 @@ body {
 	background: #c20a34;
 	text-decoration: none;
 	text-align: center;
-	padding: 16px 0px;
+	padding: 1em 0;
 	color: #fff;
 }
 
@@ -56,39 +57,34 @@ body {
 }
 
 .home-text {
-	margin: 7.5% 0px;
+	margin: 7.5% 0;
 	background: rgba(0, 0, 0, .5);
 	width: 50%;
 	padding: 5%;
+	color: #fff;
+	text-transform: uppercase;
 }
 
 .home-text h1 {
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 50px;
-	margin: -10px 0px
+	font-size: 3.125em;
+	margin: -10px 0;
 }
 
 .home-text h2 {
-	color: #fff;
-	text-transform: uppercase;
 	margin: 10px 0;
 }
 
 .home-text p {
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 1.125em;
 	letter-spacing: 1px;
 }
 
 .home-text a {
 	background: #c20a34;
 	text-decoration: none;
-	color: #fff;
 	display: inline-block;
-	padding: 15px 30px;
-	text-transform: uppercase;
+	padding: .938em 1.875em;
+	color: #fff;
 }
 
 .home-text a:hover {
