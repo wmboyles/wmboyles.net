@@ -17,7 +17,7 @@ function nameSchoolAddress(className) {
 		}
 	} else {
 		for (var i = 0; i < schoolAddrs.length; i++) {
-			schoolAddrs[i].innerHTML = 2221 Dunn Avenue<br>03334 Bagwell Hall<br>Raleigh, NC 27607
+			schoolAddrs[i].innerHTML = "2221 Dunn Avenue<br>03334 Bagwell Hall<br>Raleigh, NC 27607"
 		}
 	}
 }
