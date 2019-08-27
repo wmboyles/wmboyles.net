@@ -1,10 +1,10 @@
 /**
- * JavaScript file corresponding to "Contact Me" page.
- * Displays school address depending on whether or not school is in session.
+ * JavaScript file corresponding to "Contact Me" page. Updates the school address to be visible depending on whether or
+ * not school is in session.
  */
 
 /** Changes Address to N/A in summer [May 11 - August 13] */
-function nameSchoolAddress(className, addressLineInnerHTML) {
+function nameSchoolAddress(className, addressLineInnerHMTL) {
 	var schoolAddrs = document.getElementsByClassName(className);
 	
 	var currDate = new Date();
@@ -18,8 +18,9 @@ function nameSchoolAddress(className, addressLineInnerHTML) {
 		}
 	} else {
 		for (var i = 0; i < schoolAddrs.length; i++) {
-			schoolAddrs[i].innerHTML = addressLineInnerHTML;
+			schoolAddrs[i].innerHTML = addressLineInnerHMTL;
 		}
 	}
 }	
-nameSchoolAddress("schoolAddress", "2221 Dunn Avenue<br>03334 Bagwell Hall<br>Raleigh, NC 27607");
+nameSchoolAddress("schoolAddressLine1", "03334 Bagwell Hall");
+nameSchoolAddress("schoolAddressLine2", "Raleigh, NC 27607");
