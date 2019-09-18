@@ -58,7 +58,6 @@
 	font-size: 2em;
 }
 
-
 .sidebar {
 	position: fixed;
 	top: .625em;
@@ -72,7 +71,6 @@
 		display: none !important;
 	}
 }
-
 
 /* Downloads sidebar with buttons that scrolls with you */
 nav {
@@ -104,39 +102,6 @@ nav div a:hover {
 	background: #333;
 }
 
-footer {
-	background-color: rgba(255, 255, 255, 0);
-	position: relative;
-	width: 100%;
-	padding: 1em 0;
-	text-align: center;
-}
-
-footer p {
-	font-size: 14px;
-	color: #000;
-}
-
-.resumeTitle {
-	width: 58em;
-}
-
-.edu {
-	width: 58em;
-}
-
-.workExp {
-	width: 58em;
-}
-
-.skills {
-	width: 58em;
-}
-
-.projects {
-	width: 58em;
-}
-
 .mail {
 	color: #000;
 	text-decoration: none;
@@ -145,4 +110,28 @@ footer p {
 .mail:hover {
 	color: #00F;
 	text-decoration: underline;
+}
+
+.section-table {
+	width: 58em;
+}
+
+.section-table tr td {
+	padding: 0 0;
+}
+
+.section-header strong {
+	text-decoration: underline;
+	font-size: 14pt;
+	margin: 0;
+	max-width: 100%;
+	white-space: nowrap;
+}
+
+.section-list {
+	margin: 0;
+}
+
+.section-date {
+	text-align: right;
 }
