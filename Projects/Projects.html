@@ -71,7 +71,6 @@
 					alt="Java Logo"
 				> <br>
 
-				<!-- TODO: Images -->
 				<h2>Linear Algebra Library</h2>
 				<p class="tabbedP">I originally started working on this project
 					in high school to practice array manipulation in preparation for
@@ -122,7 +121,6 @@
 
 				<hr>
 
-				<!-- TODO: Pictures -->
 				<h2>Rubik's Cube Solver</h2>
 				<p class="tabbedP">One of my favorite hobbies is solving Rubik's
 					Cubes and other twisty puzzles (a.k.a. cubing). I started by
@@ -196,7 +194,6 @@
 					alt="HTML, CSS and JavaScript logos"
 				>
 
-				<!-- TODO: Pictures -->
 				<h2>Personal Website</h2>
 				<p class="tabbedP">
 					I created <a
@@ -236,6 +233,72 @@
 					src="../Images/Projects/Python/PythonLogo.png"
 					alt="Python Logo"
 				>
+
+
+				<h2>Twitter Bad Words Count Bot</h2>
+				<p class="tabbedP">The language that people choose to use can
+					provide insight into their background and character. Although
+					reasonable people can vhemently disagree, a good indicator of
+					mutual respect between two parties is that neither resorts to
+					vulgarity. Inspired by other bots on platforms like Reddit and
+					Discord, that could provide infrmation on the lauguage that users
+					have used and play a part in keeping online discussion civil, I set
+					out to create a Twitter bot that, when requested by another Twitter
+					user, would provide information on vulgarities that users have
+					recently tweeted.</p>
+
+				<p class="tabbedP">
+					<!-- TODO: Embed tweet? -->
+					<img
+						class="collTitleImg"
+						src="../Images/Projects/Python/TwitterBot.png"
+						alt="Screenshot of the bot in action"
+					> I wrote the bot in Python, following basic online video
+					tutorials that detailed how to work with the Twitter API through
+					the python library <a href="https://www.tweepy.org/">tweepy</a>.
+					Although these tutorials showed me how to detect when a user had @
+					mentioned the bot and how to respond to tweets, the real challenge
+					and substance of this bot came from accesing another user's tweets,
+					parsing through them to find bad words, and reporting the frequency
+					of these bad words within the 280-character limit of a Tweet.
+				</p>
+
+				<p class="tabbedP">
+					After finding seperate answers on how to access a given user's
+					tweets, I got to work on detecting bad words. Although I found
+					several GitHub repos that contained lists of bad words, many were
+					too comprehensive, marking even words with possible negative
+					connotationsm, like the names of political parties, as bad. I
+					eventually setteled on a <a
+						href="https://github.com/RobertJGabriel/Google-profanity-words"
+					>list</a> of 444 common words collected by Google. This list was
+					comprehensive enough to cover most bad word, and even common
+					variations like swapping a letter for a number. On the
+					implementation side, I took advantage of Python's built-in
+					dictionary functionality to find matching bad words in a user's 100
+					most recent tweets and rank them by frequency.
+				</p>
+
+				<p class="tabbedP">
+					For deployment, I settled on a free service reccomended in one of
+					the simple video tutorials, <a
+						href="https://www.pythonanywhere.com"
+					>PythonAnywhere</a>. I know that this solution is probably not best
+					practice, but I struggled with trying to use other platforms like <a
+						href="https://www.heroku.com"
+					>Heroku</a> because I could not work out compatability issues or find
+					documentation detailed enough to fix issues.
+				</p>
+
+				<p class="tabbedP">
+					The bot's Twitter handle is <a
+						href="https://twitter.com/BadWordCount"
+					>@BadWordCount</a>. Go ahead and try it out on some of your favorite
+					twitter users. The code that the bot is running is on my <a
+						href="https://github.com/wmboyles/BadWordsBot"
+					>GitHub</a>. Feel free to look at some of the other projects I've
+					done while you're there.
+				</p>
 
 				<h2>Computer-Generated Images</h2>
 				<p class="tabbedP">
