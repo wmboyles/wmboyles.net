@@ -1,0 +1,27 @@
+.pageTitle {
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.statsTable {
+	width: 600px;
+}
+
+.credits {
+	margin-top: 50px;
+}
+
+.credits p {
+	text-align: center;
+}
+
+.boardBtn {
+	background-color: gray;
+	borderCollase: collapse;
+	border: 1px solid black;
+}
+
+.boardBtn:focus {
+	outline: none;
+}

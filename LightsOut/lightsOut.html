@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	dir="ltr"
+>
+
+<head>
+<meta charset="IOS-8859-1">
+<meta
+	name="Lights Out Game"
+	content="Lights Out game William Boyles linear algebra"
+>
+<meta
+	name="viewport"
+	content="width=device-width, user-scalable=no"
+>
+<meta
+	name="author"
+	content="William Boyles"
+>
+<meta
+	name="robots"
+	content="none"
+>
+
+<title>Lights Out Game</title>
+
+<link
+	rel="stylesheet"
+	href="./lightsOut.css"
+>
+
+</head>
+
+<body onload="promptUser();">
+	<h2 class="pageTitle">Lights Out</h2>
+
+	<table
+		class="statsTable"
+		align="center"
+	>
+		<tr>
+			<td align="left">
+				<!-- Text updated by JS -->
+				<p id="clicksCount">Clicks: 0</p>
+			<td>
+			<td align="center">
+				<button
+					id="reset"
+					onclick="reset()"
+				>Reset</button>
+			</td>
+			<td align="center">
+				<button
+					id="scramble"
+					onclick="scramble()"
+				>Scramble</button>
+			</td>
+			<td align="right">
+				<!-- Text Updated by JS -->
+				<p id="minClicks">Min: ??</p>
+			</td>
+		<tr>
+	</table>
+
+	<!-- The board is created by JS -->
+	<div id="board"></div>
+
+	<footer class="credits">
+		<p>
+			Made by <a href="../Index/index.html">William Boyles</a>
+		</p>
+	</footer>
+
+	<script
+		async
+		type="text/javascript"
+		src="./lightsOut.js"
+	></script>
+
+</body>
