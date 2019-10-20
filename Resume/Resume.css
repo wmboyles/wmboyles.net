@@ -113,6 +113,7 @@ nav div a:hover {
 }
 
 .section-table {
+	table-layout: fixed;
 	width: 58em;
 }
 
