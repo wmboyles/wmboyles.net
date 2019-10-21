@@ -1,5 +1,3 @@
-@charset "ISO-8859-1";
-
 .wrapper {
 	width: 62.5em;
 	margin: 0 auto;
@@ -7,24 +5,22 @@
 
 /* Navigation bar stuff */
 .nav-area {
-	margin: -2.5em 0;
 	width: 59.5em;
+	margin: auto 2.5em;
 }
 
 .menu-bg {
 	background: #c20a34;
-	margin: 3.125em 0;
 	position: relative;
 	height: 3.188em;
 	width: 58em;
-	z-index: 400;
 	display: flex;
 }
 
 .menu-bg div {
 	position: static;
-	width: 14.875em;
-	padding: 0;
+	width: 25%;
+	padding: none;
 	list-style: none;
 	display: inline-block;
 	text-decoration: none;
@@ -51,11 +47,11 @@
 .page-title {
 	background-color: rgba(0, 0, 0, .5);
 	color: #fff;
-	padding: 0 .9375em;
-	margin: .9375em 0;
-	width: 27.125em;
+	padding: none;
+	margin: -1em 1em 0 1.25em;
+	width: 29em;
 	text-align: center;
-	font-size: 2em;
+	font-size: 24pt; /* Changed from 2em */
 }
 
 .sidebar {
@@ -100,6 +96,10 @@ nav div a {
 
 nav div a:hover {
 	background: #333;
+}
+
+.resume-body{
+	margin: 0 2.5em;
 }
 
 .mail {

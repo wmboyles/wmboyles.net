@@ -6,7 +6,7 @@
 /* Navigation bar stuff */
 .nav-area {
 	width: 59.5em;
-	margin: auto 0;
+	margin: auto 2em;
 }
 
 .menu-bg {
@@ -48,13 +48,14 @@
 	background-color: rgba(0, 0, 0, .5);
 	color: #fff;
 	padding: none;
-	margin: -1em 0 1em 0;
+	margin: -1em 1em 0 1em;
 	width: 29em;
 	text-align: center;
 	font-size: 24pt; /* Changed from 2em */
 }
 
 .project_list_description {
+	margin: 0 2em;
 	width: 58em; /* Same width as menu-bg */
 }
 
@@ -62,11 +63,11 @@
 .collapsible {
 	background-color: #777;
 	color: #fff;
+	margin: 0em 1.5em;
 	cursor: pointer; /* Use "click here" hand on clickable content */
 	padding: .4375em 1.75em;
-	width: 38.625em;
-	border: none;
-	/* No stylized border on button */
+	width: 38.5em;
+	border: none; /* No stylized border on button */
 	outline: none; /* No blue ring aound button when clicked */
 	font-size: 18pt;
 	font-weight: bold;
@@ -103,12 +104,12 @@
 
 /* Content of text and images in collapsible writeup */
 .coll_content {
-	padding: 0em 1em;
+	margin: 0 2em;
+	padding: 0 1em;
 	max-height: 0em; /*Keep content collapsed by default */
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: #f1f1f1;
-	width: 55.25em;
 	border: .25em solid #fff; /* Visually collapsible panels */
 }
 
@@ -172,12 +173,12 @@
 }
 
 .centeredImg {
-	text-align:center;
+	text-align: center;
 }
 
-.centeredImg img{
+.centeredImg img {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
-	max-height:25em;
+	max-height: 25em;
 }
