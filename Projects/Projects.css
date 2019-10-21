@@ -1,5 +1,3 @@
-@charset "ISO-8859-1";
-
 .wrapper {
 	width: 62.5em;
 	margin: 0 auto;
@@ -7,24 +5,22 @@
 
 /* Navigation bar stuff */
 .nav-area {
-	margin: -2.5em 0;
 	width: 59.5em;
+	margin: auto 0;
 }
 
 .menu-bg {
 	background: #c20a34;
-	margin: 3.125em 0;
 	position: relative;
 	height: 3.188em;
 	width: 58em;
-	z-index: 400;
 	display: flex;
 }
 
 .menu-bg div {
 	position: static;
-	width: 14.875em;
-	padding: 0;
+	width: 25%;
+	padding: none;
 	list-style: none;
 	display: inline-block;
 	text-decoration: none;
@@ -51,54 +47,72 @@
 .page-title {
 	background-color: rgba(0, 0, 0, .5);
 	color: #fff;
-	padding: 0 .9375em;
-	margin: .9375em 0;
-	width: 27.125em;
+	padding: none;
+	margin: -1em 0 1em 0;
+	width: 29em;
 	text-align: center;
-	font-size: 2em;
+	font-size: 24pt; /* Changed from 2em */
+}
+
+.project_list_description {
+	width: 58em; /* Same width as menu-bg */
 }
 
 /* Collapsible Menus */
 .collapsible {
 	background-color: #777;
 	color: #fff;
-	cursor: pointer;
+	cursor: pointer; /* Use "click here" hand on clickable content */
 	padding: .4375em 1.75em;
 	width: 38.625em;
 	border: none;
-	text-align: left;
-	outline: none;
+	/* No stylized border on button */
+	outline: none; /* No blue ring aound button when clicked */
 	font-size: 18pt;
 	font-weight: bold;
 	font-family: serif;
+	width: 38.625em;
+	border: none;
 }
 
-.active, .collapsible:hover { /* Darken when hovering */
+.project_title {
+	float: left;
+	margin: 0 -0.5em;
+}
+
+.project_language {
+	float: right;
+	margin: 0 -1em;
+}
+
+.active, .collapsible:hover { /* Darken the button when hovering */
 	background-color: #555;
 }
 
-.collapsible:after { /*Before user has clicked to expand */
+.collapsible:before { /*Before user has clicked to expand */
 	content: '\002B'; /* Unicode character for "plus" sign (+) */
-	color: white;
 	float: left;
-	font-size: 18pt;
-	margin: 0 -1.5em; /* shift so 5px margin between left and text */
+	margin: 0em -1.5em; /* shift so + is between left edge and text */
 }
 
-.active:after { /* After user has clicked to expand */
-	content: "\2212"; /* Unicode character for "minus" sign (-) */
+.active:before { /* After user has clicked to expand */
+	content: '\2212'; /* Unicode character for "minus" sign (-) */
+	float: left;
+	margin: 0em -1.5em; /* shift so + is between left edge and text */
 }
 
+/* Content of text and images in collapsible writeup */
 .coll_content {
-	padding: 0 25px;
-	max-height: 0;
+	padding: 0em 1em;
+	max-height: 0em; /*Keep content collapsed by default */
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: #f1f1f1;
-	width: 54em;
-	border: 5px solid #fff; /* Visually collapsible panels */
+	width: 55.25em;
+	border: .25em solid #fff; /* Visually collapsible panels */
 }
 
+/* Images in writeup */
 .collTitleImg {
 	display: block;
 	margin-left: auto;
@@ -107,7 +121,8 @@
 	max-height: 17em;
 }
 
-.tabbedP{
+/* Stuff for tabbed paragraphs */
+.tabbedP {
 	text-indent: 2em;
 }
 
@@ -116,29 +131,53 @@
 	text-decoration: none;
 }
 
-.tabbedP a:hover {
+.tabbedP a:hover { /* Underline links when hovered over */
 	text-decoration: underline;
 }
 
-.imgCollage{
+/* Stuff for image collages */
+.imgCollage {
 	max-width: 52em;
 }
 
-.imgCollage .collageCol{
+.imgCollage .collageCol {
 	float: left;
 	max-width: 25em;
 	padding: 5px;
 }
 
-.imgCollage .collageCol2{
+.imgCollage .collageCol2 {
 	float: left;
 	width: 16.666em;
 	height: 16.666em;
 	padding: 5px;
 }
 
-.imgCollage .collageRow{
+.imgCollage .collageRow {
 	content: "";
 	clear: both;
 	display: table;
+}
+
+/* Images in lights out writeup */
+.imgCol {
+	float: left;
+	width: 50%;
+	padding: 1em;
+}
+
+.imgRow::after {content ="";
+	clear: both;
+	display: table;
+}
+
+.centeredImg {
+	text-align:center;
+}
+
+.centeredImg img{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	max-height:25em;
 }

@@ -1,11 +1,83 @@
-.pageTitle {
-	text-align: center;
-	margin-top: 0px;
-	margin-bottom: 0px;
+.wrapper {
+	width: 62.5em;
+	margin: 0 auto;
 }
 
+/* Navigation bar stuff */
+.nav-area {
+	width: 59.5em;
+	margin: auto 2em;
+}
+
+.menu-bg {
+	background: #c20a34;
+	position: relative;
+	height: 3.188em;
+	width: 58em;
+	display: flex;
+}
+
+.menu-bg div {
+	position: static;
+	width: 25%;
+	padding: none;
+	list-style: none;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: #c20a34;
+	color: #fff;
+}
+
+.menu-bg div a {
+	list-style: none;
+	display: block;
+	background: #c20a34;
+	text-decoration: none;
+	text-align: center;
+	padding: 1em 0;
+	color: #fff;
+}
+
+.menu-bg div a:hover {
+	background: #333;
+}
+
+/* Page Title */
+.page-title {
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+	padding: none;
+	margin: -1em 1em 0 1em;
+	width: 29em;
+	text-align: center;
+	font-size: 24pt; /* Changed from 2em */
+}
+
+/** Game board */
 .statsTable {
-	width: 600px;
+	width: 54.25em;
+	text-align:center;
+	margin: 1em 3.75em;
+}
+
+.statsTable tr td{
+	width: 25%;
+	font-size: 16pt;
+}
+
+.statsTable tr td button {
+	font-size: 16pt;
+}
+
+.boardBtn {
+	background-color: rgba(0, 0, 0, .5);
+	borderCollase: collapse;
+	border: 1px solid black;
+}
+
+.boardBtn:focus {
+	outline: none;
 }
 
 .credits {
@@ -14,14 +86,4 @@
 
 .credits p {
 	text-align: center;
-}
-
-.boardBtn {
-	background-color: gray;
-	borderCollase: collapse;
-	border: 1px solid black;
-}
-
-.boardBtn:focus {
-	outline: none;
 }

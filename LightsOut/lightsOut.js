@@ -8,16 +8,17 @@
 var buttons;
 /** The number of clicks the user has made in this solve attempt */
 var clicks = 0;
-/** The approximate height in pixels of the portion of the screen above the board */
-var headerHeight = 110;
 /** The maximum allowable board size. Larger values likely have issues displaying or cause performance problems */
-var maxSize = 30;
+var maxSize = 10;
+/** Number of ems of entire board */
+var boardEms = 60;
 
 
 /**
  * Creates a n x n array of elements for a given n.
  * 
- * @param size the size of the 2D array
+ * @param size
+ *            the size of the 2D array
  */
 function makeArray(size) {
 	buttons = new Array(size);
@@ -29,8 +30,7 @@ function makeArray(size) {
 
 
 /**
- * Resets the board to a completely solved state.
- * Resets the number of clicks the user has made.
+ * Resets the board to a completely solved state. Resets the number of clicks the user has made.
  */
 function reset() {
 	for(var i = 0; i < buttons.length; i++) {
@@ -62,12 +62,15 @@ function isSolved() {
 
 
 /**
- * Carries out the effect of clicking a button at a given position.
- * If specified, this function will check if this click solved the board.
+ * Carries out the effect of clicking a button at a given position. If specified, this function will check if this click
+ * solved the board.
  * 
- * @param r the row index of the clicked button
- * @param c the column index of the clicked button
- * @param checkSolved should this function check to see if the click solved the board?
+ * @param r
+ *            the row index of the clicked button
+ * @param c
+ *            the column index of the clicked button
+ * @param checkSolved
+ *            should this function check to see if the click solved the board?
  */
 function click(r, c, checkSolved) {
 	clicks++;
@@ -88,7 +91,7 @@ function click(r, c, checkSolved) {
 	}
 
 	if(checkSolved && isSolved()) {
-		alert("Solved in "+clicks+" clicks!");
+		alert("Solved in " + clicks + " clicks!");
 		reset();
 	}
 }
@@ -97,7 +100,8 @@ function click(r, c, checkSolved) {
 /**
  * Flips the state of a single button by changing its background color.
  * 
- * @param button a button element to chage it state.
+ * @param button
+ *            a button element to chage it state.
  */
 function flip(button) {
 	var currentColor = button.style.backgroundColor;
@@ -112,7 +116,8 @@ function flip(button) {
 /**
  * Creates the n x n board of button elements and their click event listeners for a given n.
  * 
- * @param gridSize the number of buttons in one row of buttions
+ * @param gridSize
+ *            the number of buttons in one row of buttions
  */
 function setup(gridSize) {
 	makeArray(gridSize);
@@ -128,10 +133,9 @@ function setup(gridSize) {
 			(function(i, j) {
 				var btn = document.createElement("button");
 				btn.className = "boardBtn";
-				
-				var size = Math.min(window.innerWidth, window.innerHeight) - headerHeight;
-				btn.style.height = Math.max(size / gridSize, 5) + "px";
-				btn.style.width = Math.max(size / gridSize, 5) + "px";
+
+				btn.style.height = (boardEms / gridSize) + "em";
+				btn.style.width = (boardEms / gridSize) + "em";
 
 				btn.addEventListener("click", function() {
 					click(i, j, true);
@@ -149,9 +153,8 @@ function setup(gridSize) {
 
 
 /**
- * Randomly clicks about half of the buttons in the grid, creating a new scramble for the user.
- * Note that expecially for small board sizes, its possible the click have no net effect and the
- * baord remains solved
+ * Randomly clicks about half of the buttons in the grid, creating a new scramble for the user. Note that expecially for
+ * small board sizes, its possible the click have no net effect and the baord remains solved
  */
 function scramble() {
 	for(var i = 0; i < buttons.length; i++) {
@@ -168,14 +171,13 @@ function scramble() {
 
 
 /**
- * Asks users what sized board they would like to play.
- * If the response is not a number, less than 1, or greater than 30, users will be reprompted until 
- * they provide a valid response
+ * Asks users what sized board they would like to play. If the response is not a number, less than 1, or greater than
+ * 30, users will be reprompted until they provide a valid response
  */
 function promptUser() {
-	var boardSize = Number(prompt("Enter a board size 1 - 30", "5"));
+	var boardSize = Number(prompt("Enter a board size 1 - 10", "5"));
 	if(!Number.isInteger(boardSize) || boardSize < 1 || boardSize > maxSize) {
-		alert("Invalid size. Please enter a numer 1 - 30.");
+		alert("Invalid size. Please enter a numer 1 - 10.");
 		promptUser();
 	} else {
 		setup(boardSize);
