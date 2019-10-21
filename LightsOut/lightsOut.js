@@ -9,7 +9,7 @@ var buttons;
 /** The number of clicks the user has made in this solve attempt */
 var clicks = 0;
 /** The maximum allowable board size. Larger values likely have issues displaying or cause performance problems */
-var maxSize = 10;
+var maxSize = 30;
 /** Number of ems of entire board */
 var boardEms = 60;
 
@@ -175,9 +175,9 @@ function scramble() {
  * 30, users will be reprompted until they provide a valid response
  */
 function promptUser() {
-	var boardSize = Number(prompt("Enter a board size 1 - 10", "5"));
+	var boardSize = Number(prompt("Enter a board size 1 - 25", "5"));
 	if(!Number.isInteger(boardSize) || boardSize < 1 || boardSize > maxSize) {
-		alert("Invalid size. Please enter a numer 1 - 10.");
+		alert("Invalid size. Please enter a numer 1 - 25.");
 		promptUser();
 	} else {
 		setup(boardSize);
