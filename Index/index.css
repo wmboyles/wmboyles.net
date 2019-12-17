@@ -71,7 +71,9 @@ i.badge-icon:before {
 
 /* Make the profile photo circular */
 #profile-photo {
-	width: 13em;
+	width: 172px;
 	height: auto;
-	border-radius: 100%;
+	border-color: black;
+	border-width: 20px;
+	border-radius: 50%;
 }
