@@ -1,72 +1,68 @@
-@charset "ISO-8859-1";
-
-.wrapper {
-	width: 1000px;
-	margin: 0 auto;
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+	display: none;
 }
 
-.wrapper {
-	width: 1000px;
-	margin: 0px auto;
+/* Color of project dropdowns and how it changes */
+a.dropdown-item {
+	color: rgba(255, 255, 255, 0.7);
 }
 
-/* Navigation bar stuff */
-.nav-area {
-	margin: -40px 0px;
-	width: 952px;
+a.dropdown-item:hover {
+	background-color: #6C757D;
+	color: white;
 }
 
-.menu-bg {
-	background: #c20a34;
-	margin: 50px 0px;
-	position: relative;
-	height: 51px;
-	z-index: 400;
-	display: flex;
+/* Color of badges if project dropdowns */
+.badge {
+	color: white;
 }
 
-.menu-bg div {
-	position: static;
-	width: 238px;
-	padding: 0px;
-	list-style: none;
-	display: inline-block;
-	text-decoration: none;
-	text-transform: uppercase;
-	background: #c20a34;
-	color: #fff;
+.badge.badge-bootstrap {
+	background-color: #7A43B6;
 }
 
-.menu-bg div a {
-	list-style: none;
-	display: block;
-	background: #c20a34;
-	text-decoration: none;
-	text-align: center;
-	padding: 16px 0px;
-	color: #fff;
+.badge.badge-python3 {
+	background-color: #FFD43B;
 }
 
-.menu-bg div a:hover {
-	background: #333;
+.badge.badge-java {
+	background-color: #ED8B00;
 }
 
-/* Page Title */
-.page-title {
-	background-color: rgba(0, 0, 0, .5);
-	color: #fff;
-	padding: 0px 30px;
-	margin: 30px 0px;
-	width: 892px;
-	text-align: center;
-	font-size: 2em;
+.badge.badge-web {
+	background-color: #F16529;
 }
 
-.ErrText {
+.badge.badge-twitter {
+	background-color: #00ACEE;
+}
+
+.badge.badge-tex {
+	background-color: #AFAFAF;
+}
+
+.badge.badge-android {
+	background-color: #A4C639;
+}
+
+/* Styling of icons in footer */
+i.footer-icon:before {
 	font-size: 18pt;
+	padding: 0.5em;
 }
-.ErrText a{
-	text-decoration: none;
-	color: #c20a34;
-	margin: 0px 5px;
+
+i.badge-icon:before {
+	font-size: 12pt;
+	padding: 0.25em;
+}
+
+/** Make dropdown scrollable */
+.dropdown-menu {
+	max-height: 60vh;
+	overflow-y: auto;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+	display: none;
 }
