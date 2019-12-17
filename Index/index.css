@@ -1,88 +1,77 @@
-body {
-	background-image: url(../Images/Index/MyPicture.jpg);
-	-webkit-background-size: cover;
-	background-size: cover;
-	min-height:97%;
-	background-repeat: no-repeat;
-	font-family: "Times New Roman" Times, serif;
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+	display: none;
 }
 
-.wrapper {
-	width: 62.5em;
-	margin: 0 auto;
+/* Color of project dropdowns and how it changes */
+a.dropdown-item {
+	color: rgba(255, 255, 255, 0.7);
 }
 
-/* Navigation bar stuff */
-.nav-area {
-	width: 59.5em;
-	margin: auto 2em;
+a.dropdown-item:hover {
+	background-color: #6C757D;
+	color: white;
 }
 
-.menu-bg {
-	background: #c20a34;
-	position: relative;
-	height: 3.188em;
-	width: 58em;
-	display: flex;
+/* Color of badges if project dropdowns */
+.badge {
+	color: white;
 }
 
-.menu-bg div {
-	position: static;
-	width: 25%;
-	padding: none;
-	list-style: none;
-	display: inline-block;
-	text-decoration: none;
-	text-transform: uppercase;
-	background: #c20a34;
-	color: #fff;
+.badge.badge-bootstrap {
+	background-color: #7A43B6;
 }
 
-.menu-bg div a {
-	list-style: none;
-	display: block;
-	background: #c20a34;
-	text-decoration: none;
-	text-align: center;
-	padding: 1em 0;
-	color: #fff;
+.badge.badge-python3 {
+	background-color: #FFD43B;
 }
 
-.menu-bg div a:hover {
-	background: #333;
+.badge.badge-java {
+	background-color: #ED8B00;
 }
 
-.home-text {
-	margin: 7.5% 2em;
-	background: rgba(0, 0, 0, .5);
-	width: 50%;
-	padding: 5%;
-	color: #fff;
-	text-transform: uppercase;
+.badge.badge-web {
+	background-color: #F16529;
 }
 
-.home-text h1 {
-	font-size: 3.125em;
-	margin: -10px 0;
+.badge.badge-twitter {
+	background-color: #00ACEE;
 }
 
-.home-text h2 {
-	margin: 10px 0;
+.badge.badge-tex {
+	background-color: #AFAFAF;
 }
 
-.home-text p {
-	font-size: 1.125em;
-	letter-spacing: 1px;
+.badge.badge-android {
+	background-color: #A4C639;
 }
 
-.home-text a {
-	background: #c20a34;
-	text-decoration: none;
-	display: inline-block;
-	padding: .938em 1.875em;
-	color: #fff;
+/* Styling of icons in footer */
+i.footer-icon:before {
+	font-size: 18pt;
+	padding: 0.5em;
 }
 
-.home-text a:hover {
-	background: #333;
+i.badge-icon:before {
+	font-size: 12pt;
+	padding: 0.25em;
+}
+
+/** Make dropdown scrollable */
+.dropdown-menu {
+	max-height: 60vh;
+	overflow-y: auto;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+	display: none;
+}
+
+/******* Custom project.html stylings ********/
+
+/* Make the profile photo circular */
+#profile-photo {
+	width: 13em;
+	height: auto;
+	border-radius: 100%;
 }

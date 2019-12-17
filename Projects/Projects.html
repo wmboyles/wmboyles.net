@@ -1,26 +1,43 @@
 <html
 	lang="en"
 	dir="ltr"
+	class="h-100"
 >
 <head>
+<meta charset="utf-8">
 <meta
 	name="description"
-	content="Projects that William Boyles made. Java, HTML/CSS/JavaScript, Python and other projects."
+	content="William Boyles's Homepage."
+>
+<meta
+	name="keywords"
+	content="William,Boyles,software,data structures,algorithms,engineer,computer science,NC State,NCSU,Java,Python,JavaScript,HTML,CSS,Bootstrap,LaTeX,Android"
 >
 <meta
 	name="viewport"
-	content="width=device-width; user-scalable=yes"
+	content="width=device-width, user-scalable=yes"
 >
 <meta
 	name="author"
-	content="William M. Boyles"
+	content="William Boyles"
 >
 
-<title>William Boyles - Projects</title>
+<title>William Boyles | Projects</title>
+
+<!-- Use bootstrap -->
 <link
 	rel="stylesheet"
-	href="./Projects.css"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous"
 >
+
+<!-- Additional changes in top of bootstrap -->
+<link
+	rel="stylesheet"
+	href="../Projects/Projects.css"
+>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script
 	async
@@ -34,598 +51,971 @@
 	gtag('js', new Date());
 	gtag('config', 'UA-143402318-1');
 </script>
-
 </head>
 
-<body>
-	<div class="wrapper">
-		<div class="nav-area">
-			<div class="menu-bg">
-				<div>
-					<a href="../Index/index.html">Home</a>
-				</div>
-				<div>
-					<a href="../Resume/Resume.html">Resume</a>
-				</div>
-				<div>
-					<a href="#">Projects</a>
-				</div>
-				<div>
-					<a href="../Contact/Contact.html">Contact Me</a>
+<body class="d-flex flex-column h-100">
+	<!-- A  navigation bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a
+				class="navbar-brand"
+				href="../Index/index.html"
+			>WB</a>
+			<button
+				class="navbar-toggler collapsed"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarResponsive"
+				aria-controls="navbarResponsive"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div
+				class="collapse navbar-collapse"
+				id="navbarResponsive"
+			>
+				<ul class="navbar-nav ml-auto">
+					<!-- Change the active to the current page when used in other pages -->
+					<li class="nav-item"><a
+						class="nav-link"
+						href="../Index/index.html"
+					> Home<span class="sr-only"></span></a></li>
+					<li class="nav-item"><a
+						class="nav-link"
+						href="../Documents/Resume/WilliamBoyles_Resume.pdf"
+					>Resume</a></li>
+					<li class="nav-item dropdown active"><a
+						class="nav-link dropdown-toggle"
+						href="../Projects/Projects.html"
+						id="navbarDropdown"
+						role="button"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"
+					> Projects</a>
+						<div
+							class="dropdown-menu dropdown-menu-right bg-secondary"
+							aria-labelledby="navbarDropdown"
+						>
+							<a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-1"
+							> Lights Out Android App
+								<div class="skill-badges">
+									<span class="badge badge-java x-1">Java<i
+										class="badge-icon fab fa-java"
+									></i></span> <span class="badge badge-android x-1">Android Studio<i
+										class="badge-icon fab fa-android"
+									></i>
+									</span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-2"
+							>Computer Vision Security Camera
+								<div class="skill-badges">
+									<span class="badge badge-python3 x-1">Python 3<i
+										class="badge-icon fab fa-python"
+									></i></span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-3"
+							>Personal Website
+								<div class="skill-badges">
+									<span class="badge badge-web x-1">HTML/JS/CSS<i
+										class="badge-icon fas fa-code"
+									></i></span><span class="badge badge-bootstrap x-1">Bootstrap<i
+										class="badge-icon fab fa-bootstrap"
+									></i></span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-4"
+							>Multivariable Calculus Summary
+								<div class="skill-badges">
+									<span class="badge badge-tex x-1">TeX<i
+										class="badge-icon fas fa-subscript"
+									></i></span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-5"
+							>Twitter Bad Words Count Bot
+								<div class="skill-badges">
+									<span class="badge badge-python3 x-1">Python 3<i
+										class="badge-icon fab fa-python"
+									></i></span> <span class="badge badge-twitter x-1">Twitter API<i
+										class="badge-icon fab fa-twitter"
+									></i>
+									</span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-6"
+							>Linear Algebra Library
+								<div class="skill-badges">
+									<span class="badge badge-java x-1">Java<i
+										class="badge-icon fab fa-java"
+									></i></span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-7"
+							>Computer Generated Art
+								<div class="skill-badges">
+									<span class="badge badge-python3 x-1">Python 3<i
+										class="badge-icon fab fa-python"
+									></i></span>
+								</div>
+							</a>
+						</div></li>
+					<li class="nav-item"><a
+						class="nav-link"
+						href="../Contact/Contact.html"
+					>Contact<span class="sr-only"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="bg-danger py-3 mb-3 position-relative">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<h1 class="display-4 text-white mt-5 mb-2">Projects</h1>
+					<p class="lead mb-5 text-white-50">All the listed projects were
+						not related to schoolwork or done for a grade.</p>
 				</div>
 			</div>
 		</div>
+	</header>
 
-		<header class="page-title">
-			<h1>Projects</h1>
-		</header>
+	<!-- The stuff that's actually unique to this page -->
+	<main> <!-- Lights Out App -->
+	<section
+		class="page-section text-black mb-0"
+		id="project-1"
+	>
+		<div class="container">
+			<h2
+				class="page-section-heading text-center text-uppercase text-black"
+			>Lights Out Android App</h2>
 
-		<div class="project_list_description">
-			<h2>Personal Projects</h2>
-			<p>All projects listed below are personal projects that I
-				completed at my leisure. None of them were graded assignments. All
-				projects listed either have at least publicly accessible GitHub
-				repos associated with them or another way of interacting with them.</p>
-		</div>
-
-		<div class="projects_list">
-			<button class="collapsible">
-				<div class="project_listing">
-					<span class="project_title">Lights Out Android App</span> <span
-						class="project_language"
-					>Java</span>
+			<div class="row">
+				<div class="col">
+					<p class="lead">My Lights Out app is based on the 1995 handheld
+						electronic game by Tiger Electronics of the same name. In the 1995
+						version, the game board consists of a 5x5 grid of lights, and then
+						when game starts, a seemingly random pattern of lights is
+						presented to the player. The player's objective is to toggle
+						lights to turn all of the lights off with button presses,
+						preferably in as few presses as possible.</p>
 				</div>
-			</button>
-			<div class="coll_content">
-				<h2>Lights Out Android App</h2>
-				<p class="tabbedP">My Lights Out app is based on the 1995
-					handheld electronic game by Tiger Electronics of the same name. In
-					the 1995 version, the game board consists of a 5x5 grid of lights,
-					and then when game starts, a seemingly random pattern of lights is
-					presented to the player. The player's objective is to toggle lights
-					to turn all of the lights off with button presses, preferably in as
-					few presses as possible.</p>
-
-				<p class="tabbedP">When a light is pressed, the on/off state of
-					the pressed light and all directly adjacent lights are toggled.</p>
-
-				<div class="centeredImg">
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">When a light is pressed, the on/off state of
+						the pressed light and all directly adjacent lights are toggled.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 ml-auto">
 					<img
 						src="../Images/Projects/Java/toggle1.jpg"
 						alt="A board before a button press"
-					> <img
+					>
+				</div>
+				<div class="col-sm-5 mr-auto">
+					<img
 						src="../Images/Projects/Java/toggle2.jpg"
 						alt="A board after a button press"
 					>
 				</div>
-
-				<p class="tabbedP">Although similar handheld games and apps
-					already exists. There are two things that I belive make my app
-					unique: variable board sizes, and mathematical optimization.</p>
-
-				<h3>Variable Board Sizes</h3>
-				<p class="tabbedP">
-					Many of the apps availiable today only feature a single board size,
-					usually the classic 5x5. This makes the app less challenging once
-					the user finds a reliable method for solving the single board size
-					and limits the number of possible scrambles. For the 5x5 board,
-					there are 2<sup>23</sup>=8388608 distinct ways to create a
-					scramble. However, there are at least 4 different ways to create
-					any given scramble, leaving at most 2<sup>19</sup>=524288 unique
-					scrambles. All of these scrambles can be solved in at most 15
-					button presses.
-				</p>
-
-				<p class="tabbedP">My app allows user to play any board size
-					from the trivial 1x1 to the daunting 10x10, providing orders of
-					magnitude more unique scrambles than the 5x5 alone. I would have
-					allowed even larges sizes, but the buttons were getting too small
-					to reliably press.</p>
-				<div class="centeredImg">
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">Although similar handheld games and apps
+						already exists. There are two things that I belive make my app
+						unique: variable board sizes, and mathematical optimization.</p>
+				</div>
+			</div>
+			<h4 class="page-subsection-heading text-uppercase text-black">Variable
+				Board Sizes</h4>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						Many of the apps availiable today only feature a single board
+						size, usually the classic 5x5. This makes the app less challenging
+						once the user finds a reliable method for solving the single board
+						size and limits the number of possible scrambles. For the 5x5
+						board, there are 2<sup>23</sup>=8388608 distinct ways to create a
+						scramble. However, there are at least 4 different ways to create
+						any given scramble, leaving at most 2<sup>19</sup>=524288 unique
+						scrambles. All of these scrambles can be solved in at most 15
+						button presses.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">My app allows user to play any board size from
+						the trivial 1x1 to the daunting 10x10, providing orders of
+						magnitude more unique scrambles than the 5x5 alone. I would have
+						allowed even larges sizes, but the buttons were getting too small
+						to reliably press.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 ml-auto">
 					<img
 						src="../Images/Projects/Java/levelSelect.jpg"
 						alt="Level selection"
-					> <img
+					>
+				</div>
+				<div class="col-sm-5 mr-auto">
+					<img
 						src="../Images/Projects/Java/10x10.jpg"
 						alt="A scrambled 10x10 board"
 					>
 				</div>
-				<p class="tabbedP">
-					In fact, just the 10x10 size has 2<sup>100</sup>, over 1 nonillion
-					unique scrambles. For comparision, if each unique board were
-					printed on a sheet of paper .1mm thick, the stack of paper would
-					reach to the edge of the observable universe 13.4 billion light
-					years away.
-				</p>
-
-				<p class="tabbedP">User have yet another dimension opened to
-					them in being able to play by only pressing buttons that are
-					already on. Although all puzzles that can be solved normally can
-					also be solved by only pressing on buttons, it makes for a much
-					more difficult challenge because the way that most learn to solve
-					the 5x5 board requires pressing off buttons.</p>
-
-				<h3>Mathematical Optimization</h3>
-				<p class="tabbedP">
-					I already mentioned how any 5x5 board can be solved in at most 15
-					button presses. Puzzle enthuiasts and recreational mathematicians
-					like Jaap Scherphuis proved this to be the case. Jaap in particular
-					uses a method of treating solving the board as a linear algebra
-					problem that is described by mathematician Marlow Anderson and Todd
-					Feil in their 1998 paper <i>Turning Lights Out with Linear
-						Algebra</i>.
-				</p>
-
-				<p class="tabbedP">I implemented Andserson and Feil's method of
-					row-reducing matricies modulo 2 to determine the minimum number of
-					clicks needed to solve any given board. This way users can know how
-					their solve is compared to the absolute best they could do.</p>
-				<img
-					src="../Images/Projects/Java/10x10.jpg"
-					alt="The minimum for this 10x10 board is 42 clicks"
-					style="display: block; margin-left: auto; margin-right: auto; max-height: 25em;"
-				>
-
-				<p class="tabbedP">Although this value is only one on a screen,
-					I think it provides valuable information to users about a given
-					puzzle's difficults and their own solving abilities that no other
-					app has.</p>
-
-				<p class="tabbedP">
-					Although all of the features I talked about are already
-					implemented, I am still developing the app using Java in Android
-					Studio. In the meantime, you can play an <a
-						href="../LightsOut/lightsOut.html"
-					>online version</a> that doesn't have the minimum clicks implemented
-					that I created using JavaScript.
-				</p>
 			</div>
-
-			<button class="collapsible">
-				<div class="project_listing">
-					<span class="project_title">Computer Vision Security Camera</span>
-					<span class="project_language">Python</span>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						In fact, just the 10x10 size has 2<sup>100</sup>, over 1 nonillion
+						unique scrambles. For comparision, if each unique board were
+						printed on a sheet of paper 0.1mm thick, the stack of paper would
+						reach to the edge of the observable universe 13.4 billion light
+						years away.
+					</p>
 				</div>
-			</button>
-			<div class="coll_content">
-				<h2>Computer Vision Security Camera</h2>
-				<p class="tabbedP">This application started when my high-school
-					engineering class had just moved into a larger building. It was
-					common for expensive tools to get lost or stolen, so we needed a
-					way to find these items and identify any culprits.</p>
-				<p class="tabbedP">Although the new building already had some
-					installed security cameras, there were still many blind spots, and
-					footage could only be saved up to one week, meaning that if a tool
-					were discovered missing after one week had passed, the traditional
-					security cameras would not be useful in recovering it. My solution
-					was to use Raspberry Pi's, which are small, cheap, and single-board
-					computers, as "smart"" security cameras. These devices would be
-					cheaper and easier to install than traditional cameras, and they
-					could be more easily moved to another location if needed.</p>
-				<p class="tabbedP">My first goal was to cut down on the storage
-					space needed for footage without sacrificing picture quality or
-					other valuable information. My solution was for the smart cameras
-					to record video only when they detect motion. This way, disk space
-					wouldn't be wasted on recording hours of the exact scene, but would
-					still catch thieves as they walked into view.</p>
-				<p class="tabbedP">
-					This method worked extremely well. In many cases, hours of video
-					was cut down to mere minutes. However, changing lighting conditions
-					throughout the day could add noise to the image that would be
-					mistaken for motion. I decided to fix this problem by having a
-					threshold for motion that could be calibrated and changed
-					automatically throughout the day. However, I wanted to make sure
-					thieves would still be recorded, regardless of the lighting
-					conditions. This is where computer vision came to my aid. Using
-					Python's <a href="https://opencv.org">OpenCV</a> library, I
-					searched the video feed for faces. If any faces were detected, a
-					green rectangle would be drawn around the face in the video feed,
-					an image of the frame containing the face would be saved, and the
-					camera would wait to recalibrate until no faces were detected.
-				</p>
-				<p class="tabbedP">
-					Taken from the camera's results is an image below of me walking
-					through the frame, the camera has seen my face and is recording
-					video. <img
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">Users have yet another dimension opened to them
+						in being able to play by only pressing buttons that are already
+						on. Although all puzzles that can be solved normally can also be
+						solved by only pressing on buttons, it makes for a much more
+						difficult challenge because the way that most learn to solve the
+						5x5 board requires pressing off buttons.</p>
+				</div>
+			</div>
+			<h4 class="page-subsection-heading text-uppercase text-black">Mathematical
+				Optimization</h4>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						I already mentioned how any 5x5 board can be solved in at most 15
+						button presses. Puzzle enthuiasts and recreational mathematicians
+						like Jaap Scherphuis proved this to be the case. Jaap in
+						particular uses a method of treating solving the board as a linear
+						algebra problem that is described by mathematician Marlow Anderson
+						and Todd Feil in their 1998 paper <em>Turning Lights Out with
+							Linear Algebra</em>.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">I implemented Andserson and Feil's method of
+						row-reducing matricies modulo 2 to determine the minimum number of
+						clicks needed to solve any given board. This way users can know
+						how their solve is compared to the absolute best they could do.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col ml-auto">
+					<img
+						src="../Images/Projects/Java/10x10.jpg"
+						alt="The minimum for this 10x10 board is 42 clicks"
+						style="display: block; margin-left: auto; margin-right: auto; max-height: 25em;"
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">Although this value is only one on a screen, I
+						think it provides valuable information to users about a given
+						puzzle's difficults and their own solving abilities that no other
+						app has.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						The app is currently availiable for free download on the Google
+						Play Store. If you have an iOS device or would like to play on a
+						PC, you can play an <a href="../LightsOut/lightsOut.html">online
+							version</a> that doesn't have the minimum clicks implemented that I
+						created using JavaScript.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CV Security Camera -->
+	<section
+		class="page-section bg-light text-black mb-0"
+		id="project-2"
+	>
+		<div class="container">
+			<h2
+				class="page-section-heading text-center text-uppercase text-black"
+			>Computer Vision Security Camera</h2>
+			<div class="row">
+				<div class="col">
+					<p class="lead">This application started when my high-school
+						engineering class had just moved into a larger building. It was
+						common for expensive tools to get lost or stolen, so we needed a
+						way to find these items and identify any culprits.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">Although the new building already had some
+						installed security cameras, there were still many blind spots, and
+						footage could only be saved up to one week, meaning that if a tool
+						were discovered missing after one week had passed, the traditional
+						security cameras would not be useful in recovering it. My solution
+						was to use Raspberry Pi's, which are small, cheap, and
+						single-board computers, as "smart" security cameras. These devices
+						would be cheaper and easier to install than traditional cameras,
+						and they could be more easily moved to another location if needed.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">My first goal was to cut down on the storage
+						space needed for footage without sacrificing picture quality or
+						other valuable information. My solution was for the smart cameras
+						to record video only when they detect motion. This way, disk space
+						wouldn't be wasted on recording hours of the exact scene, but
+						would still catch thieves as they walked into view.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						This method worked extremely well. In many cases, hours of video
+						was cut down to mere minutes. However, changing lighting
+						conditions throughout the day could add noise to the image that
+						would be mistaken for motion. I decided to fix this problem by
+						having a threshold for motion that could be calibrated and changed
+						automatically throughout the day. However, I wanted to make sure
+						thieves would still be recorded, regardless of the lighting
+						conditions. This is where computer vision came to my aid. Using
+						Python's <a
+							href="https://opencv.org/"
+							target="_blank"
+						>OpenCV</a> library, I searched the video feed for faces. If any
+						faces were detected, a green rectangle would be drawn around the
+						face in the video feed, an image of the frame containing the face
+						would be saved, and the camera would wait to recalibrate until no
+						faces were detected.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col ml-auto">
+					<img
 						src="../Images/Projects/Python/15-06-51.jpg"
 						alt="Security camera feed with green box around a face"
-						style="display: block; margin-left: auto; margin-right: auto;"
+						style="display: block; margin-left: auto; margin-right: auto; max-height: 25em;"
 					>
-				</p>
-				<p class="tabbedP">
-					Code for this project is available on GitHub 
-                    <a href="https://github.com/wmboyles/SmartSecurityCamera">here</a>.
-				</p>
-			</div>
-			<button class="collapsible">
-				<div class="project_listing">
-					<span class="project_title">Personal Website</span> <span
-						class="project_language"
-					>HTML/CSS/JS</span>
 				</div>
-			</button>
-			<div class="coll_content">
-				<h2>Personal Website</h2>
-				<img
-					class="collTitleImg"
-					src="../Images/Projects/HTML-CSS-JS/HTML-CSS-JS.webp"
-					alt="HTML, CSS and JavaScript logos"
-				>
-				<!-- Note: INSERT DOMAIN HERE text is replaced by JavaScript -->
-				<p class="tabbedP">
-					I created <a
-						class="myDomain"
-						href="../Index/index.html"
-					>INSERT DOMAIN HERE</a> because I felt that my front-end development
-					skills were lacking. Front-end development is taught (if at all) in
-					most computer science curriculums as an afterthought. However, I
-					believe that just as students are taught to make clean, legible,
-					and well-documented code through comments and programming paradigms
-					(like object-oriented), they should also be taught how to make
-					clean, navigable, and intuitive front ends. After all, this is the
-					portion of a product with which most end-users will interact.
-				</p>
-				<p class="tabbedP">
-					<a
-						class="myDomain"
-						href="..Index/index.html"
-					>INSERT DOMAIN HERE</a> is meant to meet these design criteria and to
-					be a place to talk about myself and my experience more in-depth
-					than in a resume. Although I wrote every line of HTML, CSS, and
-					JavaScript myself, I took parts from online resources like <a
-						href="https://www.youtube.com/channel/UCki4IDK86E6_pDtptmsslow"
-					>YouTube tutorials</a> and <a href="https://www.w3schools.com/">Web
-						Developer sites</a>.
-				</p>
-				<p class="tabbedP">
-					Although you are already viewing the website, all the code is
-					available <a href="https://github.com/wmboyles/wmboyles">here</a>.
-				</p>
 			</div>
-			<button class="collapsible">
-				<div class="project_listing">
-					<span class="project_title">Multivariable Calculus Summary</span> <span
-						class="project_language"
-					>LaTeX</span>
-				</div>
-			</button>
-			<div class="coll_content">
-				<h2>Multivariable Calculus Summary</h2>
-				<p class="tabbedP">While taking a summer physics class dealing
-					with Maxwell's Equations, which are written in the language of
-					multivariable calculus, I realized how much of the subject I had
-					forgotten, despite taking a multivariable calculus class (Calc III)
-					only nine months earlier. I also knew that several of my friends
-					who would be taking Calc III in the coming semester had already
-					requested my advice about the class or to look at my handwritten
-					notes, but I like to have my notes as a reference.</p>
-				<p class="tabbedP">
-					I decided to digitize my notes using <a
-						href="https://www.latex-project.org/"
-					>LaTeX</a> in a textbook structure: chapters with sections and
-					sub-sections. I would also add better visual aids than my
-					hurriedly-made sketches using images from textbooks and other
-					online resources. This way, I could more easily share clear,
-					legible notes, keep the original, and refresh my understanding in
-					the process. By the time I was finished, I had condensed the
-					several-thousand page textbook into an <a
-						href="../Documents/Projects/MA242_Summary.pdf"
-						target="_blank"
-					>81-page guide</a> that still contained scores of visual aids and
-					many full-length proofs. I feel much more confident in my
-					abilities, and I think my friends will be able to learn from me
-					much more easily.
-				</p>
-				<p class="tabbedP">
-					After completing my notes, I posted the results to <a
-						href="https://www.reddit.com/r/math/"
-					>r/math</a>, an online community of math enthusiasts. To my surprise,
-					<a
-						href="https://www.reddit.com/r/math/comments/crfqhz/i_made_a_shortish_summary_of_multivariable/"
-					>my post</a> was incredibly well-received. Several users suggested
-					open-sourcing my work so that they and others in the community
-					could make corrections and suggest additions.
-				</p>
-				<p class="tabbedP">
-					So, I spent much of the next two weeks converting my
-					GoogleDoc-LaTeX hybrid into a pure LaTeX document. <a
-						href="https://github.com/wmboyles/Calc3-Summary"
-					>The repo</a> is available and has already taken several
-					contributions.
-				</p>
-			</div>
-			<button class="collapsible">
-				<div class="project_listing">
-					<span class="project_title">Twitter Bad Words Count Bot</span> <span
-						class="project_language"
-					>Python</span>
-				</div>
-			</button>
-			<div class="coll_content">
-				<h2>Twitter Bad Words Count Bot</h2>
-				<p class="tabbedP">The language that people choose to use can
-					provide insight into their background and character. Although
-					reasonable people can vhemently disagree, a good indicator of
-					mutual respect between two parties is that neither resorts to
-					vulgarity. Inspired by other bots on platforms like Reddit and
-					Discord, that could provide infrmation on the lauguage that users
-					have used and play a part in keeping online discussion civil, I set
-					out to create a Twitter bot that, when requested by another Twitter
-					user, would provide information on vulgarities that users have
-					recently tweeted.</p>
-
-				<blockquote class="twitter-tweet tw-align-center">
-					<p
-						lang="en"
-						dir="ltr"
-					>
-						Bad Word Count Bot Report for <a
-							href="https://twitter.com/BadWordsMovie?ref_src=twsrc%5Etfw"
-						>@badwordsmovie</a>&#39;s last 100 tweets<br>bitch - 3<br>hell
-						- 3<br>fucking - 2<br>fuck - 2<br>ass - 1<br>cunt
-						- 1<br>fucker - 1<br>damn - 1<br>tits - 1<br>asshole
-						- 1<br>shit - 1
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						Code for this project is available on <a
+							href="https://github.com/wmboyles/SmartSecurityCamera"
+							target="_blank"
+						>GitHub</a>
 					</p>
-					&mdash; Bad Word Count Bot (@BadWordCount) <a
-						href="https://twitter.com/BadWordCount/status/1181932968371200007?ref_src=twsrc%5Etfw"
-					>October 9, 2019</a>
-				</blockquote>
-				<script
-					async
-					src="https://platform.twitter.com/widgets.js"
-					charset="utf-8"
-				></script>
-
-				<p class="tabbedP">
-					I wrote the bot in Python, following basic online video tutorials
-					that detailed how to work with the Twitter API through the python
-					library <a href="https://www.tweepy.org/">tweepy</a>. Although
-					these tutorials showed me how to detect when a user had @ mentioned
-					the bot and how to respond to tweets, the real challenge and
-					substance of this bot came from accesing another user's tweets,
-					parsing through them to find bad words, and reporting the frequency
-					of these bad words within the 280-character limit of a Tweet.
-				</p>
-
-
-				<p class="tabbedP">
-					After finding seperate answers on how to access a given user's
-					tweets, I got to work on detecting bad words. Although I found
-					several GitHub repos that contained lists of bad words, many were
-					too comprehensive, marking even words with possible negative
-					connotationsm, like the names of political parties, as bad. I
-					eventually settled on a <a
-						href="https://github.com/RobertJGabriel/Google-profanity-words"
-					>list</a> of 444 common words collected by Google. This list was
-					comprehensive enough to cover most bad word, and even common
-					variations like swapping a letter for a number. On the
-					implementation side, I took advantage of Python's built-in
-					dictionary functionality to find matching bad words in a user's 100
-					most recent tweets and rank them by frequency.
-				</p>
-
-				<p class="tabbedP">
-					For deployment, I settled on a free service reccomended in one of
-					the simple video tutorials, <a
-						href="https://www.pythonanywhere.com"
-					>PythonAnywhere</a>. I know that this solution is probably not best
-					practice, but I struggled with trying to use other platforms like <a
-						href="https://www.heroku.com"
-					>Heroku</a> because I could not work out compatability issues or find
-					documentation detailed enough to fix issues.
-				</p>
-
-				<p class="tabbedP">
-					The bot's Twitter handle is <a
-						href="https://twitter.com/BadWordCount"
-					>@BadWordCount</a>. Go ahead and try it out on some of your favorite
-					twitter users. The code that the bot is running is on my <a
-						href="https://github.com/wmboyles/BadWordsBot"
-					>GitHub</a>. Feel free to look at some of the other projects I've
-					done while you're there.
-				</p>
-			</div>
-			<button class="collapsible">
-				<div class="project_listing">
-					<span class="project_title">Linear Algebra Library</span> <span
-						class="project_language"
-					>Java</span>
 				</div>
-			</button>
-			<div class="coll_content">
-				<h2>Linear Algebra Library</h2>
-				<p class="tabbedP">I originally started working on this project
-					in high school to practice array manipulation in preparation for
-					the AP Computer Science A exam. My main goal at that point was to
-					be able to find the reduced-row echelon form of a given array of
-					doubles, allowing me to solve linear systems of equations.</p>
-				<p class="tabbedP">As my knowledge grew regarding
-					object-oriented programming and the applications of matrices to
-					structures like networks, so did this project. I added a "Vector"
-					class where one could determine vector information (e.g.,
-					cross-product and dot-product) or use these Vectors to populate a
-					Matrix. One major change I made was making the "Matrix" class
-					generically-typed, with "BinaryMatrix" and "NumericMatrix"
-					extending the Matrix class and adding additional data type-specific
-					functionality. For example, a specific application of the
-					BinaryMatrix class is the ability to represent and determine
-					qualities (e.g., reflexive, transitive, trichotomous) of binary
-					relations; the DoubleMatrix class can solve linear systems of
-					equations like originally intended.</p>
-				<p class="tabbedP">I also learned the importance of unit testing
-					and code coverage. Currently, all fully-implemented classes have
-					100% method coverage, at least 90% line coverage, and all tests
-					passing. I will continue to add more unit tests and maintain high
-					coverage as I implement greater functionality.</p>
-				<p class="tabbedP">
-					Below is a recent coverage report. All concrete classes, except
-					those in the graph package and NumericMatrix, have more than 95%
-					line coverage. Classes in the graph package are not yet ready for a
-					round of testing, and NumericMatrix may soon be deleted, depending
-					on whether this library will support matrices of non-numerical
-					values. <img
-						class="collTitleImg"
+			</div>
+		</div>
+	</section>
+
+	<!-- Personal Website -->
+	<section
+		class="page-section text-black mb-0"
+		id="project-3"
+	>
+		<div class="container">
+			<h2
+				class="page-section-heading text-center text-uppercase text-black"
+			>Personal Website</h2>
+			<div class="row">
+				<div class="col">
+					<p class="lead">I created wmboyles.com because I felt that my
+						front-end development skills were lacking. Front-end development
+						is taught (if at all) in most computer science curriculums as an
+						afterthought. However, I believe that just as students are taught
+						to make clean, legible, and well-documented code through comments
+						and programming paradigms (like object-oriented), they should also
+						be taught how to make clean, navigable, and intuitive front ends.
+						After all, this is the portion of a product with which most
+						end-users will interact.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">wmboyles.com is meant to meet these design
+						criteria and to be a place to talk about myself and my experience
+						more in-depth than in a resume. I didn't use any hand-holding
+						website builders: each line was written by me, with the help of
+						documentation.</p>
+				</div>
+			</div>
+			<h4 class="page-subsection-heading text-uppercase text-black">Version
+				2</h4>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						Although the original version of my site was passable, the code
+						was messy, images were difficult to deal with, and the website did
+						not work well on mobile. With these issues in mind, I resigned the
+						site to use <a
+							href="https://getbootstrap.com/"
+							target="_blank"
+						>Bootstrap </a> to give the site a cleaner look and help in
+						addressing mobile issues.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">In the future, I plan on using JavaScript
+						frameworks like React or Angular to build elements more quickly
+						and cleanly. With all the text from all the projects on this page,
+						the html file is many lines and can be diffucult to edit.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						Although you are already viewing the website, all the code is
+						available on <a href="https://github.com/wmboyles/wmboyles">GitHub</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section
+		class="page-section bg-light text-black mb-0"
+		id="project-4"
+	>
+		<div class="container">
+			<h2
+				class="page-section-heading text-center text-uppercase text-black"
+			>Multivariable Calculus Summary</h2>
+
+			<div class="row">
+				<div class="col">
+					<p class="lead">While taking a summer physics class dealing
+						with Maxwell's Equations, which are written in the language of
+						multivariable calculus, I realized how much of the subject I had
+						forgotten, despite taking a multivariable calculus class (Calc
+						III) only nine months earlier. I also knew that several of my
+						friends who would be taking Calc III in the coming semester had
+						already requested my advice about the class or to look at my
+						handwritten notes, but I like to have my notes as a reference.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						I decided to digitize my notes using <a
+							href="https://www.latex-project.org/"
+							target="_blank"
+						>LaTeX</a> in a textbook structure: chapters with sections and
+						sub-sections. I would also add better visual aids than my
+						hurriedly-made sketches using images from textbooks and other
+						online resources. This way, I could more easily share clear,
+						legible notes, keep the original, and refresh my understanding in
+						the process. By the time I was finished, I had condensed the
+						several-thousand page textbook into an <a
+							href="../Documents/Projects/MA242_Summary.pdf"
+							target="_blank"
+						>81-page guide</a> that still contained scores of visual aids and
+						many full-length proofs. I feel much more confident in my
+						abilities, and I think my friends will be able to learn from me
+						much more easily.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						After completing my notes, I posted the results to <a
+							href="https://www.reddit.com/r/math/"
+							target="_blank"
+						>r/math</a>, an online community of math enthusiasts. To my
+						surprise, <a
+							href="https://www.reddit.com/r/math/comments/crfqhz/i_made_a_shortish_summary_of_multivariable/"
+							target="_blank"
+						>my post</a> was incredibly well-received. Several users suggested
+						open-sourcing my work so that they and others in the community
+						could make corrections and suggest additions.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						So, I spent much of the next two weeks converting my
+						GoogleDoc-LaTeX hybrid into a pure LaTeX document. <a
+							href="https://github.com/wmboyles/Calc3-Summary"
+							target="_blank"
+						>The repo</a> is available and has already taken several
+						contributions. I am especially looking to find high-quality
+						figures to replace the ones that I took from online or from my
+						textbook.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Twitter Bad Words Bot -->
+	<section
+		class="page-section text-black mb-0"
+		id="project-5"
+	>
+		<div class="container">
+			<h2
+				class="page-section-heading text-center text-uppercase text-black"
+			>Twitter Bad Words Bot</h2>
+			<div class="row">
+				<div class="col">
+					<p class="lead">The specific words that people choose to use
+						can provide insight into their background and character. Although
+						reasonable people can vhemently disagree, a good indicator of
+						mutual respect between two parties is that neither resorts to
+						vulgarity. Inspired by other bots on platforms like Reddit and
+						Discord, that could provide information on the lauguage that users
+						have used and play a part in keeping online discussion civil, I
+						set out to create a Twitter bot that, when requested by another
+						Twitter user, would provide information on vulgarities that users
+						have recently tweeted.</p>
+				</div>
+			</div>
+			<blockquote class="twitter-tweet tw-align-center">
+				<p
+					lang="en"
+					dir="ltr"
+				>
+					Bad Word Count Bot Report for <a
+						href="https://twitter.com/BadWordsMovie?ref_src=twsrc%5Etfw"
+					>@badwordsmovie</a>&#39;s last 100 tweets<br>bitch - 3<br>hell
+					- 3<br>fucking - 2<br>fuck - 2<br>ass - 1<br>cunt
+					- 1<br>fucker - 1<br>damn - 1<br>tits - 1<br>asshole
+					- 1<br>shit - 1
+				</p>
+				&mdash; Bad Word Count Bot (@BadWordCount) <a
+					href="https://twitter.com/BadWordCount/status/1181932968371200007?ref_src=twsrc%5Etfw"
+				>October 9, 2019</a>
+			</blockquote>
+			<script
+				async
+				src="https://platform.twitter.com/widgets.js"
+				charset="utf-8"
+			></script>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						I wrote the bot in Python, following basic online video tutorials
+						that detailed how to work with the Twitter API through the Python
+						library <a
+							href="https://www.tweepy.org/"
+							target="_blank"
+						>tweepy</a>. Although these tutorials showed me how to detect when a
+						user had @ mentioned the bot and how to respond to tweets, the
+						real challenge and substance of this bot came from accesing
+						another user's tweets, parsing through them to find bad words, and
+						reporting the frequency of these bad words within the
+						280-character limit of a Tweet.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						After finding seperate answers on how to access a given user's
+						tweets, I got to work on detecting bad words. Although I found
+						several GitHub repos that contained lists of bad words, many were
+						too comprehensive, marking even words with possible negative
+						connotations, like the names of political parties, as bad. I
+						eventually settled on a <a
+							href="https://github.com/RobertJGabriel/Google-profanity-words"
+							target="_blank"
+						>list</a> of 444 common words collected by Google. This list was
+						comprehensive enough to cover most bad word, and even common
+						variations like swapping a letter for a number. On the
+						implementation side, I took advantage of Python's built-in
+						dictionary functionality to find matching bad words in a user's
+						100 most recent tweets and rank them by frequency.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						For deployment, I settled on a free service reccomended in one of
+						the simple video tutorials, <a
+							href="https://www.pythonanywhere.com/"
+							target="_blank"
+						>PythonAnywhere</a>. I know that this solution is probably not best
+						practice, and I still have issues reguarding reliability because
+						PythonAnywhere periodically updates their servers and does not
+						restart any running scripts that were stopped. However, I
+						struggled with trying to use other platforms like <a
+							href="https://www.heroku.com/"
+							target="_blank"
+						>Heroku</a> because I could not work out compatability issues or
+						find documentation detailed enough to fix issues.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						The bot's Twitter handle is <a
+							href="https://twitter.com/BadWordCount"
+							, target="_blank"
+						>@BadWordCount</a>. Go ahead and try it out on some of your favorite
+						twitter users. The tweet shown above is from a movie starring
+						Jason Bateman. The code that the bot is running is on my <a
+							href="https://github.com/wmboyles/BadWordsBot"
+							target="_blank"
+						>GitHub</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Linear Algebra Library -->
+	<section
+		class="page-section bg-light text-black mb-0"
+		id="project-6"
+	>
+		<div class="container">
+			<h2
+				class="page-section-heading text-center text-uppercase text-black"
+			>Linear Algebra Libarary</h2>
+			<div class="row">
+				<div class="col">
+					<p class="lead">I originally started working on this project in
+						high school to practice array manipulation in preparation for the
+						AP Computer Science A exam. My main goal at that point was to be
+						able to find the reduced-row echelon form of a given array of
+						doubles, allowing me to solve linear systems of equations.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">As my knowledge grew regarding object-oriented
+						programming and the applications of matrices to structures like
+						networks, so did this project. I added a "Vector" class where one
+						could determine vector information (e.g., cross-product and
+						dot-product) or use these Vectors to populate a Matrix. One major
+						change I made was making the "Matrix" class generically-typed,
+						with "BinaryMatrix" and "NumericMatrix" extending the Matrix class
+						and adding additional data type-specific functionality. For
+						example, a specific application of the BinaryMatrix class is the
+						ability to represent and determine qualities (e.g., reflexive,
+						transitive, trichotomous) of binary relations; the DoubleMatrix
+						class can solve linear systems of equations like originally
+						intended.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">As my knowledge grew regarding object-oriented
+						programming and the applications of matrices to structures like
+						networks, so did this project. I added a "Vector" class where one
+						could determine vector information (e.g., cross-product and
+						dot-product) or use these Vectors to populate a Matrix. One major
+						change I made was making the "Matrix" class generically-typed,
+						with "BinaryMatrix" and "NumericMatrix" extending the Matrix class
+						and adding additional data type-specific functionality. For
+						example, a specific application of the BinaryMatrix class is the
+						ability to represent and determine qualities (e.g., reflexive,
+						transitive, trichotomous) of binary relations; the DoubleMatrix
+						class can solve linear systems of equations like originally
+						intended.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">I also learned the importance of unit testing
+						and code coverage. Currently, all fully-implemented classes have
+						100% method coverage, at least 90% line coverage, and all tests
+						passing. I will continue to add more unit tests and maintain high
+						coverage as I implement greater functionality.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">Below is a recent coverage report. All concrete
+						classes, except those in the graph package and NumericMatrix, have
+						more than 95% line coverage. Classes in the graph package are not
+						yet ready for a round of testing, and NumericMatrix may soon be
+						deleted, depending on whether this library will support matrices
+						of non-numerical values.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col ml-auto">
+					<img
 						src="../Images/Projects/Java/LinAlg_Coverage.PNG"
 						alt="Eclipse coverage report of Linear Alebra library"
+						style="display: block; margin-left: auto; margin-right: auto; max-height: 25em;"
 					>
-				</p>
-				<p class="tabbedP">In the future, I want to continue adding
-					functionality for important objects in mathematics and computer
-					science that are commonly represented as matrices. This includes
-					items like Markov Chains and graphs. I am especially excited about
-					developing weighted and directed graphs (digraphs) for applications
-					like pathfinding and optimization.</p>
-				<p class="tabbedP">
-					Code and JavaDoc for the Linear Algebra library is available <a
-						href="https://github.com/wmboyles/LinearAlgebra"
-					>here</a>.
-				</p>
+				</div>
 			</div>
-			<button class="collapsible">
-				<div class="project_listing">
-					<span class="project_title">Computer-Generated Images</span> <span
-						class="project_language"
-					>Python</span>
+			<div class="row">
+				<div class="col">
+					<p class="lead">In the future, I want to continue adding
+						functionality for important objects in mathematics and computer
+						science that are commonly represented as matrices. This includes
+						items like Markov Chains and graphs. I am especially excited about
+						developing weighted and directed graphs (digraphs) for
+						applications like pathfinding and optimization.</p>
 				</div>
-			</button>
-			<div class="coll_content">
-				<h2>Computer-Generated Images</h2>
-				<p class="tabbedP">
-					Visuals have always been an effective and fun way for me to learn,
-					especially when the topic is abstract. The <a
-						href="https://docs.python.org/2/library/tkinter.html"
-					>tkinker</a>, <a
-						href="https://docs.python.org/3.3/library/turtle.html?highlight=turtle"
-					>turtle</a>, and <a href="https://python-pillow.org/">Pillow</a>
-					Python GUI libraries allow for simple image manipulation, down to
-					the pixel level.
-				</p>
-
-				<p class="tabbedP">For example, the left image below visualizes
-					how numbers change after a given number of iterations in the
-					unsolved Collatz conjecture; it has been my phone background for
-					several years. For a more artistic visualization, see the right
-					image below, which applies a smeared watercolor effect.</p>
-				<div class="imgCollage">
-					<div class="collageRow">
-						<img
-							class="collageCol"
-							src="../Images/Projects/Python/Collatz1080.bmp"
-							alt="Python-created image based on the Collatz conjecture"
-						> <img
-							class="collageCol"
-							src="../Images/Projects/Python/CollatzWC2.bmp"
-							alt="Python-crated image based on the Collatz conjecture with watercolor streaks"
-						>
-					</div>
-				</div>
-
-				<p class="tabbedP">One can also visualize more useful and common
-					mathematical ideas. The left image below shows how horizontal and
-					vertical lines in the complex plane are transformed under e^(1/z).
-					One can clearly see concentric cardioids. The right image below
-					shows the graph of several common functions, like sine and the
-					natural logarithm.</p>
-				<div class="imgCollage">
-					<div class="collageRow">
-						<img
-							class="collageCol"
-							src="../Images/Projects/Python/e^(z^-1).bmp"
-							alt="Python-created image of the complex mapping of e^(1/z)"
-						> <img
-							class="collageCol"
-							src="../Images/Projects/Python/pillowfunctions.bmp"
-							alt="Python-created image of graphed functions"
-						>
-					</div>
-				</div>
-
-				<p class="tabbedP">The Turtle library allows one to trace out
-					colored paths in an image, like the rainbow spiral no the left
-					below. Getting a little more advanced, one can create recursive
-					shapes, like the Koch Snowflake, Serpinski Triangle, and dragon
-					curve, shown below.</p>
-				<div class="imgCollage">
-					<div class="collageRow">
-						<img
-							class="collageCol"
-							src="../Images/Projects/Python/Capture10.PNG"
-							alt="Python-created image of hexagonal rainbow sprial"
-						> <img
-							class="collageCol"
-							src="../Images/Projects/Python/snowflake.PNG"
-							alt="Python-created image of Koch Snowflake"
-						>
-					</div>
-					<div class="collageRow">
-						<img
-							class="collageCol"
-							src="../Images/Projects/Python/serpinski-2.PNG"
-							alt="Python-created image of Serpinski Triangle"
-						> <img
-							class="collageCol"
-							src="../Images/Projects/Python/dragonCurve-1.PNG"
-							alt="Python-created image of dragon curve"
-						>
-					</div>
-				</div>
-
-				<p class="tabbedP">One can also make other startlingly complex
-					images from a simple set of recursive rules. The below images,
-					known colleteively as "strange attractors," show a tree, Barnsley
-					Fern, pine branch and piece of tall grass. The procedural
-					generation techniques used to create these images, known as
-					L-systems, are used in many of today's popular video games to make
-					random, realistic terrain and plants.</p>
-				<div class="imgCollage">
-					<div class="collageRow">
-						<img
-							class="collageCol"
-							src="../Images/Projects/Python/30degTree.PNG"
-							alt="Python-created image of 30-degree binary tree"
-						> <img
-							class="collageCol"
-							src="../Images/Projects/Python/barnsleyFern.PNG"
-							alt="Python created image of Barnsley Fern"
-						>
-					</div>
-					<div class="collageRow">
-						<img
-							class="collageCol"
-							src="../Images/Projects/Python/PineBranch-1.PNG"
-							alt="Python-created image of L-system resembling pine branch"
-							style="margin: -90px 0px;"
-						> <img
-							class="collageCol"
-							src="../Images/Projects/Python/TallGrass1-1.PNG"
-							alt="Python-created image of L-system resembling tall grass"
-						>
-					</div>
-				</div>
-
-				<p class="tabbedP">
-					The images above and many others that I made in Python, as well as
-					the code used to create them, are available on GitHub <a href="">here</a>.
-					Code and results for this and other Python projects are available
-					on GitHub <a href="https://github.com/wmboyles/Python-Projects">here</a>.
-				</p>
 			</div>
-			<!-- End computer-generated images section -->
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						Code and JavaDoc for the Linear Algebra library is available on <a
+							href="https://github.com/wmboyles/LinearAlgebra"
+							target="_blank"
+						>GitHub</a>.
+					</p>
+				</div>
+			</div>
 		</div>
-		<!-- End personal projects list -->
+	</section>
 
-		<!-- 		<div class="project_list_description"> -->
-		<!-- 			<hr> -->
-		<!-- 			<h2>School Projects</h2> -->
-		<!-- 			<p>All projects listed below are school projects that I completed -->
-		<!-- 				as part of a graded assignment for a class. Due to the school's -->
-		<!-- 				ownership of the assignment and some code provided in the -->
-		<!-- 				assignment, I am unable to provide publicly accessible GitHub repos.</p> -->
-		<!-- 		</div> -->
-	</div>
-	<!-- End body wrapper div -->
+	<!-- Computer Generated Art -->
+	<section
+		class="page-section text-black mb-0"
+		id="project-7"
+	>
+		<div class="container">
+			<h2
+				class="page-section-heading text-center text-uppercase text-black"
+			>Computer Generated Art</h2>
 
-	<!-- JavaScript for controlling collapsible menu behavior. -->
-	<script src="./Projects.js"></script>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						Visuals have always been an effective and fun way for me to learn,
+						especially when the topic is abstract. The <a
+							href="https://docs.python.org/2/library/tkinter.html"
+							target="_blank"
+						>tkinker</a>, <a
+							href="https://docs.python.org/3.3/library/turtle.html?highlight=turtle"
+							target="_blank"
+						>turtle</a>, and <a
+							href="https://python-pillow.org/"
+							target="_blank"
+						>Pillow</a> Python GUI libraries allow for simple image
+						manipulation, down to the pixel level.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">For example, the left image below visualizes
+						how numbers change after a given number of iterations in the
+						unsolved Collatz conjecture; it has been my phone background for
+						several years. For a more artistic visualization, see the right
+						image below, which applies a smeared watercolor effect.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 ml-auto">
+					<img
+						src="../Images/Projects/Python/Collatz1080.bmp"
+						alt="Python-created image based on the Collatz conjecture"
+					>
+				</div>
+				<div class="col-sm-5 mr-auto">
+					<img
+						src="../Images/Projects/Python/CollatzWC2.bmp"
+						alt="Python-crated image based on the Collatz conjecture with watercolor streaks"
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">One can also visualize more useful and common
+						mathematical ideas. The left image below shows how horizontal and
+						vertical lines in the complex plane are transformed under e^(1/z).
+						One can clearly see concentric cardioids. The right image below
+						shows the graph of several common functions, like sine and the
+						natural logarithm.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 ml-auto">
+					<img
+						src="../Images/Projects/Python/e^(z^-1).bmp"
+						alt="Python-created image of the complex mapping of e^(1/z)"
+					>
+				</div>
+				<div class="col-sm-5 mr-auto">
+					<img
+						src="../Images/Projects/Python/pillowfunctions.bmp"
+						alt="Python-created image of graphed functions"
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">The Turtle library allows one to trace out
+						colored paths in an image, like the rainbow spiral no the left
+						below. Getting a little more advanced, one can create recursive
+						shapes, like the Koch Snowflake, Serpinski Triangle, and dragon
+						curve, shown below.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 ml-auto">
+					<img
+						src="../Images/Projects/Python/Capture10.PNG"
+						alt="Python-created image of hexagonal rainbow sprial"
+					>
+				</div>
+				<div class="col-sm-5 mr-auto">
+					<img
+						src="../Images/Projects/Python/snowflake.PNG"
+						alt="Python-created image of Koch Snowflake"
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 ml-auto">
+					<img
+						src="../Images/Projects/Python/serpinski-2.PNG"
+						alt="Python-created image of Serpinski Triangle"
+					>
+				</div>
+				<div class="col-sm-5 mr-auto">
+					<img
+						src="../Images/Projects/Python/dragonCurve-1.PNG"
+						alt="Python-created image of dragon curve"
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">One can also make other startlingly complex
+						images from a simple set of recursive rules. The below images,
+						known colleteively as "strange attractors," show a tree, Barnsley
+						Fern, pine branch and piece of tall grass. The procedural
+						generation techniques used to create these images, known as
+						L-systems, are used in many of today's popular video games to make
+						random, realistic terrain and plants.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 ml-auto">
+					<img
+						src="../Images/Projects/Python/30degTree.PNG"
+						alt="Python-created image of 30-degree binary tree"
+					>
+				</div>
+				<div class="col-sm-5 mr-auto">
+					<img
+						src="../Images/Projects/Python/barnsleyFern.PNG"
+						alt="Python created image of Barnsley Fern"
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-5 ml-auto">
+					<img
+						src="../Images/Projects/Python/TallGrass1-1.PNG"
+						alt="Python-created image of L-system resembling tall grass"
+					>
+				</div>
+				<div class="col-sm-5 mr-auto">
+					<img
+						src="../Images/Projects/Python/PineBranch-1.PNG"
+						alt="Python-created image of L-system resembling pine branch"
+					>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p class="lead">
+						The images above and many others that I made in Python, as well as
+						the code used to create them, are available on <a
+							href="https://github.com/wmboyles/Python-Projects/tree/master/Graphics_Images/ImageCreation/PIL"
+							, target="_blank"
+						>GitHub</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+
+
+	<!-- A footer containing some copyright and contact info -->
+	<footer class="mt-auto py-3 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">© William Boyles 2019</p>
+			<div
+				class="container text-center"
+				id="icons"
+			>
+				<a
+					href="mailto:williamboyles22900@gmail.com"
+					target="_blank"
+				> <i class="footer-icon fas fa-at"></i>
+				</a> <a
+					href="https://www.github.com/wmboyles/"
+					target="_blank"
+				> <i class="footer-icon fab fa-github"></i>
+				</a> <a
+					href="https://www.linkedin.com/in/wmboyles/"
+					target="_blank"
+				> <i class="footer-icon fab fa-linkedin"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Bootsrap scripts -->
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"
+	></script>
+
+	<!-- Icons for companies -->
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>

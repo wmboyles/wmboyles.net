@@ -10,9 +10,8 @@ var buttons;
 var clicks = 0;
 /** The maximum allowable board size. Larger values likely have issues displaying or cause performance problems */
 var maxSize = 30;
-/** Number of ems of entire board */
-var boardEms = 60;
-
+/** Board size */
+var boardS = (window.screen.height < window.screen.width ? window.screen.height : window.screen.height);
 
 /**
  * Creates a n x n array of elements for a given n.
@@ -134,8 +133,8 @@ function setup(gridSize) {
 				var btn = document.createElement("button");
 				btn.className = "boardBtn";
 
-				btn.style.height = (boardEms / gridSize) + "em";
-				btn.style.width = (boardEms / gridSize) + "em";
+				btn.style.height = (boardS / gridSize)+"px";
+				btn.style.width = (boardS / gridSize)+"px";
 
 				btn.addEventListener("click", function() {
 					click(i, j, true);

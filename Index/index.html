@@ -1,26 +1,43 @@
 <html
 	lang="en"
 	dir="ltr"
+	class="h-100"
 >
 <head>
+<meta charset="utf-8">
 <meta
 	name="description"
-	content="William Boyles. Creative, fast-learning software developer who will work to exceed your needs. NC State Computer Science."
+	content="William Boyles's Homepage."
+>
+<meta
+	name="keywords"
+	content="William,Boyles,software,data structures,algorithms,engineer,computer science,NC State,NCSU,Java,Python,JavaScript,HTML,CSS,Bootstrap,LaTeX,Android"
 >
 <meta
 	name="viewport"
-	content="width=device-width; user-scalable=yes"
+	content="width=device-width, user-scalable=yes"
 >
 <meta
 	name="author"
-	content="William M. Boyles"
+	content="William Boyles"
 >
 
-<title>William Boyles - Home</title>
+<title>William Boyles | Home</title>
+
+<!-- Use bootstrap -->
 <link
 	rel="stylesheet"
-	href="./index.css"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous"
 >
+
+<!-- Additional changes in top of bootstrap -->
+<link
+	rel="stylesheet"
+	href="../Index/index.css"
+>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script
 	async
@@ -34,39 +51,221 @@
 	gtag('js', new Date());
 	gtag('config', 'UA-143402318-1');
 </script>
-
 </head>
-<body>
-	<div class="wrapper">
-		<div class="nav-area">
-			<div class="menu-bg">
-				<div>
-					<a href="#">Home</a>
-				</div>
-				<div>
-					<a href="../Resume/Resume.html">Resume</a>
-				</div>
-				<div>
-					<a href="../Projects/Projects.html">Projects</a>
-				</div>
-				<div>
-					<a href="../Contact/Contact.html">Contact Me</a>
-				</div>
-			</div>
-		</div>
 
-		<div class="home-area">
-			<div class="home-text">
-				<h1>William Boyles</h1>
-				<h2>NC State Computer Science</h2>
-				<p>Creative, fast-learning software developer who will work to
-					meet your needs.</p>
-				<a
-					id="contact"
-					href="../Contact/Contact.html"
-				>Contact Me</a>
+<body class="d-flex flex-column h-100">
+	<!-- A  navigation bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a
+				class="navbar-brand"
+				href="../Index/index.html"
+			>WB</a>
+			<button
+				class="navbar-toggler collapsed"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarResponsive"
+				aria-controls="navbarResponsive"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div
+				class="collapse navbar-collapse"
+				id="navbarResponsive"
+			>
+				<ul class="navbar-nav ml-auto">
+					<!-- Change the active to the current page when used in other pages -->
+					<li class="nav-item active"><a
+						class="nav-link"
+						href="../Index/index.html"
+					> Home<span class="sr-only"></span></a></li>
+					<li class="nav-item"><a
+						class="nav-link"
+						href="../Documents/Resume/WilliamBoyles_Resume.pdf"
+					>Resume</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle"
+						href="../Projects/Projects.html"
+						id="navbarDropdown"
+						role="button"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false"
+					> Projects</a>
+						<div
+							class="dropdown-menu dropdown-menu-right bg-secondary"
+							aria-labelledby="navbarDropdown"
+						>
+							<a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-1"
+							> Lights Out Android App
+								<div class="skill-badges">
+									<span class="badge badge-java x-1">Java<i
+										class="badge-icon fab fa-java"
+									></i></span> <span class="badge badge-android x-1">Android Studio<i
+										class="badge-icon fab fa-android"
+									></i>
+									</span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-2"
+							>Computer Vision Security Camera
+								<div class="skill-badges">
+									<span class="badge badge-python3 x-1">Python 3<i
+										class="badge-icon fab fa-python"
+									></i></span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-3"
+							>Personal Website
+								<div class="skill-badges">
+									<span class="badge badge-web x-1">HTML/JS/CSS<i
+										class="badge-icon fas fa-code"
+									></i></span><span class="badge badge-bootstrap x-1">Bootstrap<i
+										class="badge-icon fab fa-bootstrap"
+									></i></span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-4"
+							>Multivariable Calculus Summary
+								<div class="skill-badges">
+									<span class="badge badge-tex x-1">TeX<i
+										class="badge-icon fas fa-subscript"
+									></i></span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-5"
+							>Twitter Bad Words Count Bot
+								<div class="skill-badges">
+									<span class="badge badge-python3 x-1">Python 3<i
+										class="badge-icon fab fa-python"
+									></i></span> <span class="badge badge-twitter x-1">Twitter API<i
+										class="badge-icon fab fa-twitter"
+									></i>
+									</span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-6"
+							>Linear Algebra Library
+								<div class="skill-badges">
+									<span class="badge badge-java x-1">Java<i
+										class="badge-icon fab fa-java"
+									></i></span>
+								</div>
+							</a> <a
+								class="dropdown-item"
+								href="../Projects/Projects.html#project-7"
+							>Computer Generated Art
+								<div class="skill-badges">
+									<span class="badge badge-python3 x-1">Python 3<i
+										class="badge-icon fab fa-python"
+									></i></span>
+								</div>
+							</a>
+						</div></li>
+					<li class="nav-item"><a
+						class="nav-link"
+						href="../Contact/Contact.html"
+					>Contact<span class="sr-only"></span></a></li>
+				</ul>
 			</div>
 		</div>
+	</nav>
+
+	<header class="bg-danger py-3 mb-3 position-relative">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<h1 class="display-4 text-white mt-5 mb-2">William Boyles</h1>
+					<p class="lead mb-5 text-white-50">NCSU Computer Science 2022.
+						Java & Python developer. Always ready to pick up a new skill.</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- The stuff that's actually unique to this page -->
+	<main class="container">
+	<div class="container">
+		<center>
+			<img
+				id="profile-photo"
+				src="../Images/Index/MyPicture2.jpg"
+				alt="William Boyles's Face"
+			>
+		</center>
 	</div>
+	<h2>About Me</h2>
+	<hr>
+	<p>
+		Hi, I'm William Boyles. I'm a <strong>computer science</strong>
+		student at <strong>North Carolina State Univeristy</strong>,
+		graduating in <strong>May 2022</strong> with a minor in mathematics.
+		I'm originally from, Winston-Salem, North Carolina. When I'm not busy
+		working on school projects, for classes like <strong>Java</strong>, <strong>Data
+			Structures & Algorithms</strong>, and <strong>C</strong>, you might find me
+		working on some of my own projects, like a security camera written in
+		<strong>Python 3</strong> using the <strong>OpenCV</strong> library or
+		this website. If I'm not writing code, you might find me solving
+		Rubik's Cubes, playing ping-pong, traveling with friends and family,
+		or binging a comedy on Netflix.
+	</p>
+	</main>
+
+	<!-- A footer containing some copyright and contact info -->
+	<footer class="mt-auto py-3 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">© William Boyles 2019</p>
+			<div
+				class="container text-center"
+				id="icons"
+			>
+				<a
+					href="mailto:williamboyles22900@gmail.com"
+					target="_blank"
+				> <i class="footer-icon fas fa-at"></i>
+				</a> <a
+					href="https://www.github.com/wmboyles/"
+					target="_blank"
+				> <i class="footer-icon fab fa-github"></i>
+				</a> <a
+					href="https://www.linkedin.com/in/wmboyles/"
+					target="_blank"
+				> <i class="footer-icon fab fa-linkedin"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Bootsrap scripts -->
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"
+	></script>
+
+	<!-- Icons for companies -->
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
