@@ -13,6 +13,11 @@ a.dropdown-item:hover {
 	color: white;
 }
 
+/* Extra padding on top of project ids */
+.page-section.text-black.mb-0 {
+    padding-top: 3.25em;
+}
+
 /* Color of badges if project dropdowns */
 .badge {
 	color: white;
