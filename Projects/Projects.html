@@ -278,7 +278,7 @@
 						<p class="lead">This application started when my high-school
 							engineering class had just moved into a larger building. It was
 							common for expensive tools to get lost or stolen, so we needed a
-							way to find these items and identify any culprits.</p>
+							way to track these items as they were used and identify theft.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -290,8 +290,7 @@
 							security cameras would not be useful in recovering it. My solution
 							was to use Raspberry Pi's, which are small, cheap, and
 							single-board computers, as "smart" security cameras. These devices
-							would be cheaper and easier to install than traditional cameras,
-							and they could be more easily moved to another location if needed.</p>
+							would be cheaper, more portable, and easier to install than the traditional cameras.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -300,8 +299,7 @@
 							space needed for footage without sacrificing picture quality or
 							other valuable information. My solution was for the smart cameras
 							to record video only when they detect motion. This way, disk space
-							wouldn't be wasted on recording hours of the exact scene, but
-							would still catch thieves as they walked into view.</p>
+							wouldn't be wasted recording hours of no activity.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -311,16 +309,13 @@
 							was cut down to mere minutes. However, changing lighting
 							conditions throughout the day could add noise to the image that
 							would be mistaken for motion. I decided to fix this problem by
-							having a threshold for motion that could be calibrated and changed
-							automatically throughout the day. However, I wanted to make sure
-							thieves would still be recorded, regardless of the lighting
-							conditions. This is where computer vision came to my aid. Using
-							Python's <a href="https://opencv.org/" target="_blank">OpenCV</a> library, I searched the
-							video feed for faces. If any
-							faces were detected, a green rectangle would be drawn around the
-							face in the video feed, an image of the frame containing the face
-							would be saved, and the camera would wait to recalibrate until no
-							faces were detected.
+							allowing the camera auto-adjust its threshold for motion.
+							However, I wanted to make sure all activity would still be recorded, regardless of the
+							lighting conditions. This is where computer vision came to my aid. Using
+							Python's <a href="https://opencv.org/" target="_blank">OpenCV</a> library, the camera
+							searches for faces. If any faces are detected, a green rectangle would be drawn around the
+							face in the recorded video feed, an annotated image of the frame containing the face
+							would be saved. The camera waits to recalibrate until no faces have been detected recently.
 						</p>
 					</div>
 				</div>
@@ -356,16 +351,11 @@
 							and programming paradigms (like object-oriented), they should also
 							be taught how to make clean, navigable, and intuitive front ends.
 							After all, this is the portion of a product with which most
-							end-users will interact.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<p class="lead">wmboyles.com is meant to meet these design
+							end-users will interact. wmboyles.com is meant to meet these design
 							criteria and to be a place to talk about myself and my experience
-							more in-depth than in a resume. I didn't use any hand-holding
-							website builders: each line was written by me, with the help of
-							documentation.</p>
+							more in-depth than in a resume. In order to have a full experience in creating my own
+							website, I didn't use any hand-holding
+							website builders.</p>
 					</div>
 				</div>
 				<h4 class="page-subsection-heading text-uppercase text-black">Version
@@ -375,7 +365,7 @@
 						<p class="lead">
 							Although the original version of my site was passable, the code
 							was messy, images were difficult to deal with, and the website did
-							not work well on mobile. With these issues in mind, I resigned the
+							not work well on mobile devices. With these issues in mind, I resigned the
 							site to use <a href="https://getbootstrap.com/" target="_blank">Bootstrap </a> to give the
 							site a cleaner look and help in
 							addressing mobile issues.
@@ -384,7 +374,7 @@
 				</div>
 				<div class="row">
 					<div class="col">
-						<p class="lead">In the future, I plan on using JavaScript
+						<p class="lead">In the future, I'd like to make use of JavaScript
 							frameworks like React or Angular to build elements more quickly
 							and cleanly. With all the text from all the projects on this page,
 							the html file is many lines and can be difficult to edit.</p>
@@ -410,28 +400,26 @@
 					<div class="col">
 						<p class="lead">
 							While taking a summer physics class dealing
-							with Maxwell's Equations, which are written in the language of
-							multivariable calculus, I realized how much of the subject I had
+							with multivariable calculus, I realized how much of the subject I had
 							forgotten even though I took multivariable calculus class (Calc
 							III) only nine months earlier. I also knew that several of my
 							friends who would be taking Calc III in the coming semesters had
-							already requested my advice about the class and for my notes,
-							but I like to have my notes as a reference.
+							already requested my notes and advice about the class.
 						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col">
 						<p class="lead">
+							However, I like to keep my notes, which can be hard for others to read, as a reference.
 							I decided to digitize my notes using <a href="https://www.latex-project.org/"
-								target="_blank">LaTeX</a> in a textbook structure: chapters with sections and
-							sub-sections. I would also add better visual aids than my
-							hurriedly-drawn sketches. This way, I could easily share clear and
-							legible notes, keep the my original notes, and refresh my own understanding.
+								target="_blank">LaTeX</a> in an abridged textbook structure. I would also add better
+							visual aids than the hurriedly-drawn sketchesin my nodes. This way, I could easily share
+							clear and legible notes, keep the my original notes, and refresh my own understanding.
 							By the time I was finished, I had condensed the
 							several-thousand page textbook into an <a href="../Documents/Projects/MA242_Summary.pdf"
-								target="_blank">81-page guide</a> that still contained many visual aids and
-							full-length proofs. I feel much more confident in my
+								target="_blank">81 pages</a> that covered almost all topics mentioned in class while
+							still containing many visual aids and full-length proofs. I feel much more confident in my
 							abilities, and I think my friends will be able to learn from me
 							much more easily.
 						</p>
@@ -444,7 +432,7 @@
 								target="_blank">r/math</a>, an online community of math enthusiasts. To my
 							surprise my post was incredibly well-received, and several users suggested
 							open-sourcing my work so that others could help make corrections and suggest additions.
-							<a href="https://github.com/wmboyles/Calc3-Summary" target="_blank">The repo</a> is
+							<a href="https://github.com/wmboyles/Math-Summaries" target="_blank">The repo</a> is
 							available and has already taken several community contributions.
 						</p>
 					</div>
@@ -454,9 +442,9 @@
 						<p class="lead">
 							I've begun expanding the scope of the project beyond multivaraible calculus.
 							I recently completed a <a href="../Documents/Projects/MA341_Summary.pdf" target="_blank">
-								92-page summary </a> of introductory differential equations, and I will begin
-							working on a similar document for linear algebra. Due to user suggestions, I also plan
-							on making a summary of single variable calculus.
+								92-page summary </a> of introductory differential equations, and hope to start working
+							on a similar document for linear algebra. Due to user suggestions, a summary of single
+							variable calculus is also forthcoming.
 						</p>
 					</div>
 				</div>
@@ -474,11 +462,11 @@
 							reasonable people can vehemently disagree, a good indicator of
 							mutual respect between two parties is that neither resorts to
 							vulgarity. Inspired by other bots on platforms like Reddit and
-							Discord, that could provide information on the language that users
+							Discord that could provide information on the language that users
 							have used and play a part in keeping online discussion civil, I
-							set out to create a Twitter bot that, when requested by another
-							Twitter user, would provide information on vulgarities that users
-							have recently tweeted.</p>
+							set out to create a Twitter bot that when called upon by a
+							Twitter user would provide information on vulgarities that a
+							requested user had recently tweeted.</p>
 					</div>
 				</div>
 				<blockquote class="twitter-tweet tw-align-center">
@@ -532,15 +520,8 @@
 				<div class="row">
 					<div class="col">
 						<p class="lead">
-							For deployment, I settled on a free service recommended in one of
-							the simple video tutorials, <a href="https://www.pythonanywhere.com/"
-								target="_blank">PythonAnywhere</a>. I know that this solution is probably not best
-							practice, and I still have issues regarding reliability because
-							PythonAnywhere periodically updates their servers and does not
-							restart any running scripts that were stopped. However, I
-							struggled with trying to use other platforms like <a href="https://www.heroku.com/"
-								target="_blank">Heroku</a> because I could not work out compatibility issues or
-							find documentation detailed enough to fix issues.
+							The bot is currently not deployed. I hope to find a long-term, affordable, and reliable
+							deployment solution.
 						</p>
 					</div>
 				</div>
