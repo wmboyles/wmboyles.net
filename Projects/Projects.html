@@ -87,10 +87,10 @@
 											class="badge-icon fab fa-twitter"></i>
 									</span>
 								</div>
-							</a> <a class="dropdown-item" href="../Projects/Projects.html#project-6">Linear Algebra
-								Library
+							</a> <a class="dropdown-item" href="../Projects/Projects.html#project-6"><em>Jeopardy!</em>
+								Game
 								<div class="skill-badges">
-									<span class="badge badge-java x-1">Java<i class="badge-icon fab fa-java"></i></span>
+									<span class="badge badge-web x-1">JS<i class="badge-icon fas fa-code"></i></span>
 								</div>
 							</a> <a class="dropdown-item" href="../Projects/Projects.html#project-7">Computer Generated
 								Art
@@ -108,6 +108,7 @@
 		</div>
 	</nav>
 
+	<!-- Page title -->
 	<header class="bg-danger py-3 mb-3 position-relative">
 		<div class="container">
 			<div class="row align-items-center">
@@ -557,97 +558,68 @@
 			</div>
 		</section>
 
-		<!-- Linear Algebra Library -->
+		<!-- Jeopardy! Game -->
 		<section class="page-section bg-light text-black mb-0" id="project-6">
 			<div class="container">
-				<h2 class="page-section-heading text-center text-uppercase text-black">Linear Algebra Library</h2>
+				<h2 class="page-section-heading text-center text-uppercase text-black">Jeopardy! Game</h2>
 				<div class="row">
 					<div class="col">
-						<p class="lead">I originally started working on this project in
-							high school to practice array manipulation in preparation for the
-							AP Computer Science A exam. My main goal at that point was to be
-							able to find the reduced-row echelon form of a given array of
-							doubles, allowing me to solve linear systems of equations.</p>
+						<p class="lead"><em>Jeopardy!</em> has for a long time been one of my favorite TV game shows.
+							I enjoy how the game is mostly skill-based and I always learn something new when I play
+							along.
+							When I heard about the free <a href="https://jservice.io/" target="_blank">JService</a> API
+							from a friend,
+							I thought this would be a fun opportunity for me to learn about interacting with APIs.
+						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col">
-						<p class="lead">As my knowledge grew regarding object-oriented
-							programming and the applications of matrices to structures like
-							networks, so did this project. I added a "Vector" class where one
-							could determine vector information (e.g., cross-product and
-							dot-product) or use these Vectors to populate a Matrix. One major
-							change I made was making the "Matrix" class generically-typed,
-							with "BinaryMatrix" and "NumericMatrix" extending the Matrix class
-							and adding additional data type-specific functionality. For
-							example, a specific application of the BinaryMatrix class is the
-							ability to represent and determine qualities (e.g., reflexive,
-							transitive, trichotomous) of binary relations; the DoubleMatrix
-							class can solve linear systems of equations like originally
-							intended.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<p class="lead">As my knowledge grew regarding object-oriented
-							programming and the applications of matrices to structures like
-							networks, so did this project. I added a "Vector" class where one
-							could determine vector information (e.g., cross-product and
-							dot-product) or use these Vectors to populate a Matrix. One major
-							change I made was making the "Matrix" class generically-typed,
-							with "BinaryMatrix" and "NumericMatrix" extending the Matrix class
-							and adding additional data type-specific functionality. For
-							example, a specific application of the BinaryMatrix class is the
-							ability to represent and determine qualities (e.g., reflexive,
-							transitive, trichotomous) of binary relations; the DoubleMatrix
-							class can solve linear systems of equations like originally
-							intended.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<p class="lead">I also learned the importance of unit testing
-							and code coverage. Currently, all fully-implemented classes have
-							100% method coverage, at least 90% line coverage, and all tests
-							passing. I will continue to add more unit tests and maintain high
-							coverage as I implement greater functionality.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<p class="lead">Below is a recent coverage report. All concrete
-							classes, except those in the graph package and NumericMatrix, have
-							more than 95% line coverage. Classes in the graph package are not
-							yet ready for a round of testing, and NumericMatrix may soon be
-							deleted, depending on whether this library will support matrices
-							of non-numerical values.</p>
+						<p class="lead">I decided to write a single-player version of the game that could be used for
+							practicing.
+							I went with JavaScript running in the client's web-browser, as this would allow me to deploy
+							my app for free as a website hosted by GitHub Pages.
+							After I figured out how to make calls to the JService API, the rest of the implementation
+							was fairly straitforward.
+						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col ml-auto">
-						<img src="../Images/Projects/Java/LinAlg_Coverage.PNG"
-							alt="Eclipse coverage report of Linear Alebra library"
+						<img src="../Images/Projects/PlayJ/PlayJ_gameplay.PNG" alt="Placeholder Image"
 							style="display: block; margin-left: auto; margin-right: auto; max-height: 25em;">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col">
-						<p class="lead">In the future, I want to continue adding
-							functionality for important objects in mathematics and computer
-							science that are commonly represented as matrices. This includes
-							items like Markov Chains and graphs. I am especially excited about
-							developing weighted and directed graphs (digraphs) for
-							applications like path finding and optimization.</p>
+						<p class="lead">
+							The biggest issue came from some unavoidable problems with the JService API.
+							For API problems, some <em>Jeopardy!</em> clues use sounds or videos as clues,
+							the gimmick of certain categories are also hard to understand without an explination from
+							the host. JService provides access to neither of these things.
+							Although JService has made an effort to remove these sorts of clues from its dataset, some
+							still remain.
+							Further, the answers to certain clues sometimes contain extraneous words like "a" or "the".
+							To avoid the user being penalized for responses that arent't letter for letter perfect, I've
+							included an "I'm Right" button that gives the user credit for an answer that doesn't exactly
+							match the one provided by JService.
+							Another big difference between traditional <em>Jeopardy!</em> gameplay and mine is that I
+							don't require users to answer in the form of a question.
+							This matched the form in which answers were sent by the API.
+						</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col">
 						<p class="lead">
-							Code and JavaDoc for the Linear Algebra library is available on <a
-								href="https://github.com/wmboyles/LinearAlgebra" target="_blank">GitHub</a>.
+							Click the link to <a href="https://wmboyles.github.io/PlayJ/" target="_blank">play</a> for
+							yourself.
+							You can also see the code on <a href="https://github.com/wmboyles/PlayJ"
+								target="_blank">GitHub</a>.
 						</p>
 					</div>
 				</div>
+
 			</div>
 		</section>
 
