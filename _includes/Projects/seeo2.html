@@ -1,0 +1,93 @@
+<!-- HackNC 2020 Air Quality: SeeO2 -->
+<section
+  class="page-section bg-light text-black mb-0"
+  id="project-2"
+  style="padding-top: 3.25em"
+>
+  <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase text-black">
+      Air Quality Tracking &amp; Prediction
+    </h2>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          India suffers over 1 million pollution deaths per year, the most in
+          the world. If Indian air quality was at the same level as the United
+          States, the average life expectancy in India would increase by 1.7
+          years. Without accurate real-time and forecasted air quality,
+          residents don't have the tools they need to make decesions for their
+          health.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          This is the problem my team and I tackled during HackNC 2020 with our
+          hack,
+          <a href="https://devpost.com/software/seeo2" target="_blank">SeeO2</a
+          >. We wanted to create a simple way for users to see past, present,
+          and future air quality information for where they live. We also wanted
+          to provide tips based on the air quality level, like staying indoors
+          or buying a filtration system, that users could follow to protect
+          their health.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ml-auto">
+        <img
+          src="./assets/Images/Projects/SeeO2/SeeO2.png"
+          alt="Sreenshot of app showing air quality data"
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 25em;
+          "
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          The frontend was done in React, with some components being borrowed
+          from other projects and repurposed. We got current information from
+          <a href="https://openweathermap.org/" target="_blank"
+            >Open Weather Map</a
+          >
+          and
+          <a href="https://www.getambee.com/" target="_blank">Ambee</a>
+          APIs. For past air quality and future predictions, I created our own
+          API in Python using Pandas, Flask, and SciPy, which analyses a
+          <a
+            href="https://www.kaggle.com/rohanrao/air-quality-data-in-india"
+            target="_blank"
+            >Kaggle Data Set</a
+          >
+          and is hosted on
+          <a href="https://www.heroku.com/" target="_blank">Heroku</a>. You can
+          check out our work on
+          <a href="https://devpost.com/software/seeo2" target="_blank"
+            >Devpost</a
+          >
+          and
+          <a href="https://github.com/narmis99/seeO2" target="_blank">GitHub</a
+          >.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          We were very satisfied with the result and happy that the app won
+          several awards, including
+          <strong>Best Hack for Sustainability</strong> and
+          <strong>Top 20 Hack</strong>. In the future, we may expand the app's
+          functionality by providing interactive plots of air quality over time
+          and using more advanced prediction methods.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

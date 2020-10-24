@@ -1,0 +1,25 @@
+I"Q<main class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container my-0">
+      <h3 class="display-5">Email</h3>
+      <p class="lead pl-3">
+        <strong>Personal: </strong><a href="mailto:williamboyles22900@gmail.com">williamboyles22900@gmail.com</a>
+      </p>
+      <p class="lead pl-3">
+        <strong>School: </strong><a href="mailto:wmboyle2@ncsu.edu">wmboyle2@ncsu.edu</a>
+      </p>
+      <h3 class="display-5">Github</h3>
+      <p class="lead pl-3">
+        <a href="https://www.github.com/wmboyles">wmboyles</a>
+      </p>
+      <h3 class="display-5">LinkedIn</h3>
+      <p class="lead pl-3">
+        <a href="https://www.linkedin.com/in/wmboyles">wmboyles</a>
+      </p>
+      <h3 class="display-5">Phone</h3>
+      <p class="lead pl-3"><strong>Cell: </strong>(336) 749-6144</p>
+    </div>
+  </div>
+</main>
+
+:ET
