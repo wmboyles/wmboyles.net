@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="description" content="William Boyles's Homepage" />
-    <title>William Boyles | Home</title>
-
-    <link rel="stylesheet" href="./assets/CSS/default.css" />
+    <meta name="description" content="Lights Out Game" />
+    <title>Lights Out Game</title>
+    <link rel="stylesheet" href="./assets/CSS/lightsOut.css" />
 
     <meta charset="utf-8" />
 <meta
@@ -36,7 +35,7 @@
 </script>
 
   </head>
-  <body class="d-flex flex-column h-100">
+  <body onload="promptUser()">
     <!-- A  navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
@@ -56,7 +55,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <!-- Change the active to the current page when used in other pages -->
-        <li id="nav-home" class="nav-item active">
+        <li id="nav-home" class="nav-item">
           <a class="nav-link" href="/">Home</a>
         </li>
         <li id="nav-resume" class="nav-item">
@@ -66,7 +65,7 @@
             >Resume</a
           >
         </li>
-        <li id="nav-projects" class="nav-item dropdown">
+        <li id="nav-projects" class="nav-item dropdown active">
           <a
             class="nav-link dropdown-toggle"
             href="/projects"
@@ -165,47 +164,34 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-12">
-        <h1 class="display-4 text-white mt-5 mb-2">William Boyles</h1>
-        <p class="lead mb-5 text-white-50">NCSU Computer Science 2022. Always ready to meet someone new or pick up a new skill.</p>
+        <h1 class="display-4 text-white mt-5 mb-2">Lights Out - JS</h1>
+        <p class="lead mb-5 text-white-50">A simple JavaScript version of Lights Out.</p>
       </div>
     </div>
   </div>
 </header>
- <!-- Content unique to homepage that can't be written in markdown -->
-<main class="container">
-  <div class="container">
-    <center>
-      <img id="profile-photo" src="./assets/Images/Index/MyPicture2.jpg" alt="William Boyles's Face" />
-    </center>
-  </div>
-  <h2>About Me</h2>
-  <hr />
-  <p>
-    Hi, I'm William Boyles. I'm a <strong>computer science</strong> student at
-    <strong>North Carolina State Univeristy</strong>, graduating in
-    <strong>May 2022</strong> with a minor in mathematics. I'm originally from,
-    Winston-Salem, North Carolina. When I'm not busy working on school projects,
-    for classes like <strong>Software Engineering</strong>,
-    <strong>Data Structures &amp; Algorithms</strong>, and
-    <strong>Graph Theory</strong>, you might find me working on some of my own
-    projects, like an app to predict air quality in Indian metro areas using
-    <strong>React</strong> and <strong>Python 3</strong> or this website. If I'm
-    not writing code, you might find me solving Rubik's Cubes, playing
-    ping-pong, traveling with friends and family, or binging a comedy on
-    Netflix.
-  </p>
-  <p>
-    This past summer, I worked at <strong>IBM</strong> as a
-    <strong>Cloud &amp; Cognitive Software Intern</strong>, where I used my
-    <strong>Python 3</strong> skills to analyze and report cloud outage data
-    using a Slack bot. I learned a lot about <strong>Docker</strong> and
-    <strong>Kubernetes</strong> and eventaully deployed my work there. This
-    summer, I'll be working at <strong>Microsoft</strong> as a
-    <strong>Software Engineering Intern</strong>.
-  </p>
-</main>
 
- <!-- A footer containing some copyright and contact info -->
+
+    <main>
+      <!-- The board is created by JS -->
+      <div class="container mb-3">
+        <center>
+          <div class="row container">
+            <div id="clicksCount" class="col-md-4">Clicks: 0</div>
+            <div class="col-md-4">
+              <button id="reset" onclick="reset()">Reset</button>
+            </div>
+
+            <div class="col-md-4">
+              <button id="scramble" onclick="scramble()">Scramble</button>
+            </div>
+          </div>
+        </center>
+      </div>
+      <div id="board" class="mb-3"></div>
+    </main>
+
+    <!-- A footer containing some copyright and contact info -->
 <footer class="mt-auto py-4 bg-dark">
   <div class="container">
     <p class="m-0 text-center text-white">© William Boyles 2020</p>
@@ -242,5 +228,7 @@
 <!-- Icons for companies -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+    <!-- Script to run game -->
+    <script src="./assets/JS/lightsOut.js"></script>
   </body>
 </html>
