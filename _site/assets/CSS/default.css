@@ -1,0 +1,89 @@
+html,
+body {
+  height: 100%;
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Color of project dropdowns and how it changes */
+a.dropdown-item {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+a.dropdown-item:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Color of badges if project dropdowns */
+.badge {
+  color: white;
+}
+
+.badge.badge-bootstrap {
+  background-color: #7a43b6;
+}
+
+.badge.badge-python3 {
+  background-color: #ffd43b;
+}
+
+.badge.badge-java {
+  background-color: #ed8b00;
+}
+
+.badge.badge-web {
+  background-color: #f16529;
+}
+
+.badge.badge-twitter {
+  background-color: #00acee;
+}
+
+.badge.badge-tex {
+  background-color: #afafaf;
+}
+
+.badge.badge-android {
+  background-color: #a4c639;
+}
+
+/* Styling of icons in footer */
+i.footer-icon:before {
+  font-size: 18pt;
+  padding: 0.5em;
+}
+
+i.badge-icon:before {
+  font-size: 12pt;
+  padding: 0.25em;
+}
+
+/** Make dropdown scrollable */
+.dropdown-menu {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Make the profile photo circular */
+#profile-photo {
+  max-width: 172px;
+  max-height: 172px;
+  border-color: black;
+  border-width: 20px;
+  border-radius: 50%;
+}
+
+/******* Custom project.html stylings ********/
+/** Limit image size to fit on screens */
+img {
+  max-height: 25em;
+  max-width: 100%;
+}

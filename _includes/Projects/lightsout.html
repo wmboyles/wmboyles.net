@@ -1,0 +1,177 @@
+<!-- Lights Out App -->
+<section class="page-section text-black mb-0" id="project-1">
+  <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase text-black">
+      Lights Out Android App
+    </h2>
+
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          My Lights Out app is based on the 1995 handheld electronic game by
+          Tiger Electronics of the same name. In the 1995 version, the game
+          board consists of a 5x5 grid of lights, and then when game starts, a
+          seemingly random pattern of lights is presented to the player. The
+          player's objective is to toggle lights to turn all the lights off with
+          button presses, preferably in as few presses as possible.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          When a light is pressed, the on/off state of the pressed light and all
+          directly adjacent lights are toggled.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 ml-auto">
+        <img
+          src="./assets/Images/Projects/Java/toggle1.jpg"
+          alt="A board before a button press"
+        />
+      </div>
+      <div class="col-sm-5 mr-auto">
+        <img
+          src="./assets/Images/Projects/Java/toggle2.jpg"
+          alt="A board after a button press"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          Although similar handheld games and apps already exists. There are two
+          things that I believe make my app unique: variable board sizes, and
+          mathematical optimization.
+        </p>
+      </div>
+    </div>
+    <h4 class="page-subsection-heading text-uppercase text-black">
+      Variable Board Sizes
+    </h4>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          Many of the apps available today only feature a single board size,
+          usually the classic 5x5. This makes the app less challenging once the
+          user finds a reliable method for solving the single board size and
+          limits the number of possible scrambles. For the 5x5 board, there are
+          2<sup>23</sup>=8388608 distinct ways to create a scramble. However,
+          there are at least 4 different ways to create any given scramble,
+          leaving at most 2<sup>19</sup>=524288 unique scrambles. All of these
+          scrambles can be solved in at most 15 button presses.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          My app allows user to play any board size from the trivial 1x1 to the
+          daunting 10x10, providing orders of magnitude more unique scrambles
+          than the 5x5 alone. I would have allowed even larges sizes, but the
+          buttons were getting too small to reliably press.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 ml-auto">
+        <img
+          src="./assets/Images/Projects/Java/levelSelect.jpg"
+          alt="Level selection"
+        />
+      </div>
+      <div class="col-sm-5 mr-auto">
+        <img
+          src="./assets/Images/Projects/Java/10x10.jpg"
+          alt="A scrambled 10x10 board"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          In fact, just the 10x10 size has 2<sup>100</sup>, over 1 nonillion
+          unique scrambles. For comparison, if each unique board were printed on
+          a sheet of paper 0.1 mm thick, the stack of paper would reach to the
+          edge of the observable universe 13.4 billion light years away.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          Users have yet another dimension opened to them in being able to play
+          by only pressing buttons that are already on. Although all puzzles
+          that can be solved normally can also be solved by only pressing on
+          buttons, it makes for a much more difficult challenge because the way
+          that most learn to solve the 5x5 board requires pressing off buttons.
+        </p>
+      </div>
+    </div>
+    <h4 class="page-subsection-heading text-uppercase text-black">
+      Mathematical Optimization
+    </h4>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          I already mentioned how any 5x5 board can be solved in at most 15
+          button presses. Puzzle enthusiasts and recreational mathematicians
+          like Jaap Scherphuis proved this to be the case. Jaap in particular
+          uses a method of treating solving the board as a linear algebra
+          problem that is described by mathematician Marlow Anderson and Todd
+          Feil in their 1998 paper
+          <em>Turning Lights Out with Linear Algebra</em>.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          I implemented Andserson and Feil's method of row-reducing matrices
+          modulo 2 to determine the minimum number of clicks needed to solve any
+          given board. This way users can know how their solve is compared to
+          the absolute best they could do.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ml-auto">
+        <img
+          src="./assets/Images/Projects/Java/10x10.jpg"
+          alt="The minimum for this 10x10 board is 42 clicks"
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 25em;
+          "
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          Although this value is only one number on a screen, I think it
+          provides valuable information to users about a given puzzle's
+          difficulty and their own solving abilities that no other app has.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          The app is currently available for free download on the Google Play
+          Store. If you have an iOS device or would like to play on a PC, you
+          can play an
+          <a href="../LightsOut/lightsOut.html">online version</a> that doesn't
+          have the minimum clicks implemented that I created using JavaScript.
+          The Android Studio project, which includes the Java source code is
+          available
+          <a href="https://github.com/wmboyles/LightsOut"> on GitHub</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
