@@ -1,0 +1,652 @@
+I"üx<main>
+  <!-- Lights Out App -->
+<section class="page-section text-black mb-0" id="project-1" style="padding-top: 3.25em">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-black">
+            Lights Out Android App
+        </h2>
+
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    My Lights Out app is based on the 1995 handheld electronic
+                    game by Tiger Electronics of the same name. In the 1995
+                    version, the game board consists of a 5x5 grid of lights,
+                    and then when game starts, a seemingly random pattern of
+                    lights is presented to the player. The player's objective is
+                    to toggle lights to turn all the lights off with button
+                    presses, preferably in as few presses as possible.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    When a light is pressed, the on/off state of the pressed
+                    light and all directly adjacent lights are toggled.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 ml-auto">
+                <img src="./assets/Images/Projects/Java/toggle1.jpg" alt="A board before a button press" />
+            </div>
+            <div class="col-sm-5 mr-auto">
+                <img src="./assets/Images/Projects/Java/toggle2.jpg" alt="A board after a button press" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    Although similar handheld games and apps already exists.
+                    There are two things that I believe make my app unique:
+                    variable board sizes, and mathematical optimization.
+                </p>
+            </div>
+        </div>
+        <h4 class="page-subsection-heading text-uppercase text-black">
+            Variable Board Sizes
+        </h4>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    Many of the apps available today only feature a single board
+                    size, usually the classic 5x5. This makes the app less
+                    challenging once the user finds a reliable method for
+                    solving the single board size and limits the number of
+                    possible scrambles. For the 5x5 board, there are
+                    2<sup>23</sup>=8388608 distinct ways to create a scramble.
+                    However, there are at least 4 different ways to create any
+                    given scramble, leaving at most 2<sup>19</sup>=524288 unique
+                    scrambles. All of these scrambles can be solved in at most
+                    15 button presses.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    My app allows user to play any board size from the trivial
+                    1x1 to the daunting 10x10, providing orders of magnitude
+                    more unique scrambles than the 5x5 alone. I would have
+                    allowed even larges sizes, but the buttons were getting too
+                    small to reliably press.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 ml-auto">
+                <img src="./assets/Images/Projects/Java/levelSelect.jpg" alt="Level selection" />
+            </div>
+            <div class="col-sm-5 mr-auto">
+                <img src="./assets/Images/Projects/Java/10x10.jpg" alt="A scrambled 10x10 board" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    In fact, just the 10x10 size has 2<sup>100</sup>, over 1
+                    nonillion unique scrambles. For comparison, if each unique
+                    board were printed on a sheet of paper 0.1 mm thick, the
+                    stack of paper would reach to the edge of the observable
+                    universe 13.4 billion light years away.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    Users have yet another dimension opened to them in being
+                    able to play by only pressing buttons that are already on.
+                    Although all puzzles that can be solved normally can also be
+                    solved by only pressing on buttons, it makes for a much more
+                    difficult challenge because the way that most learn to solve
+                    the 5x5 board requires pressing off buttons.
+                </p>
+            </div>
+        </div>
+        <h4 class="page-subsection-heading text-uppercase text-black">
+            Mathematical Optimization
+        </h4>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    I already mentioned how any 5x5 board can be solved in at
+                    most 15 button presses. Puzzle enthusiasts and recreational
+                    mathematicians like Jaap Scherphuis proved this to be the
+                    case. Jaap in particular uses a method of treating solving
+                    the board as a linear algebra problem that is described by
+                    mathematician Marlow Anderson and Todd Feil in their 1998
+                    paper
+                    <em>Turning Lights Out with Linear Algebra</em>.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    I implemented Anderson and Feil's method of row reducing
+                    matrices modulo 2 to determine the minimum number of clicks
+                    needed to solve any given board. This way users can know how
+                    their solve is compared to the absolute best they could do.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ml-auto">
+                <img src="./assets/Images/Projects/Java/10x10.jpg" alt="The minimum for this 10x10 board is 42 clicks" style="
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        max-height: 25em;
+                    " />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    Although this value is only one number on a screen, I think
+                    it provides valuable information to users about a given
+                    puzzle's difficulty and their own solving abilities that no
+                    other app has.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    The app is currently available for free download on the
+                    Google Play Store. If you have an iOS device or would like
+                    to play on a PC, you can play an
+                    <a href="/lightsout">online version</a> that doesn't have
+                    the minimum clicks implemented that I created using
+                    JavaScript. The Android Studio project, which includes the
+                    Java source code is available
+                    <a href="https://github.com/wmboyles/LightsOut">
+                        on GitHub</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- HackNC 2020 Air Quality: SeeO2 -->
+<section class="page-section bg-light text-black mb-0" id="project-2" style="padding-top: 3.25em">
+  <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase text-black">
+      Air Quality Tracking &amp; Prediction
+    </h2>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          India suffers over 1 million pollution deaths per year, the most in
+          the world. If Indian air quality was at the same level as the United
+          States, the average life expectancy in India would increase by 1.7
+          years. Without accurate real-time and forecasted air quality,
+          residents don't have the tools they need to make decesions for their
+          health.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          This is the problem my team and I tackled during HackNC 2020 with our
+          hack,
+          <a href="https://devpost.com/software/seeo2" target="_blank">SeeO2</a>. We wanted to create a simple way for users to see past, present,
+          and future air quality information for where they live. We also wanted
+          to provide tips based on the air quality level, like staying indoors
+          or buying a filtration system, that users could follow to protect
+          their health.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ml-auto">
+        <img src="./assets/Images/Projects/SeeO2/SeeO2.png" alt="Sreenshot of app showing air quality data" style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 25em;
+          " />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          The frontend was done in React, with some components being borrowed
+          from other projects and repurposed. We got current information from
+          <a href="https://openweathermap.org/" target="_blank">Open Weather Map</a>
+          and
+          <a href="https://www.getambee.com/" target="_blank">Ambee</a>
+          APIs. For past air quality and future predictions, I created our own
+          API in Python using Pandas, Flask, and SciPy, which analyses a
+          <a href="https://www.kaggle.com/rohanrao/air-quality-data-in-india" target="_blank">Kaggle Data Set</a>
+          and is hosted on
+          <a href="https://www.heroku.com/" target="_blank">Heroku</a>. You can
+          check out our work on
+          <a href="https://devpost.com/software/seeo2" target="_blank">Devpost</a>
+          and
+          <a href="https://github.com/narmis99/seeO2" target="_blank">GitHub</a>.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          We were very satisfied with the result and happy that the app won
+          several awards, including
+          <strong>Best Hack for Sustainability</strong> and
+          <strong>Top 20 Hack</strong>. In the future, we may expand the app's
+          functionality by providing interactive plots of air quality over time
+          and using more advanced prediction methods.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Personal Website -->
+<section class="page-section text-black mb-0" id="project-3" style="padding-top: 3.25em">
+  <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase text-black">
+      Personal Website
+    </h2>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          I created wmboyles.com as a place to provide more in-depth information
+          about me and my projects than can fit onto a resume. Coding the
+          website and buying a domain name were great learning experiences. The
+          first iteration of the website was in vanilla HTML, CSS, and
+          JavaScript. I wanted to get the experience of doing everything myself
+          rather than using no-code site builder tools. This version was
+          passable, but it didn't look good on mobile devices with narrower
+          screens. To solve this in my next iteration, I used
+          <a href="https://getbootstrap.com/" target="_blank">Bootstrap </a> to
+          do cleaner styling and work better on mobile devices. This version
+          worked well, but I was annoyed that some files were very long and
+          redundant. Often, if I wanted to make a small change, I would have to
+          make it on every single page. To alleviate this in my third and
+          current iterations, I now use Jekyll to generate my site for me. Now,
+          I can write redundant peices of code once and just include them where
+          needed.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          Although you are already viewing the website, all the code is
+          available on
+          <a href="https://github.com/wmboyles/wmboyles.com">GitHub</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Math Summaries -->
+<section class="page-section bg-light text-black mb-0" id="project-4" style="padding-top: 3.25em">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-black">
+            Math Summaries
+        </h2>
+
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    While taking a summer physics class dealing with
+                    multivariable calculus, I realized how much of the subject I
+                    had forgotten even though I took multivariable calculus
+                    class (Calc III) only nine months earlier. I also knew that
+                    several of my friends who would be taking Calc III in the
+                    coming semesters had already requested my notes and advice
+                    about the class.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    However, I like to keep my notes, which can be hard for
+                    others to read, as a reference. I decided to digitize my
+                    notes using
+                    <a href="https://www.latex-project.org/" target="_blank">LaTeX</a>
+                    in an abridged textbook structure. I would also add better
+                    visual aids than the hurriedly-drawn sketches in my nodes.
+                    This way, I could easily share clear and legible notes, keep
+                    the my original notes, and refresh my own understanding. By
+                    the time I was finished, I had condensed the several
+                    thousand page textbook into an
+                    <a href="./assets/PDF/MA242_Summary.pdf" target="_blank">81 pages</a>
+                    that covered almost all topics mentioned in class while
+                    still containing many visual aids and full length proofs. I
+                    feel much more confident in my abilities, and I think my
+                    friends will be able to learn from me much more easily.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    After completing my notes, I posted the results to
+                    <a href="https://www.reddit.com/r/math/" target="_blank">r/math</a>, an online community of math enthusiasts. To my surprise
+                    my post was incredibly well received, and several users
+                    suggested open sourcing my work so that others could help
+                    make corrections and suggest additions.
+                    <a href="https://github.com/wmboyles/Math-Summaries" target="_blank">The repo</a>
+                    is available and has already taken several community
+                    contributions.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    I've begun expanding the scope of the project beyond
+                    multivaraible calculus. I recently completed a
+                    <a href="./assets/PDF/MA341_Summary.pdf" target="_blank">
+                        92-page summary
+                    </a>
+                    of introductory differential equations, and hope to start
+                    working on a similar document for linear algebra. Due to
+                    user suggestions, a summary of single variable calculus is
+                    also forthcoming.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Twitter Bad Words Bot -->
+<section class="page-section text-black mb-0" id="project-5" style="padding-top: 3.25em">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-black">
+            Twitter Bad Words Bot
+        </h2>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    The specific words that people choose to use can provide
+                    insight into their background and character. Although
+                    reasonable people can vehemently disagree, a good indicator
+                    of mutual respect between two parties is that neither
+                    resorts to vulgarity. Inspired by other bots on platforms
+                    like Reddit and Discord that could provide information on
+                    the language that users have used and play a part in keeping
+                    online discussion civil, I set out to create a Twitter bot
+                    that when called upon by a Twitter user would provide
+                    information on vulgarities that a requested user had
+                    recently tweeted.
+                </p>
+            </div>
+        </div>
+        <blockquote class="twitter-tweet tw-align-center">
+            <p lang="en" dir="ltr">
+                Bad Word Count Bot Report for
+                <a href="https://twitter.com/BadWordsMovie?ref_src=twsrc%5Etfw">@badwordsmovie</a>&#39;s last 100 tweets<br />bitch - 3<br />hell - 3<br />fucking
+                - 2<br />fuck - 2<br />ass - 1<br />cunt - 1<br />fucker - 1<br />damn
+                - 1<br />tits - 1<br />asshole - 1<br />shit - 1
+            </p>
+            &mdash; Bad Word Count Bot (@BadWordCount)
+            <a href="https://twitter.com/BadWordCount/status/1181932968371200007?ref_src=twsrc%5Etfw">October 9, 2019</a>
+        </blockquote>
+        <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    I wrote the bot in Python, following basic online video
+                    tutorials that detailed how to work with the Twitter API
+                    through the Python library
+                    <a href="https://www.tweepy.org/" target="_blank">tweepy</a>. Although these tutorials showed me how to detect when a
+                    user had @ mentioned the bot and how to respond to tweets,
+                    the real challenge and substance of this bot came from
+                    accessing another user's tweets, parsing through them to
+                    find bad words, and reporting the frequency of these bad
+                    words within the 280-character limit of a Tweet.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    After finding separate answers on how to access a given
+                    user's tweets, I got to work on detecting bad words.
+                    Although I found several GitHub repos that contained lists
+                    of bad words, many were too comprehensive, marking even
+                    words with possible negative connotations, like the names of
+                    political parties, as bad. I eventually settled on a
+                    <a href="https://github.com/RobertJGabriel/Google-profanity-words" target="_blank">list</a>
+                    of 444 common words collected by Google. This list was
+                    comprehensive enough to cover most bad word, and even common
+                    variations like swapping a letter for a number. On the
+                    implementation side, I took advantage of Python's built in
+                    dictionary functionality to find matching bad words in a
+                    user's 100 most recent tweets and rank them by frequency.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    The bot is currently not deployed. I hope to find a long
+                    term, affordable, and reliable deployment solution.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    The bot's Twitter handle is
+                    &lt;a href="https://twitter.com/BadWordCount" , target="_blank"
+                        &gt;@BadWordCount&lt;/a
+                    &gt;. Go ahead and try it out on some of your favorite twitter
+                    users. The tweet shown above is from a movie starring Jason
+                    Bateman. The code that the bot is running is on my
+                    <a href="https://github.com/wmboyles/BadWordsBot" target="_blank">GitHub</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Jeopardy! Game -->
+<section class="page-section bg-light text-black mb-0" id="project-6" style="padding-top: 3.25em">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-black">
+            Jeopardy! Game
+        </h2>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    <em>Jeopardy!</em> has for a long time been one of my
+                    favorite TV game shows. I enjoy how the game is mostly skill
+                    based and I always learn something new when I play along.
+                    When I heard about the free
+                    <a href="https://jservice.io/" target="_blank">JService</a>
+                    API from a friend, I thought this would be a fun opportunity
+                    for me to learn about interacting with APIs.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    I decided to write a single-player version of the game that
+                    could be used for practicing. I went with JavaScript running
+                    in the client's web-browser, as this would allow me to
+                    deploy my app for free as a website hosted by GitHub Pages.
+                    After I figured out how to make calls to the JService API,
+                    the rest of the implementation was fairly straightforward.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ml-auto">
+                <img src="./assets/Images/Projects/PlayJ/PlayJ_gameplay.PNG" alt="Placeholder Image" style="
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        max-height: 25em;
+                    " />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    The biggest issue came from some unavoidable problems with
+                    the JService API. For API problems, some
+                    <em>Jeopardy!</em> clues use sounds or videos as clues, the
+                    gimmick of certain categories are also hard to understand
+                    without an explanation from the host. JService provides
+                    access to neither of these things. Although JService has
+                    made an effort to remove these sorts of clues from its
+                    dataset, some still remain. Further, the answers to certain
+                    clues sometimes contain extraneous words like "a" or "the".
+                    To avoid the user being penalized for responses that aren't
+                    letter for letter perfect, I've included an "I'm Right"
+                    button that gives the user credit for an answer that doesn't
+                    exactly match the one provided by JService. Another big
+                    difference between traditional <em>Jeopardy!</em> gameplay
+                    and mine is that I don't require users to answer in the form
+                    of a question. This matched the form in which answers were
+                    sent by the API.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    Click the link to
+                    <a href="https://wmboyles.github.io/PlayJ/" target="_blank">play</a>
+                    for yourself. You can also see the code on
+                    <a href="https://github.com/wmboyles/PlayJ" target="_blank">GitHub</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+ <!-- Computer Generated Art -->
+<section class="page-section text-black mb-0" id="project-7" style="padding-top: 3.25em">
+  <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase text-black">
+      Computer Generated Art
+    </h2>
+
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          Visuals have always been an effective and fun way for me to learn,
+          especially when the topic is abstract. The
+          <a href="https://docs.python.org/2/library/tkinter.html" target="_blank">tkinker</a>,
+          <a href="https://docs.python.org/3.3/library/turtle.html?highlight=turtle" target="_blank">turtle</a>, and
+          <a href="https://python-pillow.org/" target="_blank">Pillow</a>
+          Python GUI libraries allow for simple image manipulation, down to the
+          pixel level.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          For example, the left image below visualizes how numbers change after
+          a given number of iterations in the unsolved Collatz conjecture; it
+          has been my phone background for several years. For a more artistic
+          visualization, see the right image below, which applies a smeared
+          watercolor effect.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 ml-auto">
+        <img src="./assets/Images/Projects/Python/Collatz1080.bmp" alt="Python-created image based on the Collatz conjecture" />
+      </div>
+      <div class="col-sm-5 mr-auto">
+        <img src="./assets/Images/Projects/Python/CollatzWC2.bmp" alt="Python-crated image based on the Collatz conjecture with watercolor streaks" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          One can also visualize more useful and common mathematical ideas. The
+          left image below shows how horizontal and vertical lines in the
+          complex plane are transformed under e^(1/z). One can clearly see
+          concentric cardioids. The right image below shows the graph of several
+          common functions, like sine and the natural logarithm.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 ml-auto">
+        <img src="./assets/Images/Projects/Python/e^(z^-1).bmp" alt="Python-created image of the complex mapping of e^(1/z)" />
+      </div>
+      <div class="col-sm-5 mr-auto">
+        <img src="./assets/Images/Projects/Python/pillowfunctions.bmp" alt="Python-created image of graphed functions" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          The Turtle library allows one to trace out colored paths in an image,
+          like the rainbow spiral no the left below. Getting a little more
+          advanced, one can create recursive shapes, like the Koch Snowflake,
+          Seirpinski Triangle, and dragon curve, shown below.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 ml-auto">
+        <img src="./assets/Images/Projects/Python/Capture10.PNG" alt="Python-created image of hexagonal rainbow sprial" />
+      </div>
+      <div class="col-sm-5 mr-auto">
+        <img src="./assets/Images/Projects/Python/snowflake.PNG" alt="Python-created image of Koch Snowflake" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 ml-auto">
+        <img src="./assets/Images/Projects/Python/serpinski-2.PNG" alt="Python-created image of Seirpinski Triangle" />
+      </div>
+      <div class="col-sm-5 mr-auto">
+        <img src="./assets/Images/Projects/Python/dragonCurve-1.PNG" alt="Python-created image of dragon curve" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          One can also make other startlingly complex images from a simple set
+          of recursive rules. The below images, known collectively as "strange
+          attractors," show a tree, Barnsley Fern, pine branch and piece of tall
+          grass. The procedural generation techniques used to create these
+          images, known as L-systems, are used in many of today's popular video
+          games to make random, realistic terrain and plants.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 ml-auto">
+        <img src="./assets/Images/Projects/Python/30degTree.PNG" alt="Python-created image of 30-degree binary tree" />
+      </div>
+      <div class="col-sm-5 mr-auto">
+        <img src="./assets/Images/Projects/Python/barnsleyFern.PNG" alt="Python created image of Barnsley Fern" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 ml-auto">
+        <img src="./assets/Images/Projects/Python/TallGrass1-1.PNG" alt="Python-created image of L-system resembling tall grass" />
+      </div>
+      <div class="col-sm-5 mr-auto">
+        <img src="./assets/Images/Projects/Python/PineBranch-1.PNG" alt="Python-created image of L-system resembling pine branch" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="lead">
+          The images above and many others that I made in Python, as well as the
+          code used to create them, are available on
+          <a href="https://github.com/wmboyles/Python-Projects/tree/master/Graphics_Images/ImageCreation/PIL" target="_blank">GitHub</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+:ET

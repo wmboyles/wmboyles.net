@@ -1,4 +1,4 @@
-I"Sq<main>
+I"És<main>
   <!-- Lights Out App -->
 <section class="page-section text-black mb-0" id="project-1" style="padding-top: 3.25em">
     <div class="container">
@@ -440,75 +440,79 @@
 </section>
  <!-- Jeopardy! Game -->
 <section class="page-section bg-light text-black mb-0" id="project-6" style="padding-top: 3.25em">
-  <div class="container">
-    <h2 class="page-section-heading text-center text-uppercase text-black">
-      Jeopardy! Game
-    </h2>
-    <div class="row">
-      <div class="col">
-        <p class="lead">
-          <em>Jeopardy!</em> has for a long time been one of my favorite TV game
-          shows. I enjoy how the game is mostly skill-based and I always learn
-          something new when I play along. When I heard about the free
-          <a href="https://jservice.io/" target="_blank">JService</a> API from a
-          friend, I thought this would be a fun opportunity for me to learn
-          about interacting with APIs.
-        </p>
-      </div>
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-black">
+            Jeopardy! Game
+        </h2>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    <em>Jeopardy!</em> has for a long time been one of my
+                    favorite TV game shows. I enjoy how the game is mostly
+                    skill-based and I always learn something new when I play
+                    along. When I heard about the free
+                    <a href="https://jservice.io/" target="_blank">JService</a>
+                    API from a friend, I thought this would be a fun opportunity
+                    for me to learn about interacting with APIs.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    I decided to write a single-player version of the game that
+                    could be used for practicing. I went with JavaScript running
+                    in the client's web-browser, as this would allow me to
+                    deploy my app for free as a website hosted by GitHub Pages.
+                    After I figured out how to make calls to the JService API,
+                    the rest of the implementation was fairly straightforward.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ml-auto">
+                <img src="./assets/Images/Projects/PlayJ/PlayJ_gameplay.PNG" alt="Placeholder Image" style="
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        max-height: 25em;
+                    " />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    The biggest issue came from some unavoidable problems with
+                    the JService API. For API problems, some
+                    <em>Jeopardy!</em> clues use sounds or videos as clues, the
+                    gimmick of certain categories are also hard to understand
+                    without an explination from the host. JService provides
+                    access to neither of these things. Although JService has
+                    made an effort to remove these sorts of clues from its
+                    dataset, some still remain. Further, the answers to certain
+                    clues sometimes contain extraneous words like "a" or "the".
+                    To avoid the user being penalized for responses that arent't
+                    letter for letter perfect, I've included an "I'm Right"
+                    button that gives the user credit for an answer that doesn't
+                    exactly match the one provided by JService. Another big
+                    difference between traditional <em>Jeopardy!</em> gameplay
+                    and mine is that I don't require users to answer in the form
+                    of a question. This matched the form in which answers were
+                    sent by the API.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">
+                    Click the link to
+                    <a href="https://wmboyles.github.io/PlayJ/" target="_blank">play</a>
+                    for yourself. You can also see the code on
+                    <a href="https://github.com/wmboyles/PlayJ" target="_blank">GitHub</a>.
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <p class="lead">
-          I decided to write a single-player version of the game that could be
-          used for practicing. I went with JavaScript running in the client's
-          web-browser, as this would allow me to deploy my app for free as a
-          website hosted by GitHub Pages. After I figured out how to make calls
-          to the JService API, the rest of the implementation was fairly
-          straitforward.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col ml-auto">
-        <img src="./assets/Images/Projects/PlayJ/PlayJ_gameplay.PNG" alt="Placeholder Image" style="
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-height: 25em;
-          " />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <p class="lead">
-          The biggest issue came from some unavoidable problems with the
-          JService API. For API problems, some <em>Jeopardy!</em> clues use
-          sounds or videos as clues, the gimmick of certain categories are also
-          hard to understand without an explination from the host. JService
-          provides access to neither of these things. Although JService has made
-          an effort to remove these sorts of clues from its dataset, some still
-          remain. Further, the answers to certain clues sometimes contain
-          extraneous words like "a" or "the". To avoid the user being penalized
-          for responses that arent't letter for letter perfect, I've included an
-          "I'm Right" button that gives the user credit for an answer that
-          doesn't exactly match the one provided by JService. Another big
-          difference between traditional <em>Jeopardy!</em> gameplay and mine is
-          that I don't require users to answer in the form of a question. This
-          matched the form in which answers were sent by the API.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <p class="lead">
-          Click the link to
-          <a href="https://wmboyles.github.io/PlayJ/" target="_blank">play</a>
-          for yourself. You can also see the code on
-          <a href="https://github.com/wmboyles/PlayJ" target="_blank">GitHub</a>.
-        </p>
-      </div>
-    </div>
-  </div>
 </section>
  <!-- Computer Generated Art -->
 <section class="page-section text-black mb-0" id="project-7" style="padding-top: 3.25em">
