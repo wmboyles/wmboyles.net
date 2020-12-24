@@ -1,6 +1,6 @@
 <!-- A  navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
+  <div class="container col-8">
     <a class="navbar-brand" href="/">WB</a>
     <button
       class="navbar-toggler collapsed"
@@ -43,7 +43,7 @@
             class="dropdown-menu dropdown-menu-right bg-secondary"
             aria-labelledby="navbarDropdown"
           >
-            <a class="dropdown-item" href="/projects#project-1">
+            <a class="dropdown-item" href="/projects/lightsout">
               Lights Out Android App
               <div class="skill-badges">
                 <span class="badge badge-java x-1"
@@ -54,7 +54,8 @@
                 </span>
               </div>
             </a>
-            <a class="dropdown-item" href="/projects#project-2"
+
+            <a class="dropdown-item" href="/projects/seeo2"
               >Air Quality Tracking &amp; Prediction
               <div class="skill-badges">
                 <span class="badge badge-python3 x-1"
@@ -65,17 +66,8 @@
                 ></span>
               </div>
             </a>
-            <a class="dropdown-item" href="/projects#project-3"
-              >Personal Website
-              <div class="skill-badges">
-                <span class="badge badge-web x-1"
-                  >HTML/JS/CSS<i class="badge-icon fas fa-code"></i></span
-                ><span class="badge badge-bootstrap x-1"
-                  >Bootstrap<i class="badge-icon fab fa-bootstrap"></i
-                ></span>
-              </div>
-            </a>
-            <a class="dropdown-item" href="/projects#project-4"
+
+            <a class="dropdown-item" href="/projects/mathsummaries"
               >Math Summaries
               <div class="skill-badges">
                 <span class="badge badge-tex x-1"
@@ -83,8 +75,19 @@
                 ></span>
               </div>
             </a>
-            <a class="dropdown-item" href="/projects#project-5"
-              >Twitter Bad Words Count Bot
+
+            <a class="dropdown-item" href="/projects/playj"
+              ><em>Jeopardy!</em>
+              Game
+              <div class="skill-badges">
+                <span class="badge badge-web x-1"
+                  >JS<i class="badge-icon fas fa-code"></i
+                ></span>
+              </div>
+            </a>
+
+            <a class="dropdown-item" href="/projects/twitterbot"
+              >Twitter Bad Words Bot
               <div class="skill-badges">
                 <span class="badge badge-python3 x-1"
                   >Python 3<i class="badge-icon fab fa-python"></i
@@ -94,16 +97,19 @@
                 </span>
               </div>
             </a>
-            <a class="dropdown-item" href="/projects#project-6"
-              ><em>Jeopardy!</em>
-              Game
+
+            <a class="dropdown-item" href="/projects/website"
+              >Personal Website
               <div class="skill-badges">
                 <span class="badge badge-web x-1"
-                  >JS<i class="badge-icon fas fa-code"></i
+                  >HTML/JS/CSS<i class="badge-icon fas fa-code"></i></span
+                ><span class="badge badge-bootstrap x-1"
+                  >Bootstrap<i class="badge-icon fab fa-bootstrap"></i
                 ></span>
               </div>
             </a>
-            <a class="dropdown-item" href="/projects#project-7"
+            
+            <a class="dropdown-item" href="/projects/compart"
               >Computer Generated Art
               <div class="skill-badges">
                 <span class="badge badge-python3 x-1"
@@ -111,6 +117,7 @@
                 ></span>
               </div>
             </a>
+
           </div>
         </li>
         <li id="nav-contact" class={% if page.activePage == "contact" %}"nav-item active"{% else %}"nav-item"{% endif %}>
