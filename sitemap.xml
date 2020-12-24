@@ -9,37 +9,77 @@
 
 <url>
   <loc>https://wmboyles.com/</loc>
-  <lastmod>2020-11-07T22:16:45+00:00</lastmod>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://wmboyles.com/assets/PDF/WilliamBoyles_Resume.pdf</loc>
-  <lastmod>2020-11-07T22:16:34+00:00</lastmod>
+  <lastmod>2020-12-24T00:52:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://wmboyles.com/projects</loc>
-  <lastmod>2020-11-07T22:16:45+00:00</lastmod>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wmboyles.com/projects/lightsout</loc>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wmboyles.com/projects/seeo2</loc>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wmboyles.com/projects/mathsummaries</loc>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wmboyles.com/projects/playj</loc>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wmboyles.com/projects/twitterbot</loc>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wmboyles.com/projects/website</loc>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://wmboyles.com/projects/compart</loc>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://wmboyles.com/contact</loc>
-  <lastmod>2020-11-07T22:16:45+00:00</lastmod>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://wmboyles.com/lightsout</loc>
-  <lastmod>2020-11-07T22:16:45+00:00</lastmod>
+  <lastmod>2020-12-24T00:52:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://wmboyles.com/assets/PDF/Calc_Summary.pdf</loc>
+  <lastmod>2020-12-24T00:52:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://wmboyles.com/assets/PDF/MA242_Summary.pdf</loc>
-  <lastmod>2020-11-07T22:16:34+00:00</lastmod>
+  <lastmod>2020-12-24T00:52:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://wmboyles.com/assets/PDF/MA341_Summary.pdf</loc>
-  <lastmod>2020-11-07T22:16:34+00:00</lastmod>
+  <lastmod>2020-12-24T00:52:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
