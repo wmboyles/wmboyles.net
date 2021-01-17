@@ -9,18 +9,34 @@
 </p>
 
 <p class="lead">
-    However, my hurriedly-taken handwritten notes could be sometimes incomplete
+    However, my hurriedly-taken, handwritten notes could be sometimes incomplete
     and hard to read. Plus, I like to keep my handwritten notes as a reference.
     I decided to digitize my notes using
     <a href="https://www.latex-project.org/" target="_blank">LaTeX</a>
-    in an abridged textbook structure. I would also add better visual aids than
-    the sketches in my notes. This way, I could easily share clear and legible
-    notes with my friends, keep the original notes for myself, and refresh my
-    own understanding while writing. By the time I was finished, I had condensed
-    a several thousand page textbook into an 81 page document that covered all
-    the important topics mentioned in class while still containing many visual
-    aids, examples, full length proofs, and test questions.
+    into an abridged textbook structure. I would also add better visual aids
+    than the sketches in my notes. This way, I could easily share clear and
+    legible notes with my friends, keep the original notes for myself, and
+    refresh my own understanding while writing. By the time I was finished, I
+    had condensed the several thousand page Calc III textbook into less than 100
+    pages that covered all the important topics mentioned in class while still
+    containing many visual aids, examples, full length proofs, and test
+    questions.
 </p>
+
+<div class="row">
+    <div class="col ml-auto">
+        <img
+            src="/assets/Images/Projects/Math-Summaries/eulers_identity.PNG"
+            alt="Play J! Gameplay"
+            style="
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 30em;
+            "
+        />
+    </div>
+</div>
 
 <p class="lead">
     After completing my notes, I posted the results to
@@ -35,6 +51,24 @@
 </p>
 
 <p class="lead">
+    Putting the project on GitHub also helped me avoid mistakes and simplify my
+    workflow. For example, when writing a text with equations, it's important
+    that all sentences end with a period, including sentences that contain an
+    equation. I had not been strict in observing this rule, but thanks to
+    community contributions, I now have a Python script that finds and fixes
+    these mistakes. Another issue solved in GitHub was thanking contributors. I
+    wanted to include everyone that contributed to the project in the text, but
+    I though it infeasible to have everyone on the title page as an author. I
+    settled on adding a contributors section, but I didn't want to have users
+    manually add their names, espeically since many contributors did not know
+    LaTeX. Instead, I wrote a Python script that would query the GitHub API, get
+    all the most up to date list of project contributors and generate the LaTeX
+    file. This script was integrated as a step in a Github Action that would
+    also compile each work into a PDF so people could view the work wihtout
+    needing to compile the LaTeX themselves.
+</p>
+
+<p class="lead">
     Since then, I've begun expanding the scope of the project beyond
     multivaraible calculus. The project now includes summaries of intro to
     differential equations, usually the next class after Calc III, and single
@@ -45,7 +79,7 @@
     It has been incredibly heartwarming to see how many people appreciate my
     work and take enough interest to point out mistakes, make suggestions, and
     contribute. I hope to continue expanding this project as I take more math
-    classes. I expect linear algebra to be the next topic I'll cover.
+    classes. I expect linear algebra will be the next topic I'll cover.
 </p>
 
 <h3 class="text-black text-uppercase">PDFs</h3>
