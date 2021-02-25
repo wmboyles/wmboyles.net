@@ -3,7 +3,7 @@ title: William Boyles | Computer Art
 description: Computer-Generated Art
 activePage: projects
 header-title: Computer-Generated Art
-header-subtitle: <span class="badge badge-python3 x-1">Python 3<i class="badge-icon fab fa-python"></i></span>
+header-subtitle: <span class="badge badge-python3 x-1">Python<i class="badge-icon fab fa-python"></i></span>
 layout: default
 ---
 
