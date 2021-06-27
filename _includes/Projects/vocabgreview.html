@@ -1,0 +1,61 @@
+<!-- VocabGREview -->
+<p class="lead">
+  During the summer of 2021, I spent a lot of my evenings studying for the GRE.
+  I was especially struggling with vocabulary questions. Most of these questions
+  are structured so that you are given a sentence with a word missing and must
+  choose the correct word among five answer choices to logically complete the
+  sentence. Although I tried to prepare by memorizing the definitions of words,
+  I knew the best way to prepare would be to answer questions with the exact
+  same structure as those on the exam. Unfortunately, there are a limited number
+  of these questions available in test prep books. If I could get the most
+  common GRE words and some example sentences using them, I could generate the
+  questions myself.
+</p>
+
+<p class="lead">
+  First, I needed a list of words that commonly appear on the GRE. Thankfully,
+  <a href="https://www.graduateshotline.com/gre/">GraduateShotOnline</a> has
+  lists of over the 1300 most common GRE words. These are very easy to scrape
+  using a tool like BeautifulSoup. Now that I had the words, I needed didactic
+  sentences containing them like one would see in a dictionary. Companies like
+  Webster's have APIs for their dictionaries, but they tend to either lack
+  example sentences or require payment, which was not an option on my budget of
+  nothing. Originially, I tried scraping the result of "define _____" from
+  search engines. However, search engines purposely make their content hard to
+  scrape to hinder competitors. Eventually I found
+  <a href="https://api.dictionaryapi.dev">DictionaryAPI.dev</a> where I could
+  get the same information one would see in an internet search without the
+  difficulty or cost.
+</p>
+
+<p class="lead">
+  I wrote the API in Python and the frontend in React. One could query the API
+  to get a random question and answer pair. If one clicked an answer choice
+  button and it was correct, the button would turn red. Otherwise, the button
+  would turn green.
+</p>
+
+<div class="row">
+  <div class="col ml-auto">
+    <img
+      src="/assets/Images/Projects/VocabGREview/vocabgreview.png"
+      alt="Screenshot of VocabGREview app with a red incorrect answer choice and a
+    green correct answer choice"
+      style="
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 30em;
+      "
+    />
+  </div>
+</div>
+
+<p class="lead">
+  I deployed the app to Heroku because it was free. This project was a really
+  great way to make a useful study tool while getting more hands-on with React.
+  In the future, I might add different "gamemodes" or more ways to see with
+  which words are the most difficult for each user. You can try it out for
+  yourself <a href="https://vocabgreview.herokuapp.com/">here</a> and can look
+  at the code in <a href="https://github.com/wmboyles/VocabGREview">GitHub</a>.
+</p>

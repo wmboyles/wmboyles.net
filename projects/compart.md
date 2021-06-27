@@ -1,4 +1,4 @@
----
+<!-- ---
 title: William Boyles | Computer Art
 description: Computer-Generated Art
 activePage: projects
@@ -11,4 +11,4 @@ layout: default
     <div class="col-md-8 offset-md-2">
         {% include projects/compart.html %}
     </div>
-</main>
+</main> -->
