@@ -66,6 +66,7 @@ i.badge-icon:before {
 .dropdown-menu::-webkit-scrollbar {
 	display: none;
 }
+
 /** Game board */
 .statsTable {
 	width: 54.25em;
@@ -84,7 +85,8 @@ i.badge-icon:before {
 
 .boardBtn {
 	min-height: 1em;
-	min-width: 1em; background-color : rgba( 0, 0, 0, .5);
+	min-width: 1em;
+	background-color: rgba(0, 0, 0, .5);
 	borderCollase: collapse;
 	border: 1px solid black;
 	background-color: rgba(0, 0, 0, .5);

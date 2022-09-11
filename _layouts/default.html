@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="description" content="{{ page.description }}" />
-        <title>{{ page.title }}</title>
 
-        <link rel="stylesheet" href="/assets/CSS/default.css" />
+<head>
+    <meta name="description" content="{{ page.description }}" />
+    <title>{{ page.title }}</title>
 
-        {% include common_head.html %}
-    </head>
-    <body class="d-flex flex-column h-100">
-        {% include nav.html %} {% include page_header.html %} {{ content }} {%
-        include footer.html %} {% include common_end_body.html %}
-    </body>
+    <link rel="stylesheet" href="/assets/CSS/default.css" />
+
+    {% include common_head.html %}
+</head>
+
+<body class="d-flex flex-column h-100">
+    {% include nav.html %} {% include page_header.html %} {{ content }} {%
+    include footer.html %} {% include common_end_body.html %}
+</body>
+
 </html>

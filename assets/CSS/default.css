@@ -72,15 +72,6 @@ i.badge-icon:before {
     display: none;
 }
 
-/* Make the profile photo circular */
-#profile-photo {
-    max-width: 172px;
-    max-height: 172px;
-    border-color: black;
-    border-width: 20px;
-    border-radius: 50%;
-}
-
 /******* Custom project.html stylings ********/
 /** Limit image size to fit on screens */
 img {
