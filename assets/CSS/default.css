@@ -51,6 +51,10 @@ a.dropdown-item:hover {
     background-color: #a4c639;
 }
 
+.badge.badge-azure {
+    background-color: #008ad7;
+}
+
 /* Styling of icons in footer */
 i.footer-icon:before {
     font-size: 18pt;
