@@ -1,72 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://wmboyles.com/</loc>
-  <lastmod>2022-09-10T23:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/resume</loc>
-  <lastmod>2021-05-04T20:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/resume</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/projects</loc>
-  <lastmod>2022-09-10T23:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/projects/lightsout</loc>
-  <lastmod>2021-05-04T20:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects/lightsout</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/projects/seeo2</loc>
-  <lastmod>2021-05-04T20:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects/seeo2</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/projects/mathsummaries</loc>
-  <lastmod>2021-05-04T20:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects/mathsummaries</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/projects/playj</loc>
-  <lastmod>2021-05-04T20:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects/playj</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/projects/ncaapredictions</loc>
-  <lastmod>2022-09-10T23:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects/ncaapredictions</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/projects/website</loc>
-  <lastmod>2021-05-04T20:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects/azurephotos</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/projects/vocabgreview</loc>
-  <lastmod>2021-06-27T18:35:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects/website</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/contact</loc>
-  <lastmod>2021-05-04T20:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/contact</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://wmboyles.com/lightsout</loc>
-  <lastmod>2021-05-04T20:53:43+00:00</lastmod>
+  <loc>https://wmboyles.net/projects/compart</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-
-
+<url>
+  <loc>https://wmboyles.net/projects/vocabgreview</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://wmboyles.net/projects/twitterbot</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://wmboyles.net/lightsout</loc>
+  <lastmod>2023-06-18T11:13:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 </urlset>
