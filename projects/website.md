@@ -7,8 +7,4 @@ header-subtitle: You're Already Here<br/><span class="badge badge-bootstrap x-1 
 layout: default
 ---
 
-<main class="text-black mb-0">
-    <div class="col-md-8 offset-md-2">
-        {% include projects/website.html %}
-    </div>
-</main>
+{% include projects/website.html %}

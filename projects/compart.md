@@ -7,8 +7,4 @@ header-subtitle: Before AI made it cool<br/><span class="badge badge-python3 x-1
 layout: default
 ---
 
-<main class="text-black mb-0">
-    <div class="col-md-8 offset-md-2">
-        {% include projects/compart.html %}
-    </div>
-</main>
+{% include projects/compart.html %}

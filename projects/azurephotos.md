@@ -8,9 +8,4 @@ header-subtitle: I'm not paying for Google One<br/> <span class="badge badge-pyt
 layout: default
 ---
 
-<main class="text-black mb-0">
-    <div class="col-md-8 offset-md-2">
-        {% include projects/azurephotos.html %}
-    </div>
-</main>
-
+{% include projects/azurephotos.html %}

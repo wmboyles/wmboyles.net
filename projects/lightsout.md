@@ -7,8 +7,4 @@ header-subtitle: Get it on Google Play<br/> <span class="badge badge-java x-1 mr
 layout: default
 ---
 
-<main class="text-black mb-0">
-    <div class="col-md-8 offset-md-2">
-        {% include projects/lightsout.html %}
-    </div>
-</main>
+{% include projects/lightsout.html %}

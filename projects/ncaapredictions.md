@@ -7,8 +7,4 @@ header-subtitle: <span class="badge badge-python3 x-1 mr-1">Python<i class="badg
 layout: default
 ---
 
-<main class="text-black mb-0">
-    <div class="col-md-8 offset-md-2">
-        {% include projects/ncaapredictions.html %}
-    </div>
-</main>
+{% include projects/ncaapredictions.html %}
