@@ -1,10 +1,10 @@
 <!-- NCAA Predictions -->
 
-<p class="lead">
+<p>
     My friends and I really enjoy the NCAA Tournament. Even if our favorite teams are not participating, we've found
     that filling out a bracket is a good way to get excited about a game between two teams you might not have even
     otherwise heard of. We also compete against each other to see who can make the best predictions. Since I'm a
-    computer scientist and someone who doesn't have the time to follow all Division I teams in the months leading up to
+    computer scientist and someone who doesn't have the time to follow all Division I teams in the months ing up to
     March, I've created a Python program that automatically scrapes the web for game data, make predictions with a
     choice of several ranking algorithms, and generate a filled-in PDF bracket for me.
 </p>
@@ -17,7 +17,7 @@
 </div>
 
 <h3 class="text-uppercase text-black">Web Scraping</h3>
-<p class="lead">
+<p>
     The first step of the prediction program was to obtain game data from all teams that could participate in the NCAA
     Tournament. Although a much smaller number of teams have paritipated in the Tournament in the last decade or so,
     there are in theory about 350 Division I men's teams that could be included. Given that each of these teams plays
@@ -29,7 +29,7 @@
 </p>
 
 <h3 class="text-uppercase text-black">Predictions</h3>
-<p class="lead">
+<p>
     We now have a bunch of outcomes of regular season games. However, we have some problems to face. To start, many of
     the games we want to predict never happened during the regular season, so we need a way to infer the outcome of
     these games from our data. The simpliest and probably most pratical way to do this is to create a ranking of all
@@ -38,7 +38,7 @@
 </p>
 
 <h4 class="text-uppercase text-black">Elo</h4>
-<p class="lead">
+<p>
     In an Elo rating system, all new teams are given a starting number of points. As games happen, winners take a
     certain number of points from losers. Thus, we'd expect better teams to have more points. The number of points
     exchanged is determined by the initial point difference between the opponents. Since its unsuprising that a team
@@ -51,7 +51,7 @@
 </p>
 
 <h4 class="text-uppercase text-black">Bradley-Terry</h4>
-<p class="lead">
+<p>
     In Bradley-Terry Ranking, we wish to assign each team a positive score and estimate that the probability that team X
     (with score y) beats team Y (with score y) as x/(x+y). We can calculate each teams score by starting with each
     team's score equal and performing many rounds of an iterated procedure that updates our estimates. The score
@@ -61,7 +61,7 @@
 </p>
 
 <h4 class="text-uppercase text-black">PageRank</h4>
-<p class="lead">
+<p>
     In PageRank, we have a graph structure with nodes that are connected together by weighted directed edges. In a graph
     with N total nodes, we say the rank of a node X is the probability that if a person starts at a random node R and
     either jumps to a new random node with probability 1/N, or travels to a new node via edges from R with probabilities
@@ -73,7 +73,7 @@
 </p>
 
 <h4 class="text-uppercase text-black">Problems with Absolute Ranking</h4>
-<p class="lead">
+<p>
     Although all the algorithms above are clever and find cool real-world applications, the fact that they generate an
     absolute ranking of teams means they all share the same flaw in modeling real games: transitivity. That is, if these
     algorithms predict that A should beat B and B should beat C, then they must also predict that A should beat C.
@@ -82,7 +82,7 @@
     aforementioned ranking algorithms, the best they could do is say that rock, paper, and scissors are equally likely
     to beat each other, when we know this is false.
 </p>
-<p class="lead">
+<p>
     We can see the problem transitivity poses to accurate ranking visually. If we draw out the outcomes of some games
     between rock, paper, and scissors with arrows, we get a circle. These circles also exist in basketball games and can
     be big enough to include all Division I games, in what's known as a "Circle of Suck".
@@ -100,7 +100,7 @@
 </div>
 
 <h4 class="text-uppercase text-black">PathRank</h4>
-<p class="lead">
+<p>
     Our tournament prediction algorithm only needs to do one thing: Predict the outcome of a game between two teams.
     This goal is not incompatible with Circles of Suck. After all, one can accurately say who will win any game of rock
     paper scissors. However, our approach of generating a list ranking of all teams is the issue. So, I have created my
@@ -112,7 +112,7 @@
     another, the less likely transitivity is to hold.
 </p>
 
-<p class="lead">
+<p>
     Although my algorithm does have the unique advantage amoung the ones I've mentioned to handle non-transitivity, it
     does have some problems. Most notably, all of the other ranking algorithms I've described have been studied my
     mathematians and statistians to confirm that they work. They also also stood the test of time in having been applied
@@ -121,7 +121,7 @@
 </p>
 
 <h3 class="text-uppercase text-black">PDF Generation</h3>
-<p class="lead">
+<p>
     Now that I had a way to predict the outcome of games, I wanted a way to visually show my predictions. A filled-in
     bracket seemed like the best option, since it is what people are most familiar with for the NCAA Tournament. It was
     realtively straightforward to write a Python script that would write and compile a LaTeX file into a PDF. My only
@@ -132,7 +132,7 @@
 </p>
 
 <h3 class="text-uppercase text-black">Conclusion</h3>
-<p class="lead">
+<p>
     All my code is availiable on <a href="https://github.com/wmboyles/NCAA-Predictions">GitHub</a>, where you can
     generate your own brackets, investigate how the ranking algorithms work, and even extend the project to write your
     own ranking algorithm.
