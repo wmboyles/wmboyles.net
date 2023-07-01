@@ -7,8 +7,4 @@ header-subtitle: <span class="badge badge-tex x-1">TeX<i class="badge-icon fas f
 layout: default
 ---
 
-<main class="text-black mb-0">
-    <div class="col-md-8 offset-md-2">
-        {% include projects/mathsummaries.html %}
-    </div>
-</main>
+{% include projects/mathsummaries.html %}

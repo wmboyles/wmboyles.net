@@ -7,8 +7,4 @@ header-subtitle: Online Jeopardy! Game<br/> <span class="badge badge-web x-1">JS
 layout: default
 ---
 
-<main class="text-black mb-0">
-    <div class="col-md-8 offset-md-2">
-        {% include projects/playj.html %}
-    </div>
-</main>
+{% include projects/playj.html %}

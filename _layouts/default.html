@@ -11,8 +11,13 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-    {% include nav.html %} {% include page_header.html %} {{ content }} {%
-    include footer.html %} {% include common_end_body.html %}
+    {% include nav.html %}
+    {% include page_header.html %}
+    <main class="container col-lg-8">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include common_end_body.html %}
 </body>
 
 </html>
