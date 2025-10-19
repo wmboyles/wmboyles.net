@@ -1,2 +1,4 @@
 name: wmboyles.net
 encoding: UTF-8
+exclude:
+  - "README.md"
