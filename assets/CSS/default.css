@@ -35,7 +35,7 @@ a.dropdown-item:hover {
     background-color: #ed8b00;
 }
 
-.badge.badge-web {
+.badge.badge-js {
     background-color: #f16529;
 }
 
@@ -53,6 +53,10 @@ a.dropdown-item:hover {
 
 .badge.badge-azure {
     background-color: #008ad7;
+}
+
+.badge.badge-js {
+    background-color: #f16529;
 }
 
 /* Styling of icons in footer */

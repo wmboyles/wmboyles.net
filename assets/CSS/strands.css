@@ -1,0 +1,14 @@
+.boardBtn {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    border-radius: 50%;
+    font-size: xx-large;
+}
+.boardBtn:hover {
+    filter: brightness(1.1);
+}
+.theme,#status {
+    font-size: x-large;
+}

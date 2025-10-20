@@ -1,7 +1,7 @@
 /**
- * This is the javascrpit interactive part of the lights out page.
+ * This is the JavaScript interactive part of the Lights Out page.
  * It controls the creation of the board of buttons, the scrambling of the board,
- * what happens when a buttons is clicked, and what happens when the board is solved.
+ * what happens when buttons are clicked, and what happens when the board is solved.
  */
 
 /** A 2D array of button elements to change their color when one is pressed */
@@ -174,9 +174,9 @@ function scramble() {
  * 30, users will be reprompted until they provide a valid response
  */
 function promptUser() {
-	var boardSize = Number(prompt("Enter a board size 1 - 25", "5"));
+	var boardSize = Number(prompt(`Enter a board size 1 - ${maxSize}`, "5"));
 	if(!Number.isInteger(boardSize) || boardSize < 1 || boardSize > maxSize) {
-		alert("Invalid size. Please enter a numer 1 - 25.");
+		alert(`Invalid size. Please enter a number 1 - ${maxSize}.`);
 		promptUser();
 	} else {
 		setup(boardSize);

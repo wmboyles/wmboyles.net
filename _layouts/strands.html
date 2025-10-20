@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="{{ page.description }}" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="./assets/CSS/strands.css" />
+
+    {% include common_head.html %}
+</head>
+
+<body onload="setup()">
+    {% include nav.html %} {% include page_header.html %}
+
+    <main>
+        <!-- The board is created by JS -->
+        <div id="board" class="container mb-3"></div>
+    </main>
+
+    {% include footer.html %} 
+    {% include common_end_body.html %}
+    <!-- Script to run game -->
+  <script src="./assets/JS/strands.js"></script>
+</body>
+
+</html>
