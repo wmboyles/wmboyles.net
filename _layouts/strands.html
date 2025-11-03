@@ -12,15 +12,18 @@
 <body onload="setup()">
     {% include nav.html %} {% include page_header.html %}
 
-    <main>
-        <!-- The board is created by JS -->
-        <div id="board" class="container mb-3"></div>
+    <main class="d-flex justify-content-center">
+        <div id="board-container" class="position-relative d-inline-block">
+            <svg id="board-lines" class="position-absolute top-0 start-0 w-100 h-100 pe-none"></svg>
+            <!-- The board is created by JS -->
+            <div id="board" class="container mb-3"></div>
+        </div>
     </main>
 
-    {% include footer.html %} 
+    {% include footer.html %}
     {% include common_end_body.html %}
     <!-- Script to run game -->
-  <script src="./assets/JS/strands.js"></script>
+    <script src="./assets/JS/strands.js"></script>
 </body>
 
 </html>

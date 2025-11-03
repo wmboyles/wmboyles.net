@@ -5,6 +5,8 @@
     transition: background-color 0.1s;
     border-radius: 50%;
     font-size: xx-large;
+    /* Z-index needs to be explicitly set to be above svg lines */
+    z-index: 1;
 }
 .boardBtn:hover {
     filter: brightness(1.1);

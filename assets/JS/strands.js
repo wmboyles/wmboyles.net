@@ -8,6 +8,7 @@
  */
 
 const board = document.getElementById("board");
+const svg = document.getElementById("board-lines");
 
 const THEME = "Flavor Carousel";
 
@@ -49,6 +50,8 @@ const BUTTON_SIZE = Math.min(boardWidth/BOARD_COLS, boardHeight / BOARD_ROWS);
 let isDragging = false;
 // Selected elements
 let path = [];
+// All drawn lines
+let allLines = [];
 // Found theme words
 let foundThemeWords = 0;
 
@@ -89,10 +92,20 @@ function setup() {
 
 // Clear selection if the user mouseup'd and path. Should not be called if the selection is a correct word.
 function clearPath() {
-    path.forEach(oldPathBtn => {
-        oldPathBtn.style.backgroundColor = DEFAULT_COLOR;
-    });
+    for (let i = 0; i < path.length; i++) {
+        path[i].style.backgroundColor = DEFAULT_COLOR;
+    }
     path = [];
+
+    let newAllLines = [];
+    for (let i = 0; i < allLines.length; i++) {
+        if (allLines[i].getAttribute("stroke") == SELECTED_COLOR) {
+            svg.removeChild(allLines[i]);
+        } else {
+            newAllLines.push(allLines[i]);
+        }
+    }
+    allLines = newAllLines;
 }
 
 // User mousedown'd, starting a new selection
@@ -107,6 +120,34 @@ function startDrag(button) {
     button.style.backgroundColor = SELECTED_COLOR;
 }
 
+// Get (x,y) center of button
+function getButtonCenter(button) {
+    const rect = button.getBoundingClientRect();
+    return {
+        x: rect.x + rect.width / 2,
+        y: rect.y + rect.height / 2,
+    };
+}
+
+// Draw line between buttons
+function drawLine(btn1, btn2, color) {
+    const svgRect = svg.getBoundingClientRect();
+    const p1 = getButtonCenter(btn1);
+    const p2 = getButtonCenter(btn2);
+
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", p1.x - svgRect.x);
+    line.setAttribute("y1", p1.y - svgRect.y);
+    line.setAttribute("x2", p2.x - svgRect.x);
+    line.setAttribute("y2", p2.y - svgRect.y);
+    line.setAttribute("stroke", color);
+    line.setAttribute("stroke-width", "20");
+    line.setAttribute("stroke-linecap", "round");
+
+    allLines.push(line);
+    svg.appendChild(line);
+}
+
 // Whether two buttons can be connected. Diagonals are allowed.
 function areNeighbors(r1, c1, r2, c2) {
     const dr = Math.abs(r1 - r2);
@@ -119,10 +160,7 @@ function continueDrag(button) {
     if (!isDragging) {
         return;
     }
-    if (path.includes(button)) {
-        return;
-    }
-    if (path.length == 0) {
+    if (path.length === 0 || path.includes(button)) {
         return;
     }
 
@@ -141,6 +179,7 @@ function continueDrag(button) {
         return;
     }
 
+    drawLine(path[path.length - 1], button, SELECTED_COLOR)
     path.push(button);
     button.style.backgroundColor = SELECTED_COLOR;
 }
@@ -153,6 +192,9 @@ function colorPath(color) {
     let i = 0;
     const intervalId = setInterval(() => {
         if (i < path.length) {
+            if (i < path.length - 1) {
+                drawLine(path[i], path[i+1], color)
+            }
             path[i].style.backgroundColor = color;
             i++;
         } else {
@@ -165,9 +207,11 @@ function colorPath(color) {
 
 // Check if the current selection is part of the solution.
 function checkWord() {
-    const word = path.map(btn => btn.textContent).join("")
-    console.log(`Checking ${word}`)
+    if (path.length === 0) {
+        return false;
+    }
 
+    const word = path.map(btn => btn.textContent).join("")
     if (word === SPANOGRAM) {
         colorPath(SPANOGRAM_COLOR);
         return true;
