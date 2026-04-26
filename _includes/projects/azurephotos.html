@@ -2,110 +2,104 @@
 
 <h3 class="text-uppercase text-black">Problem</h3>
 <p>
-  "You're at 80% of your storage quota," Google warned me yet again. With only
-  17GB total of Drive space, I'd reach 100% in a few short months. What could I
-  do when each of my photos could be 10MB, and I refuse to let my precious
-  photos be compressed to "Storage Saver" quality? Google of course had a
-  solution: Buy one of their Google One plans. For the best deal, pay $100 and
-  get 2TB of storage (and some other features) for the year. However, armed with
-  $150/month of Azure credits from work, I knew I could build a more
-  cost-effective solution and learn more about Azure along the way.
+  "You're at 80% of your storage quota," Google warned me yet again. With only 17GB total of Drive space, I'd reach 100%
+  in a few short months. What could I do when each photo is around 10MB, and I refuse to let my precious photos be
+  compressed to "Storage Saver" quality? Google of course had a solution: buy one of their Google One plans. For the
+  best deal, pay $100 and get 2TB of storage (and some other features) for the year. However, armed with $150/month of
+  Azure credits from work, I knew I could build a more cost-effective solution and learn more about Azure along the way.
 </p>
 
 <h3 class="text-uppercase text-black">Design</h3>
 <p>
-  Copying advanced features like photo editing and object recognition from
-  Google Photos is not feasible. However, the basic features I need, such as
-  uploading, viewing, and deleting photos, are available. By utilizing a storage
-  account, I can store up to 2TiB of photos and even enable geo-backup for an
-  additional cost, ensuring data replication to another data center. The UI is
-  served through a Flask Web App. Azure facilitates a secure login flow via my
-  Microsoft account, ensuring authentication for all requests to my app by
-  storing a secret in a Key Vault and enabling login integration. The Web App
-  communicates with the storage account using the
-  <a
-    href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python"
-    >azure-storage-blob</a
-  >
-  Python library, allowing photo uploads, fetching, and deletion. Furthermore,
-  the library can generate time-based user-delegated keys, enabling direct
-  serving of photos from the storage account without the risk of exposing
-  connection strings.
+  Implementing the more advanced Google Photos features like editing and object recognition isn't feasible. I really
+  just need basic photo storage and management: upload, view, and delete. Using a Storage Account, I can store petabytes
+  of photos and even enable geo-redundant backup. The UI is served through a Flask Web App. Entra facilitates a secure
+  login flow via my Microsoft account. The Web App communicates with the Storage Account using the <a
+    href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python">azure-storage-blob</a>
+  Python library. Furthermore, Storage Accounts allow for time-boxed, read-only, user-delegated SAS keys, allowing me to
+  serve photos directly from the Storage Account without enabling riskier operations.
 </p>
 
 <div class="row">
   <div class="col text-center">
-    <img
-      src="/assets/Images/Projects/AzurePhotos/AzurePhotosUI.png"
-      alt="A user interface with buttons to upload photos and photos displayed below"
-    />
+    <img src="/assets/Images/Projects/AzurePhotos/AzurePhotosUI.png"
+      alt="A user interface with buttons to upload photos and photos displayed below" />
   </div>
 </div>
+<hr />
 
+<h3 class="text-uppercase text-black">Performance</h3>
 <p>
-  I encountered two performance issues that significantly slowed down the page
-  loading. First, the page attempted to load all images in the storage account,
-  even if the user hadn't scrolled far enough to view them. Fortunately, by
-  utilizing the <code>loading="lazy"</code> attribute for <code>imgs</code>,
-  requests for images are only made when they are close to entering the user's
-  view. Second, the page requested full-sized images from the storage account,
-  resulting in downloading at least a dozen files as large as 10MB each when the
-  page ran. To address this, I implemented an Azure Function that detects
-  newly-uploaded images and generates smaller thumbnails for the web app to
-  display. When a user clicks on a thumbnail, the app presents the full-sized
-  image in a larger view. While I could have integrated the resizing directly
-  into the WebApp to execute upon image upload, I opted to experiment with Azure
-  Functions. Even on the free tier, my function resizes images in under 1
-  second.
+  I encountered several performance issues that slowed page loads. First, the page was loading the full-size ~10MB
+  images from the Storage Account, which slowed everything down and wasted users' mobile data. To solve this, I added
+  thumbnail generation when the user uploaded a new image. The page would show this much smaller thumbnail, and the user
+  could click on the thumbnail to view in full resolution.
+</p>
+<p>
+  Second, the page attempted to load all images on the page, even if the user hadn't scrolled far enough to view them
+  yet. This problem is solved by adding <code>loading="lazy"</code> attributes to each thumbnail <code>img</code>. Now,
+  the page would only load thumbnails when they are close to entering the user's view.
+</p>
+<p>
+  Finally, if the user uploaded just one image or did something else to refresh the page, all images would be requested
+  again, which takes time and costs bandwidth. The solution here is to add a <code>cache-control</code> header to the
+  thumbnail and full-size responses. On subsequent requests for the same resource, the browser will serve the image
+  from memory or disk.
 </p>
 
 <div class="row">
   <div class="col text-center">
-    <img
-      src="/assets/Images/Projects/AzurePhotos/AzurePhotosDesign.png"
-      alt="A design diagram with an Active Directory, Web App, Key Vault, Storage Account, and Function App"
-    />
+    <img src="/assets/Images/Projects/AzurePhotos/CacheControl.png"
+      alt="A browser's network dev tools showing responses served from cache" />
   </div>
 </div>
+<hr/>
+
+<h3 class="text-uppercase text-black">Feedback</h3>
+<p>
+  After showing my only user (my wife) the app, she requested two important features. First, the ability to create albums to
+  organize photos. This was pretty simple to implement. I used the <a
+    href="https://learn.microsoft.com/en-us/python/api/overview/azure/data-tables-readme?view=azure-python">azure-data-tables</a>
+  library to create a table tracking each album and the photos it contained. I also needed to select one thumbnail from
+  the photos in the album to represent the entire album. Now I could display that album thumbnail on the main page,
+  alongside any photos not assigned to an album.
+</p>
+<p>
+  The second requested feature was to support videos. At first, I was worried about how to stream the video from the
+  Storage Account in chunks instead of needing to wait to download the whole thing. Thankfully, HTML5 video elements and
+  the Storage Account's support for HTTP range requests handle this out of the box. The next challenge was generating
+  thumbnails. <a href="https://ffmpeg.org/">FFmpeg</a> is the obvious choice here. It could select the first key frame,
+  resize it, and even add an icon in the top left to indicate it was a video. I ended up having to ship the FFmpeg
+  binaries with my app as trying to install them during deployment often timed out.
+</p>
+
+<hr />
 
 <h3 class="text-uppercase text-black">Costs</h3>
 <p>
-  My solution costs about $0.42 per day at rest, and $1.00 per day when in use.
-  Although this cost is a small part of my credits budget, it is
-  considerably more expensive than Google One. More than half the cost is just
-  from running the web app. If it weren't necessary for the web app to be
-  constantly active, I could switch to the free tier App Service Plan.
-  Additionally, disabling the geo-backup option on the storage account would
-  significantly reduce most of the bandwidth expenses. If I could eliminate or
-  distribute these costs among multiple users like Google does, I would be able
-  to compete with Google One's pricing.
+  My solution costs about $0.45 per day, or about $162 per year. Although this cost is a small part of my credits
+  budget, it is considerably more expensive than Google One. Over 85% of the cost is the B1 App Service Plan hosting the
+  app. If it weren't necessary for the web app to be constantly active, I could probably switch to the free tier App
+  Service Plan. If I could distribute these costs among more users like Google does, I would be able to compete with
+  Google One's prices.
 </p>
 
 <div class="row">
   <div class="col text-center">
-    <img
-      src="/assets/Images/Projects/AzurePhotos/AzurePhotosCosts.png"
-      alt="Azure cost analysis graphs"
-    />
+    <img src="/assets/Images/Projects/AzurePhotos/AzurePhotosCosts.png" alt="Azure cost analysis graphs" />
   </div>
 </div>
+<hr />
 
-<h3 class="text-uppercase text-black">Learnings &amp; Future Enhancements</h3>
+<h3 class="text-uppercase text-black">Future Features</h3>
 <p>
-  I wouldn't recommend trying to build your own cloud photo storage solution
-  unless you don't care about advanced features and have free Azure credits.
-  However, as a learning experience, I know much more about setting up multiple
-  Azure components, deploying code to them, and using secure, credential-free
-  authentication.
+  My user has asked for photos to be arranged chronologically with visual cues for the month and year. Photos are
+  already arranged by either their EXIF metadata or upload time, so this should mostly be a UI change. As a stretch
+  goal,
+  my user would like photo locations to be displayed on a map. Although the location itself is likely in the EXIF
+  metadata, I'm not quite sure how to go from there. Personally, I think further leveraging the user-delegated SAS
+  feature to allow sharing photos with others would be neat.
 </p>
-
 <p>
-  I can add more features similar to Google Photos, such as chronological
-  ordering and album creation. Furthermore, I can utilize the user-delegated key
-  functionality to enable sharing links to photos that automatically expire
-  after a specific time. As for a more advanced capability, I have already
-  prototyped image embedding techniques to identify near-duplicates, allowing
-  users to keep only one copy. You can find the notebook and all other project
-  code on
-  <a href="https://github.com/wmboyles/AzurePhotos">GitHub</a>.
+  You can find all the project code on <a href="https://github.com/wmboyles/AzurePhotos">GitHub</a>.
 </p>
